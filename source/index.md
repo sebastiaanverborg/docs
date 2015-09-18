@@ -197,7 +197,7 @@ curl "https://api.kasko.io/policies" \
 
   if (($result = curl_exec($curl)) === false)
   {
-    // hanlde error
+    // handle error
   }
 
   curl_close($curl);
@@ -284,12 +284,6 @@ Field |
 ----- |
 <span class="nowrap">`-created_at`</span> |
 
-### Response format
-
-The response is formatted as JSON and contains two sections: one for the `data` and one for the `meta`. 
-
-Two sections are used because this endpoint returns a list of objects that can be paginated using the query string parameters above. The meta section allows you to quickly see the `total` number of results, the `count` of the number of results returned in the current response and the `limit` on response size being used.
-
 ## Get a single policy
 
 ```shell
@@ -309,7 +303,7 @@ curl "https://api.kasko.com/policies/123"
 
   if (($result = curl_exec($curl)) === false)
   {
-    // hanlde error
+    // handle error
   }
 
   curl_close($curl);
