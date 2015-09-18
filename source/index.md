@@ -91,31 +91,31 @@ We are currently running on one version of the API as we have not made any break
 ```json
 {
   "data": [
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {}
+    {
+      "object": "example",
+      "id": 1
+    },
+    {
+      "object": "example",
+      "id": 2
+    },
+    {
+      "object": "example",
+      "id": 3
+    },
+    {
+      "object": "example",
+      "id": 4
+    },
+    {
+      "object": "example",
+      "id": 5
+    }
   ],
   "meta": {
-    "total": 2320,
-    "count": 20,
-    "limit": 20,
+    "total": 123,
+    "count": 5,
+    "limit": 5,
     "sort": "last_name"
   }
 }
