@@ -9,6 +9,12 @@ script:
   - bundle install
   - ./node_modules/.bin/gulp
 
+deploy:
+  provider: script
+  script: scripts/deploy.sh
+  on:
+    branch: master
+
 notifications:
   slack:
     secure: zes7bl+WKgHlV9v0tFXNXQ8AQGVk+pleyYL/VOsHPGY3AYQaQVgSurFXXNZ4dWFwOQi2XBqr6j1NWQN3Rluou+VkCPhxbGOeKQaA6jBnVztk0ycv30itAaIC7Id+HEo6/aekk9q8be2/cX/fHLUqS21ySgo+k4stTPlvUrgvOYWBLvDikBNL9L/HkF+D1Pe+nrFUgDNwRfP5nprGqBFXbid6CHrpCYWgkNZljX+nzriteMQ/JzzTOh/VamJHvu4d9WzsTXuWvaEnJGU4yjKVFgRCOwF10HgR7Ljlxjv9Gng1iwE7L/+3CTV72GBV5o4AlgVsVlKMpmKV+xyNiKSMyMPutTcskIw+ANv5haU/Dw//3Yt7vxtfAwmQtlrHUUKakEK+pGSBShr7MZRZIj/PEWO/DoyIF3BxIjiBvSsI5ppiJCNZ2Sn8kopfiYhzjzG/HrKjHhrZADJ3szogbqQlYQ6QwZ2yOVHk/6rMSb/0R72dO91+DOKptBb1bDDiBgwYgDDsf7MFzHX9PxjLTyuGfaWtNGmkTQkN2dx0hw6AyNYzI2VgTlKsb4sNtOR+C8xJ9zTkLxoFl4hsAhOtIdK5qy2iewlIw7ylxF33pjiQYkIqCLekuYM/RIJbzQzVLilCjqu11cnKUXr14Pu/Y/St151dpMoRnQWzhxUTk1HKx1o=
