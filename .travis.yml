@@ -3,7 +3,6 @@ sudo: false
 language: ruby
 
 install:
-  # - bundle install
   - npm install
 
 script:
@@ -11,7 +10,5 @@ script:
 
 notifications:
   slack:
-    secure: BXvv4HQwGPqe4b+1TiudlL00a4hSW1DRaOFioAiMtduOG3aoe07RkBoEeDXY/GprI1A9i3Cn8Vs1MxFeOxCGid3H/smjTXeik9q9S5HwZ9LAHjsDa9jdES2778qdob93R3yW78+4hB4TQI0IWw3MfkH5xCYjZJbXnABuaFTem3cTxYw6RBLLIML5LhX5yutWi1ZvPDwBKPKlDBMbEPb/qXHl64cDQC22vlAsUZ+cqKiG9w824DNoWfm0FV5PJQ32UF5aC63k6dfTjSmbFgGkMT/mGoFlZGwuizO4vxUtlvfmIw4VV+lhZdR+7/Yb/JXrmVns1u5v6eKPLcNyyfK9KguRpfbXBk06lX4IrCkPLGQMJOB+kzgNtRQdRIjWnidF6O2LgRhLA8k2cRKEvSKJ/TKGku3971QYo+swoCx7t7ebbhOafVFNkbP/jHoiL6V2uhvjLQZNJvrH+xBsrD2l6rKAs1E9A6RqIOyJJ4ejGD0gY7VJX2DbYkjTO7halCEtFFC6T6H0rCdB/eKCU5teBvAhDr/PyZKoBZsJnuYZ4ewVhjnWMD8MRaqLOgPWZGcoLfPlTOfV9OtFLdNecNWMVy6hcPgvP5FDQJym8WhiO6QsqwlneaC4u50Q9ll1wW98tCnNk6qT9BJ8Geaj/+uSASaN8K7YyhyPHzvJ/Funhys=
-    on_success: change
-    on_start: never
+    secure: zes7bl+WKgHlV9v0tFXNXQ8AQGVk+pleyYL/VOsHPGY3AYQaQVgSurFXXNZ4dWFwOQi2XBqr6j1NWQN3Rluou+VkCPhxbGOeKQaA6jBnVztk0ycv30itAaIC7Id+HEo6/aekk9q8be2/cX/fHLUqS21ySgo+k4stTPlvUrgvOYWBLvDikBNL9L/HkF+D1Pe+nrFUgDNwRfP5nprGqBFXbid6CHrpCYWgkNZljX+nzriteMQ/JzzTOh/VamJHvu4d9WzsTXuWvaEnJGU4yjKVFgRCOwF10HgR7Ljlxjv9Gng1iwE7L/+3CTV72GBV5o4AlgVsVlKMpmKV+xyNiKSMyMPutTcskIw+ANv5haU/Dw//3Yt7vxtfAwmQtlrHUUKakEK+pGSBShr7MZRZIj/PEWO/DoyIF3BxIjiBvSsI5ppiJCNZ2Sn8kopfiYhzjzG/HrKjHhrZADJ3szogbqQlYQ6QwZ2yOVHk/6rMSb/0R72dO91+DOKptBb1bDDiBgwYgDDsf7MFzHX9PxjLTyuGfaWtNGmkTQkN2dx0hw6AyNYzI2VgTlKsb4sNtOR+C8xJ9zTkLxoFl4hsAhOtIdK5qy2iewlIw7ylxF33pjiQYkIqCLekuYM/RIJbzQzVLilCjqu11cnKUXr14Pu/Y/St151dpMoRnQWzhxUTk1HKx1o=
   email: false
