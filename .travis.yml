@@ -2,8 +2,8 @@ sudo: false
 
 language: ruby
 
-rvm:
-  - 1.9.3
-  - 2.0.0
+install:
+  - npm install
 
-cache: bundler
+script:
+  - ./node_modules/.bin/gulp
