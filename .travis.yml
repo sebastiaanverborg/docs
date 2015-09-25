@@ -3,7 +3,7 @@ sudo: false
 language: ruby
 
 install:
-  - bundle install
+  # - bundle install
   - npm install
 
 script:
