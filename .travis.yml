@@ -6,6 +6,7 @@ install:
   - npm install
 
 script:
+  - budnle install
   - ./node_modules/.bin/gulp
 
 notifications:
