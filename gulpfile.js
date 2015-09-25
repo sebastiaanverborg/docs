@@ -7,3 +7,5 @@ gulp.task('watch', ['build'], function() {
 	console.log('Watching for changes in ./source');
 	gulp.watch('source/**/*', ['build']);
 });
+
+gulp.task('default', ['build']);

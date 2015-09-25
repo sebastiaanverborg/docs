@@ -16,4 +16,10 @@ to build the files into the `build` folder.
 
 If you just want to build once, do:
 
-```./node_modules/.bin/gulp build```
+```./node_modules/.bin/gulp```
+
+
+Need Help? Found a bug?
+--------------------
+
+Just [submit an issue](https://github.com/kasko/docs/issues) to the Kasko Docs Github if you need any help. And, of course, feel free to submit pull requests with bug fixes or changes.
