@@ -248,7 +248,7 @@ curl "https://api.kasko.io/policies" \
           }
         ],
         "_links": {
-          "_slef": {
+          "_self": {
             "href": "https://api.kasko.io/policies/0qGR3prv694AKBOw8Qk8PVNazDlxY7Wj"
           }
         }
@@ -289,7 +289,7 @@ curl "https://api.kasko.io/policies" \
           }
         ],
         "_links": {
-          "_slef": {
+          "_self": {
             "href": "https://api.kasko.io/policies/ae5lQ6pL8zP712Oo4MkKRVrN9xX0AWZb"
           }
         }
