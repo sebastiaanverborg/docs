@@ -19,7 +19,9 @@ search: true
 
 Welcome to the Kasko API reference. Our API currently provides access to retrieve policy information, but it will be expanded over the coming weeks and months to include endpoints for retrieving products, variants, quotes, and for processing payments.
 
-We have language bindings in cURL and PHP, with more to come soon. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+We have language bindings in cURL with more to come soon. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+
+KASKO API response payload is in the HAL format.  For more information on HAL format please look <a href="http://stateless.co/hal_specification.html">here</a>
 
 We are always happy to hear from our users, so if you have any feedback or suggestions please <a href="mailto:techsupport@kasko.io">email our technical support desk</a>.
 
@@ -29,14 +31,14 @@ We are always happy to hear from our users, so if you have any feedback or sugge
 
 ```shell
 # With shell, you can just pass the correct header with each request
-curl "https://api.kasko.com/api_endpoint_here"
+curl "https://api.kasko.io/api_endpoint_here"
   -H "Authorization: Bearer your_api_key"
 ```
 
 ```php
 <?php
   $key = "your_api_key";
-    
+
   curl_setopt($curl, CURLOPT_HTTPHEADER, array("Authorization: Bearer $key"));
   curl_setopt($curl, CURLOPT_URL, "https://api.kasko.io/api_endpoint_here");
 ?>
@@ -46,9 +48,9 @@ curl "https://api.kasko.com/api_endpoint_here"
 
 ### API Keys
 
-There are two types of API key: **public** and **private**. 
+There are two types of API key: **public** and **private**.
 
-The private key gives you full access to the API and should be used for requests made between your server and the Kasko server. Your private API key carries many privileges, so be sure to keep it secret! 
+The private key gives you full access to the API and should be used for requests made between your server and the Kasko server. Your private API key carries many privileges, so be sure to keep it secret!
 
 The public key allows provides you limited access to certain endpoints so that you can use the API from within your website or mobile app. The public key can be placed into javascript code and urls; it doesn't need to be protected like the private key does.
 
@@ -56,7 +58,7 @@ You can manage your API keys from your account [dashboard](https://dashboard.kas
 
 ### Authentication mechanism
 
-You authenticate API calls by providing your **secret key** or **public key** in the request. 
+You authenticate API calls by providing your **secret key** or **public key** in the request.
 
 All API requests must be made over HTTPS. Calls made over plain HTTP will fail. You must authenticate for all requests.
 
@@ -70,7 +72,7 @@ You must replace <code>your_api_key</code> with your API key.<br />
 
 For more information on Bearer Tokens and OAuth 2.0 please see [The OAuth 2.0 Authorization Framework: Bearer Token Usage](https://datatracker.ietf.org/doc/rfc6750).
 
-# Versioning
+<!-- # Versioning
 
 The Kasko API is continually being improved and expanded, but we try to make changes in a way that does not break the contract between us, as a service provider, and you as the API consumer. As such we consider the following changes to be "non-breaking".
 
@@ -82,7 +84,7 @@ The Kasko API is continually being improved and expanded, but we try to make cha
 
 We are currently running on one version of the API as we have not made any breaking changes so far. When we need to create a new version we will publish a new URL to our consumers, containing a version number, e.g.
 
-`https://api.kasko.io/v2/api_endpoint_here`
+`https://api.kasko.io/v2/api_endpoint_here` -->
 
 # Pagination
 
@@ -90,62 +92,53 @@ We are currently running on one version of the API as we have not made any break
 
 ```json
 {
-  "data": [
-    {
-      "object": "example",
-      "id": 1
-    },
-    {
-      "object": "example",
-      "id": 2
-    },
-    {
-      "object": "example",
-      "id": 3
-    },
-    {
-      "object": "example",
-      "id": 4
-    },
-    {
-      "object": "example",
-      "id": 5
+"_embedded":{
+    "item": [
+      {
+        "id": 1
+      },
+      {
+        "id": 2
+      },
+      {
+        "id": 3
+      },
+      {
+        "id": 4
+      }
+    ],
+    "_links": {
+      "next":{
+        "href" : "https://api.kasko.io/api_endpoint_here/?since=1444411555&limit=20"
+      },
+      "prev":{
+        "href" : "https://api.kasko.io/"
+      }
     }
-  ],
-  "meta": {
-    "total": 123,
-    "count": 5,
-    "limit": 5,
-    "sort": "last_name"
   }
 }
 ```
 Endpoints that return lists of objects support pagination to ensure performance and efficiency when retrieving data. Pagination controls are expressed as query string parameters in the endpoint URL, e.g.
 
-`https://api.kasko.io/api_endpoint_here?offset=10&limit=100`
+`https://api.kasko.io/api_endpoint_here?since=1444411555&limit=20`
 
-Responses on these endpoints split the data and pagnation information into two sections called `data` and `meta` repectively. The `data` section simply contains a single array containing the returned objects. The `meta` section contains the following information:
+Responses on these endpoints split the data and pagnation information into two sections called `item` and `_links` repectively. The `item` section simply contains a single array containing the returned objects. The `_links` section contains the following information:
 
-* The total number of items in the dataset on the server
-* The number of items contained in the current response
-* The limit on the number of items in the current response
-* The sort field and direction (prepend the field with a `-` for descending)
+* Link to the next page in pagination.   Call the href in next to get more data
+* If this has a since=?timestamp then that means there is another page of data
+* If it has ?since= then that means there are no more pages of data.
+* Link to previous page of data.   If this is just the base URL then there is no previous data
 
 Use the following query string parameters to control the pagination.
 
 Parameter | Type | Default | Description
 --------- | ---- | ------- | -----------
-<span class="nowrap">`offset`</span> | <span class="nowrap">`integer`</span> | <span class="nowrap">`0`</span> | Inclusive numerical offset index.
+<span class="nowrap">`since`</span> | <span class="nowrap">`integer`</span> | <span class="nowrap">`0`</span> | Time you want to retrieve data created or updated since.  Should be in format unix timestamp or 2015-10-14T12:52:46+00:00 (URL ENCODED)
 <span class="nowrap">`limit`</span> | <span class="nowrap">`integer`</span> | <span class="nowrap">`20`</span> | Maximum number of results to return in the dataset.
-<span class="nowrap">`sort`</span> | <span class="nowrap">`string`</span> | <span class="nowrap">`default`</span> | Sort field and direction. The default depends on the endpoint being requested. Multiple sort fields are separated with commas, e.g. `name,-age`
 
 <aside class="notice">
 Some endpoints support additional parameters for controlling pagination, and some endpoints may override the above defaults
 </aside>
-
-# Rate limiting
-
-We have designed the Kasko API to be scalable and responsive. You should not encounter any rate limit problems with normal use of the API. If you do encounter this error a lot then please <a href="mailto:techsupport@kasko.io">contact us</a> so we can assist you.
 
 # Policies
 
@@ -153,7 +146,7 @@ We have designed the Kasko API to be scalable and responsive. You should not enc
 
 The policy object represents a purchased policy within Kasko's database. Each policy contains the following information:
 
-* A reference used by the policyholder and insurer - the `insurer_policy_id` 
+* A reference used by the policyholder and insurer - the `insurer_policy_id`
 * The type of product and variant used
 * The policyholder's personal information
 * The date and time of the policy creation
@@ -164,19 +157,16 @@ Attribute | Type | Description
 --------- | ---- | -----------
 <span class="nowrap">`object`</span> | <span class="nowrap">`string`</span> | String representing the type of the object. The value is "policy".
 <span class="nowrap">`insurer_policy_id`</span> | <span class="nowrap">`string`</span> | A policy reference for use by policyholders and insurers.
-<span class="nowrap">`insurer_product_name`</span> | <span class="nowrap">`string`</span> | The name of insurance product used by this policy.
-<span class="nowrap">`insurer_variant_id`</span> | <span class="nowrap">`integer`</span> | An id of the variant of the insurance product used by this policy.
-<span class="nowrap">`kasko_product_id`</span> | <span class="nowrap">`integer`</span> | An id of the Kasko product object used by this policy.
-<span class="nowrap">`kasko_variant_id`</span> | <span class="nowrap">`integer`</span> | An id of the Kasko product variant object used by this policy.
+<span class="nowrap">`insurer_product_name`</span> | <span class="nowrap">`string`</span> | The insurer reference name of insurance product used by this policy.
+<span class="nowrap">`insurer_variant_id`</span> | <span class="nowrap">`integer`</span> | The insurer reference id of the product variant used by this policy.
 <span class="nowrap">`first_name`</span> | <span class="nowrap">`string`</span> | The given name of the policyholder.
 <span class="nowrap">`last_name`</span> | <span class="nowrap">`string`</span> | The family name of the policyholder.
 <span class="nowrap">`email`</span> | <span class="nowrap">`string`</span> | The email address of the policyholder.
 <span class="nowrap">`created_date`</span> | <span class="nowrap">`string`</span> | Policy creation datetime in ISO-8601 format.
-<span class="nowrap">`cover_duration_days`</span> | <span class="nowrap">`integer`</span> | Cover duration in number of days.
-<span class="nowrap">`cover_start_date`</span> | <span class="nowrap">`string`</span> | Cover start datetime in ISO-8601 format.
-<span class="nowrap">`cover_end_date`</span> | <span class="nowrap">`string`</span> | Cover end datetime in ISO-8601 format.
+<span class="nowrap">`start_date`</span> | <span class="nowrap">`string`</span> | Cover start datetime in ISO-8601 format.
+<span class="nowrap">`end_date`</span> | <span class="nowrap">`string`</span> | Cover end datetime in ISO-8601 format.
 <span class="nowrap">`currency`</span> | <span class="nowrap">`string`</span> | Currency code of the policy quote and subsequent transaction in ISO-4217 format.
-<span class="nowrap">`price`</span> | <span class="nowrap">`integer`</span> | Total price paid by policyholder, expressed in the minor unit of the currency used, or the major unit if the currency has only one.
+<span class="nowrap">`amount`</span> | <span class="nowrap">`integer`</span> | Total price paid by policyholder, expressed in the minor unit of the currency used, or the major unit if the currency has only one.
 <span class="nowrap">`gross_premium`</span> | <span class="nowrap">`integer`</span> | Gross premium of the policy expressed in the minor unit of the currency used, or the major unit if the currency has only one.
 
 ## Get all policies
@@ -209,49 +199,140 @@ curl "https://api.kasko.io/policies" \
 
 ```json
 {
-  "data": [
-    {
-      "object": "policy",
-      "insurer_policy_id": "abc123",
-      "insurer_product_name": "Rental Excess Reduction",
-      "insurer_variant_id": 1,
-      "kasko_product_id": 1,
-      "kasko_variant_id": 1,
-      "first_name": "Matthew",
-      "last_name": "Wardle",
-      "email": "mwardle@kasko.io",
-      "created_date": "2015-09-02 15:26:45+01:00",
-      "cover_duration_days": 1,
-      "cover_start_date": "2015-09-03 00:00:00+01:00",
-      "cover_end_date": "2015-09-03 23:59:59+01:00",
-      "currency": "EUR",
-      "price": 615,
-      "gross_premium": 462
+  "_embedded": {
+    "item": [
+      {
+        "id": "2lPeMZnrB80QXVOlYrkp5LvR1W3qbojx",
+        "distributor_id": "LzBAbqkPj23W56Ye0p0rvQKGERwaNeX7",
+        "variant_id": "KP8VEOzroaqw15DnBDyd64JZ2jG7egkm",
+        "insurer_id": "4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0",
+        "payment_id": "",
+        "insurer_policy_id": "ABC-0004E",
+        "livemode": false,
+        "first_name": "n",
+        "last_name": "n",
+        "email": "nsuehr@kasko.io",
+        "amount": 539,
+        "currency": "eur",
+        "verified": false,
+        "paid": false,
+        "start_date": "2015-10-08T23:00:00+0000",
+        "end_date": "2015-10-09T22:59:59+0000",
+        "created_date": "2015-10-09T16:59:30+0000",
+        "gross_premium": 462,
+        "net_premium": 388,
+        "premium_tax": 74,
+        "net_commision_total": 78,
+        "net_commision_kasko": 78,
+        "net_commision_distributor": 0,
+        "net_net_premium": 311,
+        "total_service_charge": 77,
+        "service_charge_vat": 12,
+        "payment_transaction_fee_ex_vat": 46,
+        "payment_transaction_fee_inc_vat": 54,
+        "net_service_fee_total": 19,
+        "net_service_fee_kasko": 19,
+        "net_service_fee_distributor": 0,
+        "split_kasko": 155,
+        "split_insurer": 384,
+        "_links": {
+          "_slef": {
+            "href": ""
+          },
+          "distributor": {
+            "href": ""
+          },
+          "variant": {
+            "href": ""
+          },
+          "insurer": {
+            "href": ""
+          },
+          "payment": {
+            "href": ""
+          }
+        },
+        "assets": []
+      },
+      {
+        "id": "0qGR3prv694AKBOw8Qk8PVNazDlxY7Wj",
+        "distributor_id": "LzBAbqkPj23W56Ye0p0rvQKGERwaNeX7",
+        "variant_id": "KP8VEOzroaqw15DnBDyd64JZ2jG7egkm",
+        "insurer_id": "4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0",
+        "payment_id": "2OQMpaxylZmNd1BnN7B7ezA9VYb3Prkg",
+        "insurer_policy_id": "ABC-0004F",
+        "livemode": false,
+        "first_name": "Nikolaus",
+        "last_name": "Suehr",
+        "email": "nsuehr@kasko.io",
+        "amount": 5794,
+        "currency": "eur",
+        "verified": false,
+        "paid": true,
+        "start_date": "2015-10-11T23:00:00+0000",
+        "end_date": "2015-10-23T22:59:59+0000",
+        "created_date": "2015-10-09T17:20:43+0000",
+        "gross_premium": 5294,
+        "net_premium": 4449,
+        "premium_tax": 845,
+        "net_commision_total": 890,
+        "net_commision_kasko": 890,
+        "net_commision_distributor": 0,
+        "net_net_premium": 3559,
+        "total_service_charge": 500,
+        "service_charge_vat": 80,
+        "payment_transaction_fee_ex_vat": 198,
+        "payment_transaction_fee_inc_vat": 236,
+        "net_service_fee_total": 222,
+        "net_service_fee_kasko": 222,
+        "net_service_fee_distributor": 0,
+        "split_kasko": 1390,
+        "split_insurer": 4404,
+        "_links": {
+          "_slef": {
+            "href": ""
+          },
+          "distributor": {
+            "href": ""
+          },
+          "variant": {
+            "href": ""
+          },
+          "insurer": {
+            "href": ""
+          },
+          "payment": {
+            "href": ""
+          }
+        },
+        "assets": [
+          {
+            "name": "policy",
+            "url": "https://dhoti9gzfs9fr.cloudfront.net/policies/4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0/ABC-0004F/Policy.pdf?Expires=1444833780&Signature=ZOmNzu0iL5ayLIyJUa3CiCa5uBtUcgBq~AGY~ymjf8oqYPN7~-jC6YjlEgKmmSaVqPBAxnKZb-ujC0v3778qCewbuVZg7ydOvqojy-xn5vFn3qRR0YRrh2rCxhpHnCo~6vHjIbaaRnoKZaZQc-fy7BUHloYSmjaUiU7rypgpnjHhJPRI8i4wdAAyoa0mwQIHb~XSooFcjUvVrCQA8BC9cYUn~IJB0bX2btQIZXoT19EZKVeCPgTHR~pNP06rNwa7qlTebIo3APD1BLwMqLiWM82nnWK17k1CuYRElWIGicBh8so38BXY6pMubt797o2eVhhRF1Rd9a4coHCSFpASTg__&Key-Pair-Id=APKAJEGNM2PTOZTFTLNA"
+          },
+          {
+            "name": "Versicherungsbedingungen",
+            "url": "https://dhoti9gzfs9fr.cloudfront.net/policies/4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0/ABC-0004F/Versicherungsbedingungen.pdf?Expires=1444833780&Signature=HhC6CKyt6rFzUrSlXRdQsaRJQzeqt5k6AoDKp1Aaqdho0DL-irZv4ZGrzedPqKOcWFrqM1kUL3W7nM8w8Trk8IqpOtS9qul4s0yBwA0vVHMkK-G4vwUOFAApLAljCTpt5I3tG0ROATsCXEO53Xf4qoUwjgIuf0m~~uO4CRcJMQBe3Vscc41bmt0b~eaNCkTBUev1uZE-ehXd~3e5Hx7i8dMnK4kSh6yU4oOI57kNxSUrApwdcRP5KEc0X2gr02Lqm9rnh~tVlACQchqV2fWrkuQmNeKu-Sh55bNPV73KYIWRWSNGTuxP9ISkkAngxsL2jHF8byZN2TB2Jt24pkoH5A__&Key-Pair-Id=APKAJEGNM2PTOZTFTLNA"
+          },
+          {
+            "name": "Produktinformation",
+            "url": "https://dhoti9gzfs9fr.cloudfront.net/policies/4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0/ABC-0004F/Produktinformation.pdf?Expires=1444833780&Signature=DUUx~YT1045uZUcY6wygNa1btqrt-Yj2jo2eYdkAPd~I4M0D3WcZDMhsVC9gFj2o8tgSbz9g5AqmAgOT3s~pXOvkH1s8MgSKX3Kz051RinTJ-xQh3~rv~6z5cgD36ZrhmAQ9gC3SRi9u1LjjH-Hf3tqJfEJgxNxsd7BRInwMz3DlfeEosKn6FkJk4cTpjNkBlFzGf588ndXp7yepy4dtzYwEVUky82EBn1Vef-ujLuJHKxs3wNR~XVFlbkm2nq3~hvHDg2~rN5VSxCpUN-NKGGckm8hZ4fmgy1GyxTfujv9Og9i4d~oV2Wr8mxYPTJNVmJwin9hEGbOwKQC5cUhNuA__&Key-Pair-Id=APKAJEGNM2PTOZTFTLNA"
+          },
+          {
+            "name": "Informationspflicht",
+            "url": "https://dhoti9gzfs9fr.cloudfront.net/policies/4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0/ABC-0004F/Informationspflicht.pdf?Expires=1444833780&Signature=mhJcGlWYR2RkCgSgPWVJ~1S2yTm9rmRN~TrJAKpEmwOVg1E93iuYc6z72ICnpEpK7wGyDwe8uoE4ORstHSvkhBpVW0uD26LXnkiQAy-GdIH9DJ1CEwCjppt2zN-q8fTSJoxFWakIsV0TpCtqgmWiQ4r1WKnBVll9BYX6kO6yfIGX9Wyn7qtf-UygGVtNTdo1fyoc1nuk-Zjxy-9-LRwjadBoraWGy1FfHWhKQDePhZ1cosseYIZWUh5wIciRyFhyTiA4wnh7JbUt1SCbjydOYx3qucapTIJe1LkIf47VlcjDIjUvyBzuCDFvGzrpdu0LXKyE3PWP17xkMELVjrCpaQ__&Key-Pair-Id=APKAJEGNM2PTOZTFTLNA"
+          }
+        ]
+      }
+    ]
+  },
+  "_links": {
+    "next": {
+      "href": "https://api.kasko.io/policies/?since=1444411555&limit=20"
     },
-    {
-      "object": "policy",
-      "insurer_policy_id": "abc456",
-      "insurer_product_name": "Rental Excess Reduction",
-      "insurer_variant_id": 1,
-      "kasko_product_id": 1,
-      "kasko_variant_id": 1,
-      "first_name": "Rob",
-      "last_name": "Long",
-      "email": "rlong@kasko.io",
-      "created_date": "2015-09-02 15:31:12+01:00",
-      "cover_duration_days": 2,
-      "cover_start_date": "2015-09-04 00:00:00+01:00",
-      "cover_end_date": "2015-09-06 23:59:59+01:00",
-      "currency": "EUR",
-      "price": 1185,
-      "gross_premium": 924
+    "prev": {
+      "href": "https://api.kasko.io/"
     }
-  ],
-  "meta": {
-    "total": 2,
-    "count": 2,
-    "limit": 20,
-    "sort": "-created_date"
   }
 }
 ```
@@ -260,94 +341,14 @@ This endpoint retrieves all policies.
 
 ### HTTP Request
 
-`GET http://example.com/api/policies`
+`GET https://api.kasko.com/policies`
 
 ### Query Parameters
 
-In addition to the [standard pagination query parameters](#pagination), the following can be used.
+Please use the [standard pagination query parameters](#pagination) above to get all the data.
 
-Parameter | Type | Default | Description
---------- | ---- | ------- | -----------
-<span class="nowrap">`offset_policy_id`</span> | <span class="nowrap">`string`</span> | <span class="nowrap">`null`</span> | Exclusive `insurer_policy_id` offset. If set, only policies that come after the given id will appear in the result set.
+This should be polled at intervals with a ?since=time set to get the latest data.
 
-<aside class="success">
-Remember to url-encode your `offset_policy_id`
-</aside>
+Any policy that has been updated, e.g. cancelled will also be returned.
 
-### Sorting the results
-
-By default results are sorted by `created_at`
-
-The following fields are available for sorting on this endpoint.
-
-Field |
------ |
-<span class="nowrap">`-created_at`</span> |
-
-## Get a single policy
-
-```shell
-curl "https://api.kasko.com/policies/123"
-  -H "Authorization: Bearer your_api_key"
-```
-
-```php
-<?php
-  $key = "your_api_key";
-  $policyID = 123;
-
-  $curl = curl_init();
-  curl_setopt($curl, CURLOPT_HTTPHEADER, array("Authorization: Bearer $key"));
-  curl_setopt($curl, CURLOPT_URL, "https://api.kadsko.io/policies/$policyID");
-  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-
-  if (($result = curl_exec($curl)) === false)
-  {
-    // handle error
-  }
-
-  curl_close($curl);
-  $policy = json_decode($result);
-?>
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "object": "policy",
-  "insurer_policy_id": "abc123",
-  "insurer_product_name": "Rental Excess Reduction",
-  "insurer_variant_id": 1,
-  "kasko_product_id": 1,
-  "kasko_variant_id": 1,
-  "first_name": "Matthew",
-  "last_name": "Wardle",
-  "email": "mwardle@kasko.io",
-  "created_date": "2015-09-02 15:26:45+01:00",
-  "cover_duration_days": 1,
-  "cover_start_date": "2015-09-03 00:00:00+01:00",
-  "cover_end_date": "2015-09-03 23:59:59+01:00",
-  "currency": "EUR",
-  "price": 615,
-  "gross_premium": 462
-}
-```
-
-This endpoint retrieves a single policy.
-
-### HTTP Request
-
-`GET http://example.com/policies/{kasko_policy_id}`
-
-or
-
-`GET http://example.com/policies/{insurer_policy_id}`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-kasko_policy_id | The `kasko_policy_id` of the policy to retrieve.
-insurer_policy_id | The `insurer_policy_id` of the policy to retrieve.
 
