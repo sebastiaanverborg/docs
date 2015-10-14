@@ -115,11 +115,11 @@ We are currently running on one version of the API as we have not made any break
       }
     ],
     "_links": {
-      "next":{
-        "href" : "https://api.kasko.io/api_endpoint_here/?since=1444411555&limit=20"
+      "next": {
+        "href": "https://api.kasko.io/policies/?since=1444411555&limit=1"
       },
-      "prev":{
-        "href" : "https://api.kasko.io/"
+      "prev": {
+        "href": "https://api.kasko.io/policies/?until=1444411555&limit=1"
       }
     }
   }
@@ -133,7 +133,7 @@ Responses on these endpoints split the data and pagnation information into two s
 
 * Link to the next page in pagination.   Call the href in next to get more data
 * If this has a since=?timestamp then that means there is another page of data
-* If it has ?since= then that means there are no more pages of data.
+* If there is no next then there is no more data to retrieve
 * Link to previous page of data.   If this is just the base URL then there is no previous data
 
 Use the following query string parameters to control the pagination.
@@ -141,6 +141,7 @@ Use the following query string parameters to control the pagination.
 Parameter | Type | Default | Description
 --------- | ---- | ------- | -----------
 <span class="nowrap">`since`</span> | <span class="nowrap">`integer`</span> | <span class="nowrap">`0`</span> | Time you want to retrieve data created or updated since.  Should be in format unix timestamp or 2015-10-14T12:52:46+00:00 (URL ENCODED)
+<span class="nowrap">`until`</span> | <span class="nowrap">`integer`</span> | <span class="nowrap">`0`</span> | Time you want to retrieve data created or updated until.  Should be in format unix timestamp or 2015-10-14T12:52:46+00:00 (URL ENCODED)
 <span class="nowrap">`limit`</span> | <span class="nowrap">`integer`</span> | <span class="nowrap">`20`</span> | Maximum number of results to return in the dataset.
 
 <aside class="notice">
@@ -209,136 +210,93 @@ curl "https://api.kasko.io/policies" \
   "_embedded": {
     "item": [
       {
-        "id": "2lPeMZnrB80QXVOlYrkp5LvR1W3qbojx",
-        "distributor_id": "LzBAbqkPj23W56Ye0p0rvQKGERwaNeX7",
-        "variant_id": "KP8VEOzroaqw15DnBDyd64JZ2jG7egkm",
-        "insurer_id": "4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0",
-        "payment_id": "",
-        "insurer_policy_id": "ABC-0004E",
-        "livemode": false,
-        "first_name": "n",
-        "last_name": "n",
-        "email": "nsuehr@kasko.io",
-        "amount": 539,
-        "currency": "eur",
-        "verified": false,
-        "paid": false,
-        "start_date": "2015-10-08T23:00:00+0000",
-        "end_date": "2015-10-09T22:59:59+0000",
-        "created_date": "2015-10-09T16:59:30+0000",
-        "gross_premium": 462,
-        "net_premium": 388,
-        "premium_tax": 74,
-        "net_commision_total": 78,
-        "net_commision_kasko": 78,
-        "net_commision_distributor": 0,
-        "net_net_premium": 311,
-        "total_service_charge": 77,
-        "service_charge_vat": 12,
-        "payment_transaction_fee_ex_vat": 46,
-        "payment_transaction_fee_inc_vat": 54,
-        "net_service_fee_total": 19,
-        "net_service_fee_kasko": 19,
-        "net_service_fee_distributor": 0,
-        "split_kasko": 155,
-        "split_insurer": 384,
-        "_links": {
-          "_slef": {
-            "href": ""
-          },
-          "distributor": {
-            "href": ""
-          },
-          "variant": {
-            "href": ""
-          },
-          "insurer": {
-            "href": ""
-          },
-          "payment": {
-            "href": ""
-          }
-        },
-        "assets": []
-      },
-      {
         "id": "0qGR3prv694AKBOw8Qk8PVNazDlxY7Wj",
-        "distributor_id": "LzBAbqkPj23W56Ye0p0rvQKGERwaNeX7",
-        "variant_id": "KP8VEOzroaqw15DnBDyd64JZ2jG7egkm",
-        "insurer_id": "4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0",
-        "payment_id": "2OQMpaxylZmNd1BnN7B7ezA9VYb3Prkg",
-        "insurer_policy_id": "ABC-0004F",
         "livemode": false,
+        "insurer_policy_id": "ABC-0004F",
+        "insurer_variant_id": "1",
+        "insurer_product_name": "Kasko SB-Deckung",
         "first_name": "Nikolaus",
         "last_name": "Suehr",
         "email": "nsuehr@kasko.io",
         "amount": 5794,
+        "gross_premium": 5294,
         "currency": "eur",
-        "verified": false,
-        "paid": true,
         "start_date": "2015-10-11T23:00:00+0000",
         "end_date": "2015-10-23T22:59:59+0000",
-        "created_date": "2015-10-09T17:20:43+0000",
-        "gross_premium": 5294,
-        "net_premium": 4449,
-        "premium_tax": 845,
-        "net_commision_total": 890,
-        "net_commision_kasko": 890,
-        "net_commision_distributor": 0,
-        "net_net_premium": 3559,
-        "total_service_charge": 500,
-        "service_charge_vat": 80,
-        "payment_transaction_fee_ex_vat": 198,
-        "payment_transaction_fee_inc_vat": 236,
-        "net_service_fee_total": 222,
-        "net_service_fee_kasko": 222,
-        "net_service_fee_distributor": 0,
-        "split_kasko": 1390,
-        "split_insurer": 4404,
-        "_links": {
-          "_slef": {
-            "href": ""
-          },
-          "distributor": {
-            "href": ""
-          },
-          "variant": {
-            "href": ""
-          },
-          "insurer": {
-            "href": ""
-          },
-          "payment": {
-            "href": ""
-          }
-        },
+        "created_at": "2015-10-09T17:20:43+0000",
+        "updated_at": "2015-10-09T17:25:55+0000",
         "assets": [
           {
             "name": "policy",
-            "url": "https://dhoti9gzfs9fr.cloudfront.net/policies/4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0/ABC-0004F/Policy.pdf?Expires=1444833780&Signature=ZOmNzu0iL5ayLIyJUa3CiCa5uBtUcgBq~AGY~ymjf8oqYPN7~-jC6YjlEgKmmSaVqPBAxnKZb-ujC0v3778qCewbuVZg7ydOvqojy-xn5vFn3qRR0YRrh2rCxhpHnCo~6vHjIbaaRnoKZaZQc-fy7BUHloYSmjaUiU7rypgpnjHhJPRI8i4wdAAyoa0mwQIHb~XSooFcjUvVrCQA8BC9cYUn~IJB0bX2btQIZXoT19EZKVeCPgTHR~pNP06rNwa7qlTebIo3APD1BLwMqLiWM82nnWK17k1CuYRElWIGicBh8so38BXY6pMubt797o2eVhhRF1Rd9a4coHCSFpASTg__&Key-Pair-Id=APKAJEGNM2PTOZTFTLNA"
+            "url": "https://dhoti9gzfs9fr.cloudfront.net/policies/4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0/ABC-0004F/Policy.pdf?Expires=1444850020&Signature=OoOIoyRXPMT2zSSoYtCLOsGTVrBetAJzUDGARwNTtPVMuP6joEQqo2a~kmh0wqV8KmMyBUL34tUwZcSFl6ceU8IasRANNuCLsD~M9H5dTu3r3mlaxVL68zRnf43XHr8HoKjDA2Tz0ay4AGYIe~Ssjlo5Hh4vWMFpdJ8GcGSQAWl4T0uyMtreoK04IeX0nNx1qEGVtx~McQl3j7fApl5phTyMzvaT9HHIX-WJGJvDlDI~ycCVtpd2MJopGf5SU1nZUfaRDW4jx5zubo9qE~dtVxAZ1ccxD4kU6BgO7oyXMkrdP298CFNYqYeXihu11wvVbSYwE4ibY4nkAN3Wbs2Rrw__&Key-Pair-Id=APKAJEGNM2PTOZTFTLNA"
           },
           {
             "name": "Versicherungsbedingungen",
-            "url": "https://dhoti9gzfs9fr.cloudfront.net/policies/4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0/ABC-0004F/Versicherungsbedingungen.pdf?Expires=1444833780&Signature=HhC6CKyt6rFzUrSlXRdQsaRJQzeqt5k6AoDKp1Aaqdho0DL-irZv4ZGrzedPqKOcWFrqM1kUL3W7nM8w8Trk8IqpOtS9qul4s0yBwA0vVHMkK-G4vwUOFAApLAljCTpt5I3tG0ROATsCXEO53Xf4qoUwjgIuf0m~~uO4CRcJMQBe3Vscc41bmt0b~eaNCkTBUev1uZE-ehXd~3e5Hx7i8dMnK4kSh6yU4oOI57kNxSUrApwdcRP5KEc0X2gr02Lqm9rnh~tVlACQchqV2fWrkuQmNeKu-Sh55bNPV73KYIWRWSNGTuxP9ISkkAngxsL2jHF8byZN2TB2Jt24pkoH5A__&Key-Pair-Id=APKAJEGNM2PTOZTFTLNA"
+            "url": "https://dhoti9gzfs9fr.cloudfront.net/policies/4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0/ABC-0004F/Versicherungsbedingungen.pdf?Expires=1444850020&Signature=Y5Rj0viQBGm-WggKoRs~9KBuSHgp6r6hupLCOcirIiflvtr2taKdSn7mowVfldiZ3GrV6VARwPyRyO~14K3FUFqUgWND1XMRBjDI76rlQe-dlhbLPHEbCOEPCRsaBI8o6T8Yi6KZyFszixSyut17S0gfKD8U8ZipO5qZLmcdtjQrJFALuhSp3WsUyCtN-2heq0G-YcoidQkHfDl9IUn9-bJTPwIip7q4YCCrig7yzEEHihd1qqVyHCYarBCntWcfU8Lxvl2Ty3cwDEO1e2L15zuXzmHWcw2dow3vjYTRBu7R7Vplpu9Ssm1cMW46fypHBnPDBoDtKDJeJQPcdlwPxA__&Key-Pair-Id=APKAJEGNM2PTOZTFTLNA"
           },
           {
             "name": "Produktinformation",
-            "url": "https://dhoti9gzfs9fr.cloudfront.net/policies/4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0/ABC-0004F/Produktinformation.pdf?Expires=1444833780&Signature=DUUx~YT1045uZUcY6wygNa1btqrt-Yj2jo2eYdkAPd~I4M0D3WcZDMhsVC9gFj2o8tgSbz9g5AqmAgOT3s~pXOvkH1s8MgSKX3Kz051RinTJ-xQh3~rv~6z5cgD36ZrhmAQ9gC3SRi9u1LjjH-Hf3tqJfEJgxNxsd7BRInwMz3DlfeEosKn6FkJk4cTpjNkBlFzGf588ndXp7yepy4dtzYwEVUky82EBn1Vef-ujLuJHKxs3wNR~XVFlbkm2nq3~hvHDg2~rN5VSxCpUN-NKGGckm8hZ4fmgy1GyxTfujv9Og9i4d~oV2Wr8mxYPTJNVmJwin9hEGbOwKQC5cUhNuA__&Key-Pair-Id=APKAJEGNM2PTOZTFTLNA"
+            "url": "https://dhoti9gzfs9fr.cloudfront.net/policies/4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0/ABC-0004F/Produktinformation.pdf?Expires=1444850020&Signature=RWIOSAIgQAHMLN6PFntn-jE3fQSGZMKQAvJB3~E26mpjV0xupxuTkCF5mWdW6wVNtJEbwSEnWe61VDjPHcjQPGt1jHWP6W7g5m~CSU8nHsLuJ5rgQgqXUsN-pS7lyJ2FlXpA~2xLNaxvvMHmH4eeScn-B9qRRCMriQR-nIeIKYWVO1MvmSaVETWKKYnwjocbc-lZOIreHmNy9F3-mqnh~igOwX0bf4rp-vbkrrbY24MojLfRyXJ6NZYlCqaaZuMSWtGTPyO30S9~g1wRz77Z6iF9wjD~aS7MQf~D833GpBooSK41lm1soQyY649-FWIVIM9GuqvO9v5QodnN77c~Vw__&Key-Pair-Id=APKAJEGNM2PTOZTFTLNA"
           },
           {
             "name": "Informationspflicht",
-            "url": "https://dhoti9gzfs9fr.cloudfront.net/policies/4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0/ABC-0004F/Informationspflicht.pdf?Expires=1444833780&Signature=mhJcGlWYR2RkCgSgPWVJ~1S2yTm9rmRN~TrJAKpEmwOVg1E93iuYc6z72ICnpEpK7wGyDwe8uoE4ORstHSvkhBpVW0uD26LXnkiQAy-GdIH9DJ1CEwCjppt2zN-q8fTSJoxFWakIsV0TpCtqgmWiQ4r1WKnBVll9BYX6kO6yfIGX9Wyn7qtf-UygGVtNTdo1fyoc1nuk-Zjxy-9-LRwjadBoraWGy1FfHWhKQDePhZ1cosseYIZWUh5wIciRyFhyTiA4wnh7JbUt1SCbjydOYx3qucapTIJe1LkIf47VlcjDIjUvyBzuCDFvGzrpdu0LXKyE3PWP17xkMELVjrCpaQ__&Key-Pair-Id=APKAJEGNM2PTOZTFTLNA"
+            "url": "https://dhoti9gzfs9fr.cloudfront.net/policies/4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0/ABC-0004F/Informationspflicht.pdf?Expires=1444850020&Signature=Z0pVN1Ul0luta0o-RI-zgrLW3--t9ss9KADoHF9VJ3xylP5nNv9jRT9jubjceRYJ3pwq5EIsZi5MHGj45WzV6gu~Yj2NUU51iBmqyNCLQv378cYGKcab~mGHenYKIVXUtZtE5tZz2igSeAbxL3iLmKo1h4E7IDLx7qi6n-QF0x01eYpFluBOKONsF3T1Pk8uIyhyzk1atiuQ~riNY4Rnh10MeUKLkaMW589jWlldRaVCRsMkE8V6-NJvhp288IYJiQZ0pzhW4j-AXz4LQZNP-HtZ0DOCO~HGSPfvTJcUzrKALM39VPSHXrwslj-zKhr-UT1zL2KLuo3OSpdyfGdb8g__&Key-Pair-Id=APKAJEGNM2PTOZTFTLNA"
           }
-        ]
+        ],
+        "_links": {
+          "_slef": {
+            "href": "https://api.kasko.io/policies/0qGR3prv694AKBOw8Qk8PVNazDlxY7Wj"
+          }
+        }
+      },
+      {
+        "id": "ae5lQ6pL8zP712Oo4MkKRVrN9xX0AWZb",
+        "livemode": false,
+        "insurer_policy_id": "ABC-00057",
+        "insurer_variant_id": "1",
+        "insurer_product_name": "Kasko SB-Deckung",
+        "first_name": "Matthew",
+        "last_name": "Wardle",
+        "email": "mwardle@kasko.io",
+        "amount": 9084,
+        "gross_premium": 8319,
+        "currency": "eur",
+        "start_date": "2015-10-21T23:00:00+0000",
+        "end_date": "2015-10-22T22:59:59+0000",
+        "created_at": "2015-10-14T17:50:24+0000",
+        "updated_at": "2015-10-14T17:50:50+0000",
+        "assets": [
+          {
+            "name": "policy",
+            "url": "https://dhoti9gzfs9fr.cloudfront.net/policies/4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0/ABC-00057/Policy.pdf?Expires=1444850020&Signature=PccIgUOy0xF-G0oRGKfCCxdqTr9aRcAD82vMo0MmCAeRl1urj1qBM3UtW7VYenyaOWSDQ6Wt5WihXFw3OsIsDSAbKkpxZD7P7oVqL7SN8leGUbSCEli4lNRlvTawW8to4Ow0qY-3lpenav4bWAtkbahXlPJH~fIYDeWMsirwooGS07ssJknGrsUkA~4RiKIywdcTuAGwRaElR5bU0vL4sflNvz23snpRJbCT7pxM-Ogow~diiIADPiGFUNkG9nWaH4ef2KVkyMP53ISuTcPuzBZZQRoaw635Fxu-ZeVLR763-Bwm00Ix2KUC18qRNZrVNut-DQeHUTUxuHboKXb82g__&Key-Pair-Id=APKAJEGNM2PTOZTFTLNA"
+          },
+          {
+            "name": "Versicherungsbedingungen",
+            "url": "https://dhoti9gzfs9fr.cloudfront.net/policies/4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0/ABC-00057/Versicherungsbedingungen.pdf?Expires=1444850020&Signature=lUUd5oC3eVYxJNtiLhDXG-WNkn4t6qTiaXivKGisozmJebjbCsVKUOeyqV4iRCXyU8fp~jTCPLarlGTNVBjU5GQdeqCdvzqo4-SF223wJCCC10gWGX390ea~-lxEGX-ANs13Q9MRYB1G53CRYASQQsDw3rs3T1rr8ZGAG5i18n1Xcthia49MIswqeT-SpK47W6rrk29AUL1PdGGd9qcaox5mtThfgzWqRtnZyW5fULeh5qAI28ptfY~wett-zgpgnl7PGKPL-rqvI0G1NsQpxE1ci0XiDoHruG2j0L73sXITKsKJTc0F~~EkGKDY97~iCm9oHY-kqWgby~B7qkqzOA__&Key-Pair-Id=APKAJEGNM2PTOZTFTLNA"
+          },
+          {
+            "name": "Produktinformation",
+            "url": "https://dhoti9gzfs9fr.cloudfront.net/policies/4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0/ABC-00057/Produktinformation.pdf?Expires=1444850020&Signature=JoX604LXouX9qPsAGD0jWOYGSPAmUyN~eHXq5GP0MTWowq9LApFiwMySjHHy2DJmIY7MmSR41HYjxCml39kW4RbiUoQJP~dEqfIXOQmsSOq-zDcmyx0dxeD7LBiLRZ54eST~qg3oUIBwmPC0BGc1f5JpRhBgkNkyC5H9Dtw1~5Ci7njjIoJeyRtyD4xtuteywXWlk4QsP4mi30bn1RMBG-nRGP92w6~kAxm~3bwlCcrH8Ny5yxzYOQ2-tHdycOQ0IOndfTJe5YlBhYugCpyZFLvOiGT7mKqx4ouFJ3DaT4AOfoozsvTOwpRjGT~QqFNKBREhleGTlrSljiMr20p9cQ__&Key-Pair-Id=APKAJEGNM2PTOZTFTLNA"
+          },
+          {
+            "name": "Informationspflicht",
+            "url": "https://dhoti9gzfs9fr.cloudfront.net/policies/4BRxwO3XQ2M7b9pKvydaJvKZWmEl8NG0/ABC-00057/Informationspflicht.pdf?Expires=1444850020&Signature=RtKZRTpwajYOaGBZAPPO8MdP6uGznwhSxi9jOR7wYsDCnAkPaViqPNbI5zs6INoi8dzwQf9xhb9TJrNKqpaAYaXSyQRgG570AKiH9XLid0lTzBpb0MxcA4-PtTKdcusjsVQNWcNWmqWlW~eoD97uA8jT81M-FLg0P3qvoOzhYSrf1iwRNu-bgSrq7bBnn9CgKvP7AbLZXv0GoWnxpBSblT~vSXRCtx7Zasw57848dZDcbO1I3Zf4lPtf3cOAKnuxcQTcYNMkVnMj8D63tmSscLzl0t9VmPQJ7I9aMhHmuHuHdyqSx7cjfBDZTJHepnmeA5gYnaIzRn9UAjh82pJC2w__&Key-Pair-Id=APKAJEGNM2PTOZTFTLNA"
+          }
+        ],
+        "_links": {
+          "_slef": {
+            "href": "https://api.kasko.io/policies/ae5lQ6pL8zP712Oo4MkKRVrN9xX0AWZb"
+          }
+        }
       }
     ]
   },
   "_links": {
     "next": {
-      "href": "https://api.kasko.io/policies/?since=1444411555&limit=20"
+      "href": "https://api.kasko.io/policies/?since=1444845050&limit=2"
     },
     "prev": {
-      "href": "https://api.kasko.io/"
+      "href": "https://api.kasko.io/policies/?until=1444411555&limit=2"
     }
   }
 }
