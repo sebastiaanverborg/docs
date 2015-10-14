@@ -56,6 +56,13 @@ The public key allows provides you limited access to certain endpoints so that y
 
 You can manage your API keys from your account [dashboard](https://dashboard.kasko.io). If your private key is compromised then please roll it as soon as possible.
 
+
+We use two classes of API keys.  TEST and LIVE.
+
+LIVE key will only return and create real polices
+
+TEST key is for development purposes and will create and return policies for DEV purposes.
+
 ### Authentication mechanism
 
 You authenticate API calls by providing your **secret key** or **public key** in the request.
