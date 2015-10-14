@@ -116,10 +116,10 @@ We are currently running on one version of the API as we have not made any break
     ],
     "_links": {
       "next": {
-        "href": "https://api.kasko.io/policies/?since=1444411555&limit=1"
+        "href": "https://api.kasko.io/policies/?since=1444411555&"
       },
       "prev": {
-        "href": "https://api.kasko.io/policies/?until=1444411555&limit=1"
+        "href": "https://api.kasko.io/policies/?until=1444411555&"
       }
     }
   }
@@ -298,10 +298,10 @@ curl "https://api.kasko.io/policies" \
   },
   "_links": {
     "next": {
-      "href": "https://api.kasko.io/policies/?since=1444845050&limit=2"
+      "href": "https://api.kasko.io/policies/?since=1444845050"
     },
     "prev": {
-      "href": "https://api.kasko.io/policies/?until=1444411555&limit=2"
+      "href": "https://api.kasko.io/policies/?until=1444411555"
     }
   }
 }
