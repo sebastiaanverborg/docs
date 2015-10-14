@@ -163,19 +163,22 @@ The policy object represents a purchased policy within Kasko's database. Each po
 
 Attribute | Type | Description
 --------- | ---- | -----------
-<span class="nowrap">`object`</span> | <span class="nowrap">`string`</span> | String representing the type of the object. The value is "policy".
+<span class="nowrap">`id`</span> | <span class="nowrap">`string`</span> | Kasko internal policy ID.
 <span class="nowrap">`insurer_policy_id`</span> | <span class="nowrap">`string`</span> | A policy reference for use by policyholders and insurers.
 <span class="nowrap">`insurer_product_name`</span> | <span class="nowrap">`string`</span> | The insurer reference name of insurance product used by this policy.
 <span class="nowrap">`insurer_variant_id`</span> | <span class="nowrap">`integer`</span> | The insurer reference id of the product variant used by this policy.
 <span class="nowrap">`first_name`</span> | <span class="nowrap">`string`</span> | The given name of the policyholder.
 <span class="nowrap">`last_name`</span> | <span class="nowrap">`string`</span> | The family name of the policyholder.
 <span class="nowrap">`email`</span> | <span class="nowrap">`string`</span> | The email address of the policyholder.
-<span class="nowrap">`created_date`</span> | <span class="nowrap">`string`</span> | Policy creation datetime in ISO-8601 format.
-<span class="nowrap">`start_date`</span> | <span class="nowrap">`string`</span> | Cover start datetime in ISO-8601 format.
-<span class="nowrap">`end_date`</span> | <span class="nowrap">`string`</span> | Cover end datetime in ISO-8601 format.
 <span class="nowrap">`currency`</span> | <span class="nowrap">`string`</span> | Currency code of the policy quote and subsequent transaction in ISO-4217 format.
 <span class="nowrap">`amount`</span> | <span class="nowrap">`integer`</span> | Total price paid by policyholder, expressed in the minor unit of the currency used, or the major unit if the currency has only one.
 <span class="nowrap">`gross_premium`</span> | <span class="nowrap">`integer`</span> | Gross premium of the policy expressed in the minor unit of the currency used, or the major unit if the currency has only one.
+<span class="nowrap">`status`</span> | <span class="nowrap">`integer`</span> | Status will either be PAID or Cancelled.   If a Policy is cancelled it will be returned with the new status and an update updated_at timestamp.
+<span class="nowrap">`start_date`</span> | <span class="nowrap">`string`</span> | Cover start datetime in ISO-8601 format.
+<span class="nowrap">`end_date`</span> | <span class="nowrap">`string`</span> | Cover end datetime in ISO-8601 format.
+<span class="nowrap">`created_at`</span> | <span class="nowrap">`string`</span> | Policy creation datetime in ISO-8601 format.
+<span class="nowrap">`updated_at`</span> | <span class="nowrap">`string`</span> | Time at which policy was updated.
+
 
 ## Get all policies
 
@@ -221,6 +224,7 @@ curl "https://api.kasko.io/policies" \
         "amount": 5794,
         "gross_premium": 5294,
         "currency": "eur",
+        "status": "paid",
         "start_date": "2015-10-11T23:00:00+0000",
         "end_date": "2015-10-23T22:59:59+0000",
         "created_at": "2015-10-09T17:20:43+0000",
@@ -261,6 +265,7 @@ curl "https://api.kasko.io/policies" \
         "amount": 9084,
         "gross_premium": 8319,
         "currency": "eur",
+        "status": "paid",
         "start_date": "2015-10-21T23:00:00+0000",
         "end_date": "2015-10-22T22:59:59+0000",
         "created_at": "2015-10-14T17:50:24+0000",
@@ -315,5 +320,7 @@ Please use the [standard pagination query parameters](#pagination) above to get 
 This should be polled at intervals with a ?since=time set to get the latest data.
 
 Any policy that has been updated, e.g. cancelled will also be returned.
+
+If a policy has been cancelled it's status will be updated to cancelled.
 
 
