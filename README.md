@@ -4,9 +4,9 @@ Kasko Docs
 Based on Slate - see docs below. To get up and running run these commands:
 
 Pre-requisites:
-Ruby Gem - https://rubygems.org/pages/download
-Bundler - http://bundler.io/#getting-started
-Xcode CLI tools
+- Ruby Gem - https://rubygems.org/pages/download
+- Bundler - http://bundler.io/#getting-started
+- Xcode CLI tools
 
 ```
 bundle install
