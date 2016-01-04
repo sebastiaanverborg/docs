@@ -10,11 +10,20 @@ script:
   - ./node_modules/.bin/gulp
 
 deploy:
+  provider: s3
+  access_key_id: AKIAIIQ2VSLDHREYHTQA
+  secret_access_key:
+    secure: XYSnxuSyO4bvZ1ZtACCrWSEiZHRjhKE7GGxYs772zCdTBfabCCbqxyJbSiA/fkzCtvyRJvvOBFELmeG7ShA0myXHcASSjcXuAgNjWNSaV4foEfNGiymtoixrqijntkY8Qp2CVJS2x8ENIKm8vLiJZ5PHxrW8vvjqes8wUUDwl8CCS+6qdxvXP6NeEOc4f0VG6BbGRNG0m82rZpQcmanwgH+IhnzRVgly/22ZpX1h5Z4RVEJWWb9fsUNjMd/4/sN6wX4SDGfxcKuwEHBDZP7Irwo0u/1S6joHNdm5KWJSnjBuc4CXVGIaxhlpN2CwmJhwCqNCEb++0EsG0zcJisErzWCbf8XaGxActCLEMQAfXXhlHqLhgandLkZZTcClxIU3rwxaLcYbFfj8SNOwydga9dgMOXxjeqz0NIwS99wuTQhYlQoUhKKcH0CrMbKi1naYyRWGIO8bPnKt/PUfoUwTgPuJ2ATHEfbSg8Fb2I9fzTuwfrVqkU1UyX9IeaFVzBB2hUq9PMX5uQ4xNWHC0R/7Zc+roJ1keJqw5215UHJ8cl5B1xYmx0T7f86WBdNBjQbBwFREXz2BgudFkwTrZ6v/kFpXPPl3gkcMUkWtiNc2UDuTr3+n+tOLqhoaHEAKC/LrCaP/miNsFy4a8b3n0Hkaj8oUwh6Z6YC5T4m+VXWI+2w=
+  bucket: developers.kasko.io
   skip_cleanup: true
-  provider: script
-  script: scripts/deploy.sh
+  endpoint: developers.kasko.io.s3-website-eu-west-1.amazonaws.com
+  region: eu-west-1
+  local-dir: build/
+  cache_control: "public, max-age=600"
+  detect_encoding: true
   on:
     branch: master
+    repo: kasko/docs
 
 notifications:
   slack:
