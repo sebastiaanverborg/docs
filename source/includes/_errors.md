@@ -23,17 +23,14 @@ Kasko Error Code | Description
 `PARAM_NOT_FOUND` | A required query string parameter was not found.
 `RESOURCE_NOT_FOUND` | The requested resource does not exist.
 `ENDPOINT_NOT_FOUND` | The requested API endpoint does not exist.
-`RATE_TOO_HIGH` | You are hitting the API with too many requests. Please slow down. 
+`RATE_TOO_HIGH` | You are hitting the API with too many requests. Please slow down.
 
 HTTP Code | Meaning | Description
 --------- | ------- | -----------
 200 | OK | Everything worked fine.
 400 | Bad Request | There's something wrong with your request. A required parameter is missing, or perhaps the request body is malformed.
-401 | Unauthorized | You did not supply a API key in the `Authorization: Bearer {key}` header, or your token is invalid/expired.
-403 | Forbidden | You are not allowed to access this endpoint; authenticating will make no difference.
-404 | Not Found | You requested a resource or an endpoint that does not exist.
+401 | Forbidden | You did not supply a API key in the `Authorization: Bearer {key}` header, or your token is invalid/expired..
+404 | Not Found | You requested a resource or an endpoint that does not exist or you are trying to access a resource you do not have access to.
 405 | Method Not Allowed | You used the wrong HTTP verb for the endpoint.
-406 | Not Acceptable | You requested a format that is not supported by the endpoint, i.e. not JSON
-429 | Too Many Requests | You are requesting too quickly and need to slow down. Please see [rate limiting](#rate-limiting) for more information.
 500 | Internal Server Error | We had an unexpected problem with our server. Please try again later.
 503 | Service Unavailable | We are temporarially offline for scheduled maintanance. Please try again later.
