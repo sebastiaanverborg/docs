@@ -29,9 +29,9 @@ We are always happy to hear from our users, so if you have any feedback or sugge
 
 Kasko will provide you with two Client keys: **TEST** and **LIVE**.
 
-**LIVE** key will only return and create real polices.   The Credit card entered will be charged, and a real policy will be created.
+**LIVE** key will create real polices.   The Credit card entered will be charged, and a real policy will be created.
 
-**TEST** key is for development purposes and will create and return policies for development purposes.  Only specific credit card details can be used, and no real card will be charged.
+**TEST** key is for development purposes and will create  policies for development purposes.  Only specific credit card details can be used, and no real card will be charged.
 
 ### Product Keys
 
@@ -49,7 +49,7 @@ Kasko JS is the easiest way to integrate the Kasko Widget on your page responsiv
 <script type="text/javascript" src="https://js.kasko.io"></script>
 ```
 
-Include the following JS include in the HEAD of the page or at above where you want the widget to be created.
+Include the following JS snippet in the HEAD of the page or at above where you want the widget to be created.
 
 ## 2.  Widget Containter
 
@@ -57,7 +57,7 @@ Include the following JS include in the HEAD of the page or at above where you w
 <div id="kasko-widget-container"></div>
 ```
 
-Include a container div where you want the widget to be created on the page.  This can be given any id but we have used kasko-widget-container in our example below.
+Add a container div where you want the widget to be created on the page.  This can be given any id but we have used kasko-widget-container in our example below.
 
 ## 3.  Setup Kasko JS
 
@@ -65,8 +65,8 @@ Include a container div where you want the widget to be created on the page.  Th
 <script>
   Kasko.Setup({
     container: "kasko-widget-container",
-    key: 'TEST OR LIVE CLIENT KEY',
-    product : 'PRODUCT KEY'
+    key: "TEST OR LIVE CLIENT KEY",
+    product : "PRODUCT KEY"
   });
 </script>
 ```
@@ -77,13 +77,23 @@ Below the widget container div include the widget setup javascript
 
 Parameter | Type | Description
 --------- | ---- | -----------
-container | div-id | ID of the div you want the Kasko Widget to appear in.
-key | client key | TEST or LIVE client key provided by Kasko.
-product | product key | Insurance product key provided by Kasko.
+container | string | ID of the div you want the Kasko Widget to appear in.
+key | string | TEST or LIVE client key provided by Kasko.
+product | string | Product key provided by Kasko.
 
 
 ## 4. Testing
-Please contant <a href="mailto:techsupport@kasko.io">techsupport@kasko.io</a> with the URL of your page for us to check the integration
+
+Once the Widget is working in TEST mode, you can buy a policy with these CC details
+
+Parameter | Detail
+--------- | ------
+Credit Card Number | 4111 1111 1111 1111
+CVC | 123
+Exp | 12/19
+Name | Any name above 4 chars
+
+Please contact <a href="mailto:techsupport@kasko.io">techsupport@kasko.io</a> with the URL of your page for us to check the integration
 
 ## 5. Go Live
 When testing is complete and you're ready to Go Live, please swap the Client TEST key for the Client LIVE key in your production site.
@@ -96,7 +106,7 @@ You must swap you client key with the live client key before going live.
 
 We strongly suggest using the Kasko JS method, as this script deals with making the widget responsive.
 
-If you cannot use our kasko script include please contact <a href="mailto:techsupport@kasko.io">techsupport@kasko.io</a> who will assist you with embedding the iframe directly correctly.
+If you cannot use our Kasko JS please contact <a href="mailto:techsupport@kasko.io">techsupport@kasko.io</a> who will assist you with embedding the iframe directly correctly.
 
 # REST API
 
