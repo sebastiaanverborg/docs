@@ -35,20 +35,20 @@ curl "https://api.kasko.com/api_endpoint_here"
 
 ```php
 <?php
-  $key = "your_api_key";
-    
-  curl_setopt($curl, CURLOPT_HTTPHEADER, array("Authorization: Bearer $key"));
-  curl_setopt($curl, CURLOPT_URL, "https://api.kasko.io/api_endpoint_here");
-?>
+
+$key = "your_api_key";
+
+curl_setopt($curl, CURLOPT_HTTPHEADER, array("Authorization: Bearer {$key}"));
+curl_setopt($curl, CURLOPT_URL, "https://api.kasko.io/api_endpoint_here");
 ```
 
 > Make sure to replace `your_api_key` with your API key.
 
 ### API Keys
 
-There are two types of API key: **public** and **private**. 
+There are two types of API key: **public** and **private**.
 
-The private key gives you full access to the API and should be used for requests made between your server and the Kasko server. Your private API key carries many privileges, so be sure to keep it secret! 
+The private key gives you full access to the API and should be used for requests made between your server and the Kasko server. Your private API key carries many privileges, so be sure to keep it secret!
 
 The public key allows provides you limited access to certain endpoints so that you can use the API from within your website or mobile app. The public key can be placed into javascript code and urls; it doesn't need to be protected like the private key does.
 
@@ -56,7 +56,7 @@ You can manage your API keys from your account [dashboard](https://dashboard.kas
 
 ### Authentication mechanism
 
-You authenticate API calls by providing your **secret key** or **public key** in the request. 
+You authenticate API calls by providing your **secret key** or **public key** in the request.
 
 All API requests must be made over HTTPS. Calls made over plain HTTP will fail. You must authenticate for all requests.
 
@@ -153,7 +153,7 @@ We have designed the Kasko API to be scalable and responsive. You should not enc
 
 The policy object represents a purchased policy within Kasko's database. Each policy contains the following information:
 
-* A reference used by the policyholder and insurer - the `insurer_policy_id` 
+* A reference used by the policyholder and insurer - the `insurer_policy_id`
 * The type of product and variant used
 * The policyholder's personal information
 * The date and time of the policy creation
@@ -188,21 +188,21 @@ curl "https://api.kasko.io/policies" \
 
 ```php
 <?php
-  $key = "your_api_key";
 
-  $curl = curl_init();
-  curl_setopt($curl, CURLOPT_HTTPHEADER, array("Authorization: Bearer $key"));
-  curl_setopt($curl, CURLOPT_URL, "https://api.kadsko.io/policies");
-  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+$key = "your_api_key";
 
-  if (($result = curl_exec($curl)) === false)
-  {
-    // handle error
-  }
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_HTTPHEADER, array("Authorization: Bearer {$key}"));
+curl_setopt($curl, CURLOPT_URL, "https://api.kadsko.io/policies");
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-  curl_close($curl);
-  $policies = json_decode($result);
-?>
+if (($result = curl_exec($curl)) === false)
+{
+  // handle error
+}
+
+curl_close($curl);
+$policies = json_decode($result);
 ```
 
 > The API reponse returns JSON structured like this:
@@ -293,22 +293,22 @@ curl "https://api.kasko.com/policies/123"
 
 ```php
 <?php
-  $key = "your_api_key";
-  $policyID = 123;
 
-  $curl = curl_init();
-  curl_setopt($curl, CURLOPT_HTTPHEADER, array("Authorization: Bearer $key"));
-  curl_setopt($curl, CURLOPT_URL, "https://api.kadsko.io/policies/$policyID");
-  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+$key = "your_api_key";
+$policyID = 123;
 
-  if (($result = curl_exec($curl)) === false)
-  {
-    // handle error
-  }
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_HTTPHEADER, array("Authorization: Bearer $key"));
+curl_setopt($curl, CURLOPT_URL, "https://api.kadsko.io/policies/$policyID");
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-  curl_close($curl);
-  $policy = json_decode($result);
-?>
+if (($result = curl_exec($curl)) === false)
+{
+  // handle error
+}
+
+curl_close($curl);
+$policy = json_decode($result);
 ```
 
 > The above command returns JSON structured like this:
