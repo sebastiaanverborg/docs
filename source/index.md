@@ -73,14 +73,18 @@ This can be given any id but we have used kasko-widget-container in our example 
   KASKO.Setup({
     container: "kasko-widget-container",
     key: "TEST OR LIVE CLIENT KEY",
-    product : "PRODUCT KEY"
+    product : "PRODUCT KEY",
+    data:{
+    	classified_id : "Classified ID",
+    	firstname : "Customer First Name"
+    }
   });
 </script>
 ```
 
 Below the widget container div include the widget setup javascript
 
-### Mandatory fields
+### Mandatory parameters
 These fields must be provided for the widget to load
 
 Parameter | Type | Description
@@ -89,15 +93,17 @@ container | string | ID of the div you want the KASKO Widget to appear in.
 key | string | TEST or LIVE client key provided by KASKO.
 product | string | Product key provided by KASKO.
 
-### Optional Fields
-These fields can be provided to prepopulate widget data or pass extra information
+### Optional data parameters
+These fields can be provided to the data object.
+
+These fields can prepopulate widget data or be used to pass extra information
 
 Parameter | Type | Description
 --------- | ---- | -----------
 firstname | string | Firstname of the customer - This will prepopulate in the widget
 lastname | string | Lastname of the customer - This will prepopulate in the widget
 email | string | Email Address of the customer - This will prepopulate in the widget
-license_plate | string | License plate of the car the policy is for - This will prepopulate in the widget
+registration | string | Registration plate of the car the policy is for - This will prepopulate in the widget
 classified_id | string | ID of the classified advert for the car of the policy
 
 
