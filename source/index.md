@@ -74,7 +74,7 @@ This can be given any id but we have used kasko-widget-container in our example 
     container: "kasko-widget-container",
     key: "TEST OR LIVE CLIENT KEY",
     product : "PRODUCT KEY",
-    overlayColor : "#FFFFFF",
+    overlay_color : "#FFFFFF",
     data:{
     	classified_id : "Classified ID",
     	firstname : "Customer First Name"
@@ -93,7 +93,7 @@ Parameter | required | Type |  Description
 container | yes | string | ID of the div you want the KASKO Widget to appear in.
 key | yes | string | TEST or LIVE client key provided by KASKO.
 product | yes | string | Product key provided by KASKO.
-overlayColor | no | HEX Color code | Color of the loading overlay.
+overlay_color | no | string | HEX Color code of the loading overlay.
 data | no | data object | Data object to preload data described below.
 
 ### Optional data parameters
