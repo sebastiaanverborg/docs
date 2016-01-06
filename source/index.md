@@ -17,13 +17,13 @@ search: true
 
 Welcome to the KASKO documentation.
 
-KASKO support 2 integration methods by default.
+KASKO supports 2 integration methods by default.
 
 ### 1. KASKO JS
 This integration method is used to load the KASKO Widget onto your site.  The KASKO widget is an end to end solution that will load onto your site and allow the full insurance transaction to take place.
 
 ### 2. REST API
-The REST API integration method is used for deep integrations.
+The REST API integration method is used for deep integrations (i.e. within you existing booking flow).
 
 We are always happy to hear from our users, so if you have any feedback or suggestions please <a href="mailto:techsupport@kasko.io">email our technical support desk</a>.
 
@@ -42,11 +42,11 @@ KASKO will provide you with two Client keys: **TEST** and **LIVE**.
 
 KASKO will provide you with distinct product keys for each insurance product that you have access to.
 
-This key must be provided to the KASKO JS.
+This key must be provided to the KASKO JS and REST API respectively.
 
 # KASKO JS
 
-KASKO JS is used to load and configure the KASKO widget onto your site.  KASKO JS allows handles sizing of the widget so that it works responsively in your page.
+KASKO JS is used to load and configure the KASKO widget onto your site.  KASKO JS automatically handles sizing of the widget so that it works responsively in your page.
 
 ## 1. Integration KASKO JS
 
@@ -64,7 +64,7 @@ Include the following JS snippet in the HEAD of the page or at above where you w
 
 Add a container div where you want the widget to be created on the page.
 
-This can be given any id but we have used kasko-widget-container in our example below.  This container can be set with any width, but should be left "height:auto" so that KASKO JS can handle the height responsively.
+This can be given any ID but we have used kasko-widget-container in our example below.  This container can be set with any width, but should be left "height:auto" so that KASKO JS can handle the height responsively.
 
 ## 3.  Setup KASKO JS
 
