@@ -1,0 +1,27 @@
+Introduction
+======================================
+
+Welcome to the KASKO documentation.
+
+Here you will find descriptions of using the KASKO JS ton include the widget and developer docs for using the REST API.
+
+If you have any questions please email us at techsupport@kasko.io
+
+Contents
+^^^^^^^^
+
+.. toctree::
+   :maxdepth: 2
+
+   integration_methods
+   authentication
+   products
+   kasko_js
+   rest_api
+
+
+
+
+
+
+
