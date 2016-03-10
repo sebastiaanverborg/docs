@@ -11,7 +11,7 @@ Getting started
 
 The basic steps to creating a policy are as follows.
 
-1) Set authorisation headers for all requests
+1) Set Authorization headers for all requests
 
 2) Get a Quote
 
@@ -30,7 +30,7 @@ The basic steps to creating a policy are as follows.
 
 
 
-Authorisation Header
+Authorization Header
 --------------------
 
 The request header must with your TEST or LIVE secret :ref:`keys` on every request you make to the API.
