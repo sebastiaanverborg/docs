@@ -28,8 +28,6 @@ The basic steps to creating a policy are as follows.
     Once the implementation has been completed and tested, and a go-live date has been approved by the business, you can change you key to the LIVE key.
 
 
-
-
 Authorisation Header
 --------------------
 
@@ -46,13 +44,17 @@ Get a quote from the KASKO platform
 Parameters
 ~~~~~~~~~~
 
-+------------------+------------+---------------+---------------------------------------------------------+
-| Parameter        | required   | Type          | Description                                             |
-+==================+============+===============+=========================================================+
-| variant_id       | yes        | string        |  Product key provided by KASKO.                         |
-+------------------+------------+---------------+---------------------------------------------------------+
-| data             | yes        | JSON          |  Refer to the product section here for required data    |
-+------------------+------------+---------------+---------------------------------------------------------+
++------------------+------------+---------------+----------------------------------------------------------------+
+| Parameter        | required   | Type          | Description                                                    |
++==================+============+===============+================================================================+
+| variant_id       | yes        | string        |  Variant key provided by KASKO.                                |
++------------------+------------+---------------+----------------------------------------------------------------+
+| data             | yes        | JSON          |  Refer to the :ref:`products` section for required data        |
++------------------+------------+---------------+----------------------------------------------------------------+
+
+.. code-block:: html
+
+	Note.  Please URL Encode data
 
 Example Request
 ~~~~~~~~~~~~~~~
@@ -153,7 +155,7 @@ Example Request
 
 .. code:: bash
 
-	xcurl 'https://dev-api.kasko.io/payments' \
+	curl 'https://dev-api.kasko.io/payments' \
    	-H 'Authorization: Bearer sk_test_XXX' \
    	-d "token=2FbB030Cr4ycClhFFSaxHVYmNjoztabOUVM6ZmuvF85LLd9CY4GR0xj-Py6ocbDYwMfK9MYbay29cOLRndaKCNFu7vTJq-nr0af64mmrdBvgQ-PcnQbsAlLYe475UiSfLHgwHj__4o_gFnPHMTzATDw" \
    	-d "policy_id=tmrDx615Jbe3pZEPpyLKzjyOBW80n2R7k"

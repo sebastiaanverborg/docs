@@ -186,10 +186,10 @@ Once the implementation has been completed and tested, and a go-live date has be
 <h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="18%" />
-<col width="12%" />
-<col width="15%" />
-<col width="56%" />
+<col width="17%" />
+<col width="11%" />
+<col width="14%" />
+<col width="59%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Parameter</th>
@@ -202,15 +202,18 @@ Once the implementation has been completed and tested, and a go-live date has be
 <tr class="row-even"><td>variant_id</td>
 <td>yes</td>
 <td>string</td>
-<td>Product key provided by KASKO.</td>
+<td>Variant key provided by KASKO.</td>
 </tr>
 <tr class="row-odd"><td>data</td>
 <td>yes</td>
 <td>JSON</td>
-<td>Refer to the product section here for required data</td>
+<td>Refer to the <a class="reference internal" href="products/index.html#products"><span>Products</span></a> section for required data</td>
 </tr>
 </tbody>
 </table>
+<div class="highlight-html"><div class="highlight"><pre><span></span>Note.  Please URL Encode data
+</pre></div>
+</div>
 </div>
 <div class="section" id="example-request">
 <h3>Example Request<a class="headerlink" href="#example-request" title="Permalink to this headline">¶</a></h3>
@@ -313,7 +316,7 @@ Once the implementation has been completed and tested, and a go-live date has be
 <p>This API request should be made after payment has been taken for the policy by the distirbutor.   This will trigger the KASKO platform to email the customer the Policy Documents.</p>
 <div class="section" id="id3">
 <h3>Example Request<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<div class="code bash highlight-python"><div class="highlight"><pre><span></span>xcurl &#39;https://dev-api.kasko.io/payments&#39; \
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>curl &#39;https://dev-api.kasko.io/payments&#39; \
 -H &#39;Authorization: Bearer sk_test_XXX&#39; \
 -d &quot;token=2FbB030Cr4ycClhFFSaxHVYmNjoztabOUVM6ZmuvF85LLd9CY4GR0xj-Py6ocbDYwMfK9MYbay29cOLRndaKCNFu7vTJq-nr0af64mmrdBvgQ-PcnQbsAlLYe475UiSfLHgwHj__4o_gFnPHMTzATDw&quot; \
 -d &quot;policy_id=tmrDx615Jbe3pZEPpyLKzjyOBW80n2R7k&quot;

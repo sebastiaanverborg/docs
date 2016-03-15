@@ -90,7 +90,9 @@
 <li class="toctree-l2"><a class="reference internal" href="probefahrten_schutz.html">Probefahrten-Schutz</a></li>
 <li class="toctree-l2"><a class="reference internal" href="testdrive_protect.html">Testdrive-Protect</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Travel Insurance Demo Product</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#quote-data">Quote Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daily-variants-required-quote-data">Daily Variants - Required Quote Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#annual-variants-required-quote-data">Annual Variants - Required Quote Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#optional-extra-data">Optional Extra Data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#policy-data">Policy Data</a></li>
 </ul>
 </li>
@@ -157,7 +159,7 @@
 <td>Demo test drive cover</td>
 </tr>
 <tr class="row-odd"><td>ID</td>
-<td>xxx</td>
+<td>d8ZYoyL6gBlpnJX9jx4Gkzj1wm7aKrPe</td>
 </tr>
 <tr class="row-even"><td>Language</td>
 <td>EN</td>
@@ -170,8 +172,8 @@
 </tr>
 </tbody>
 </table>
-<div class="section" id="quote-data">
-<h2>Quote Data<a class="headerlink" href="#quote-data" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="daily-variants-required-quote-data">
+<h2>Daily Variants - Required Quote Data<a class="headerlink" href="#daily-variants-required-quote-data" title="Permalink to this headline">¶</a></h2>
 <p>Query string data appended to the quote request</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -188,10 +190,51 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>duration</td>
+<tr class="row-even"><td>start_date</td>
+<td>date</td>
+<td>Policy start date in ISO 8601</td>
+<td>2016-03-16T14:05:53+01:00</td>
+</tr>
+<tr class="row-odd"><td>end_date</td>
+<td>date</td>
+<td>Policy end date in ISO 8601</td>
+<td>2016-03-16T14:05:53+01:00</td>
+</tr>
+<tr class="row-even"><td>age</td>
 <td>int</td>
-<td>Number of days for the cover</td>
-<td>1</td>
+<td>Age of customer</td>
+<td>29</td>
+</tr>
+<tr class="row-odd"><td>region</td>
+<td>string</td>
+<td>Region for cover</td>
+<td>uk|europe|world</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="annual-variants-required-quote-data">
+<h2>Annual Variants - Required Quote Data<a class="headerlink" href="#annual-variants-required-quote-data" title="Permalink to this headline">¶</a></h2>
+<p>Query string data appended to the quote request</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="57%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+<th class="head">Example Value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>start_date</td>
+<td>date</td>
+<td>Policy start date in ISO 8601</td>
+<td>2016-03-16T14:05:53+01:00</td>
 </tr>
 <tr class="row-odd"><td>age</td>
 <td>int</td>
@@ -201,12 +244,48 @@
 <tr class="row-even"><td>region</td>
 <td>string</td>
 <td>Region for cover</td>
-<td>europe|europe+usa|world</td>
+<td>uk|europe|world</td>
 </tr>
-<tr class="row-odd"><td>couple</td>
-<td>int</td>
-<td>Single person or couple</td>
-<td>0|1</td>
+</tbody>
+</table>
+</div>
+<div class="section" id="optional-extra-data">
+<h2>Optional Extra Data<a class="headerlink" href="#optional-extra-data" title="Permalink to this headline">¶</a></h2>
+<p>Optional data  appended to the quote request</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="57%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+<th class="head">Example Value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>addon_snow</td>
+<td>boolean</td>
+<td>Wintersports cover</td>
+<td>true|false</td>
+</tr>
+<tr class="row-odd"><td>addon_business</td>
+<td>boolean</td>
+<td>Business trip cover</td>
+<td>true|false</td>
+</tr>
+<tr class="row-even"><td>addon_cruise</td>
+<td>boolean</td>
+<td>Cruise Cover</td>
+<td>true|false</td>
+</tr>
+<tr class="row-odd"><td>addon_golf</td>
+<td>boolean</td>
+<td>Golf Cover</td>
+<td>true|false</td>
 </tr>
 </tbody>
 </table>
