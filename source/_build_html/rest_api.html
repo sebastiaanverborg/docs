@@ -87,7 +87,9 @@
 <li class="toctree-l1"><a class="reference internal" href="kasko_js.html">KASKO JS</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">REST API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#authorisation-header">Authorisation Header</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#authorization-header">Authorization Header</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#get-a-quote">Get a Quote</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#parameters">Parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#example-request">Example Request</a></li>
@@ -160,7 +162,7 @@
 <h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
 <p>The basic steps to creating a policy are as follows.</p>
 <ol class="arabic simple">
-<li>Set authorisation headers for all requests</li>
+<li>Set Authorization headers for all requests</li>
 <li>Get a Quote</li>
 <li>Create a Policy</li>
 <li>Convert a policy status to paid</li>
@@ -172,12 +174,12 @@ Once the implementation has been completed and tested, and a go-live date has be
 </pre></div>
 </div>
 </div>
-<div class="section" id="authorisation-header">
-<h2>Authorisation Header<a class="headerlink" href="#authorisation-header" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="authorization-header">
+<h1>Authorization Header<a class="headerlink" href="#authorization-header" title="Permalink to this headline">¶</a></h1>
 <p>The request header must with your TEST or LIVE secret <a class="reference internal" href="authentication.html#keys"><span>Keys</span></a> on every request you make to the API.</p>
 <div class="code rest highlight-python"><div class="highlight"><pre><span></span>Authorization: Bearer secret_key
 </pre></div>
-</div>
 </div>
 <div class="section" id="get-a-quote">
 <h2>Get a Quote<a class="headerlink" href="#get-a-quote" title="Permalink to this headline">¶</a></h2>
