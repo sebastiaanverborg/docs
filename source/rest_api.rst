@@ -61,7 +61,7 @@ Example Request
 
 .. code:: bash
 
-	curl 'https://dev-api.kasko.io/quotes?data=%7B%22duration%22:1%7D&variant_id=d8ZYoyL6gBlpnJX9jx4Gkzj1wm7aKrPe' \
+	curl 'https://qa-staging-api.kasko.io/quotes?data=%7B%22duration%22:1%7D&variant_id=d8ZYoyL6gBlpnJX9jx4Gkzj1wm7aKrPe' \
 	-H 'Authorization: Bearer sk_test_xxx'
 
 
@@ -106,7 +106,7 @@ Example Request
 
 .. code:: bash
 
-	curl 'https://dev-api.kasko.io/policies' \
+	curl 'https://qa-staging-api.kasko.io/policies' \
    	-H 'Authorization: Bearer sk_test_XXX' \
    	-d quote_token='XXX' \
    	-d 'first_name=Matthew' \
@@ -155,7 +155,7 @@ Example Request
 
 .. code:: bash
 
-	curl 'https://dev-api.kasko.io/payments' \
+	curl 'https://qa-staging-api.kasko.io/payments' \
    	-H 'Authorization: Bearer sk_test_XXX' \
    	-d "token=2FbB030Cr4ycClhFFSaxHVYmNjoztabOUVM6ZmuvF85LLd9CY4GR0xj-Py6ocbDYwMfK9MYbay29cOLRndaKCNFu7vTJq-nr0af64mmrdBvgQ-PcnQbsAlLYe475UiSfLHgwHj__4o_gFnPHMTzATDw" \
    	-d "policy_id=tmrDx615Jbe3pZEPpyLKzjyOBW80n2R7k"
