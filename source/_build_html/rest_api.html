@@ -89,20 +89,23 @@
 <li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#authorization-header">Authorization Header</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#get-a-quote">Get a Quote</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#definition">Definition</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#parameters">Parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#example-request">Example Request</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#example-response">Example Response</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#create-an-unpaid-policy">Create an unpaid policy</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">Parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Example Request</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">Example Response</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Example Request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Example Response</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#convert-unpaid-policy-to-paid-policy">Convert unpaid policy to paid policy</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id5">Parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">Example Request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Example Request</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#testing">Testing</a></li>
@@ -187,6 +190,12 @@
 <div class="section" id="get-a-quote">
 <h2>Get a Quote<a class="headerlink" href="#get-a-quote" title="Permalink to this headline">¶</a></h2>
 <p>Get a quote from the KASKO platform</p>
+<div class="section" id="definition">
+<h3>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>GET https://qa-staging-api.kasko.io/quotes
+</pre></div>
+</div>
+</div>
 <div class="section" id="parameters">
 <h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
@@ -223,8 +232,10 @@
 </div>
 <div class="section" id="example-request">
 <h3>Example Request<a class="headerlink" href="#example-request" title="Permalink to this headline">¶</a></h3>
-<div class="code bash highlight-python"><div class="highlight"><pre><span></span>curl &#39;https://qa-staging-api.kasko.io/quotes?data=%7B%22duration%22:1%7D&amp;variant_id=d8ZYoyL6gBlpnJX9jx4Gkzj1wm7aKrPe&#39; \
--H &#39;Authorization: Bearer sk_test_xxx&#39;
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>curl    --get &#39;https://qa-staging-api.kasko.io/quotes&#39; \
+        --data &#39;variant_id=VARIANT_ID&#39; \
+        --data-urlencode &#39;data=DATA&#39; \
+        -H &#39;Authorization: Bearer sk_test_SECRET_KEY&#39;
 </pre></div>
 </div>
 </div>
@@ -248,7 +259,13 @@
 <p>Create an unpaid policy on the Kasko platform.</p>
 <p>Why do we do this 2 step mechanism?   We want to ensure that there is no problem with the quote or details before you charge your customers for the policy.  After this point we can ensure that the policy can be purchased.</p>
 <div class="section" id="id2">
-<h3>Parameters<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3>Definition<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>POST https://qa-staging-api.kasko.io/policies
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>Parameters<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -292,20 +309,20 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id3">
-<h3>Example Request<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h3>Example Request<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>curl &#39;https://qa-staging-api.kasko.io/policies&#39; \
--H &#39;Authorization: Bearer sk_test_XXX&#39; \
--d quote_token=&#39;XXX&#39; \
--d &#39;first_name=Matthew&#39; \
--d &#39;last_name=Wardle&#39; \
--d &#39;email=mwardle@kasko.io&#39; \
--d &#39;data={&quot;registration&quot;:&quot;XXX&quot;}&#39;
+        -H &#39;Authorization: Bearer sk_test_SECRET_KEY&#39; \
+        -d quote_token=&#39;QUOTE_TOKEN&#39; \
+        -d &#39;first_name=FIRSTNAME&#39; \
+        -d &#39;last_name=SURNAME&#39; \
+        -d &#39;email=EMAIL_ADDRESS&#39; \
+        -d &#39;data=DATA&#39;
 </pre></div>
 </div>
 </div>
-<div class="section" id="id4">
-<h3>Example Response<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h3>Example Response<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <div class="code javascript highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;tmGgyzWx47B5qY6wXMLPNREA9dDnOQVZ3&quot;</span><span class="p">,</span>
   <span class="s2">&quot;payment_token&quot;</span><span class="p">:</span> <span class="s2">&quot;2pwqBTy+79gK/dKuJmRjC1yTk7jx5zvuh5tn34139GiOd8irZuuTB6ViTKyRMNW8VcctGzDAn+QQf9fHOjdowpE67GHEFFuy4X+QFfx87qlg=&quot;</span><span class="p">,</span>
@@ -323,8 +340,14 @@
 <h2>Convert unpaid policy to paid policy<a class="headerlink" href="#convert-unpaid-policy-to-paid-policy" title="Permalink to this headline">¶</a></h2>
 <p>Convert an already created policy to a paid policy.</p>
 <p>This API request should be made after payment has been taken for the policy by the distirbutor.   This will trigger the KASKO platform to email the customer the Policy Documents.</p>
-<div class="section" id="id5">
-<h3>Parameters<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id6">
+<h3>Definition<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>POST https://qa-staging-api.kasko.io/payments
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>Parameters<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -348,22 +371,17 @@
 <tr class="row-odd"><td>policy_id</td>
 <td>yes</td>
 <td>string</td>
-<td>First Name of the customer</td>
-</tr>
-<tr class="row-even"><td>provider</td>
-<td>yes</td>
-<td>string</td>
-<td>Last Name of the customer</td>
+<td>Policy ID from /policy endpoint</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="id6">
-<h3>Example Request<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id8">
+<h3>Example Request<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>curl &#39;https://qa-staging-api.kasko.io/payments&#39; \
--H &#39;Authorization: Bearer sk_test_XXX&#39; \
--d &quot;token=2FbB030Cr4ycClhFFSaxHVYmNjoztabOUVM6ZmuvF85LLd9CY4GR0xj-Py6ocbDYwMfK9MYbay29cOLRndaKCNFu7vTJq-nr0af64mmrdBvgQ-PcnQbsAlLYe475UiSfLHgwHj__4o_gFnPHMTzATDw&quot; \
--d &quot;policy_id=tmrDx615Jbe3pZEPpyLKzjyOBW80n2R7k&quot;
+-H &#39;Authorization: Bearer sk_test_SECRET_KEY&#39; \
+-d &quot;token=PAYMENT_TOKEN&quot; \
+-d &quot;policy_id=POLICY_ID&quot;
 </pre></div>
 </div>
 </div>

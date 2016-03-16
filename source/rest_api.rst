@@ -41,6 +41,12 @@ Get a Quote
 --------------------
 Get a quote from the KASKO platform
 
+Definition
+~~~~~~~~~~
+.. code:: bash
+
+	GET https://qa-staging-api.kasko.io/quotes
+
 Parameters
 ~~~~~~~~~~
 
@@ -59,8 +65,10 @@ Example Request
 
 .. code:: bash
 
-	curl 'https://qa-staging-api.kasko.io/quotes?data=%7B%22duration%22:1%7D&variant_id=d8ZYoyL6gBlpnJX9jx4Gkzj1wm7aKrPe' \
-	-H 'Authorization: Bearer sk_test_xxx'
+	curl 	--get 'https://qa-staging-api.kasko.io/quotes' \
+		--data 'variant_id=VARIANT_ID' \
+		--data-urlencode 'data=DATA' \
+		-H 'Authorization: Bearer sk_test_SECRET_KEY'
 
 
 
@@ -85,6 +93,13 @@ Create an unpaid policy on the Kasko platform.
 
 Why do we do this 2 step mechanism?   We want to ensure that there is no problem with the quote or details before you charge your customers for the policy.  After this point we can ensure that the policy can be purchased.
 
+Definition
+~~~~~~~~~~
+.. code:: bash
+
+	POST https://qa-staging-api.kasko.io/policies
+
+
 Parameters
 ~~~~~~~~~~
 +------------------+------------+---------------+---------------------------------------------------------+
@@ -107,12 +122,12 @@ Example Request
 .. code:: bash
 
 	curl 'https://qa-staging-api.kasko.io/policies' \
-   	-H 'Authorization: Bearer sk_test_XXX' \
-   	-d quote_token='XXX' \
-   	-d 'first_name=Matthew' \
-   	-d 'last_name=Wardle' \
-   	-d 'email=mwardle@kasko.io' \
-   	-d 'data={"registration":"XXX"}'
+   		-H 'Authorization: Bearer sk_test_SECRET_KEY' \
+   		-d quote_token='QUOTE_TOKEN' \
+   		-d 'first_name=FIRSTNAME' \
+   		-d 'last_name=SURNAME' \
+   		-d 'email=EMAIL_ADDRESS' \
+   		-d 'data=DATA'
 
 
 
@@ -140,6 +155,13 @@ Convert an already created policy to a paid policy.
 
 This API request should be made after payment has been taken for the policy by the distirbutor.   This will trigger the KASKO platform to email the customer the Policy Documents.
 
+Definition
+~~~~~~~~~~
+.. code:: bash
+
+	POST https://qa-staging-api.kasko.io/payments
+
+
 Parameters
 ~~~~~~~~~~
 
@@ -148,9 +170,7 @@ Parameters
 +==================+============+===============+=========================================================+
 | payment_token    | yes        | string        |  Payment token from /policy endpoint                    |
 +------------------+------------+---------------+---------------------------------------------------------+
-| policy_id        | yes        | string        |  First Name of the customer                             |
-+------------------+------------+---------------+---------------------------------------------------------+
-| provider         | yes        | string        |  Last Name of the customer                              |
+| policy_id        | yes        | string        |  Policy ID from /policy endpoint                        |
 +------------------+------------+---------------+---------------------------------------------------------+
 
 Example Request
@@ -159,9 +179,9 @@ Example Request
 .. code:: bash
 
 	curl 'https://qa-staging-api.kasko.io/payments' \
-   	-H 'Authorization: Bearer sk_test_XXX' \
-   	-d "token=2FbB030Cr4ycClhFFSaxHVYmNjoztabOUVM6ZmuvF85LLd9CY4GR0xj-Py6ocbDYwMfK9MYbay29cOLRndaKCNFu7vTJq-nr0af64mmrdBvgQ-PcnQbsAlLYe475UiSfLHgwHj__4o_gFnPHMTzATDw" \
-   	-d "policy_id=tmrDx615Jbe3pZEPpyLKzjyOBW80n2R7k"
+   	-H 'Authorization: Bearer sk_test_SECRET_KEY' \
+   	-d "token=PAYMENT_TOKEN" \
+   	-d "policy_id=POLICY_ID"
 
 
 Testing
