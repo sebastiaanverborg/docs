@@ -18,6 +18,8 @@ REST API
 The REST API integration method is used for deep integrations
 (i.e. within you existing booking flow).
 
+Get started with  :ref:`rest_api` here
+
 We are always happy to hear from our users, so if you have any feedback
 or suggestions please email our technical support desk.
 
