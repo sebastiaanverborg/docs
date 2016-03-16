@@ -1,6 +1,9 @@
 Travel Insurance Demo Product
 =============================
 
+Product Information
+-------------------
+
 .. csv-table::
    :widths: 50, 50
 
@@ -11,8 +14,21 @@ Travel Insurance Demo Product
    "Region", "All"
    "Live", "No"
 
+Variants
+-------------------
 
-Daily Variants - Required Quote Data
+.. csv-table::
+   :widths: 50, 50
+   :header: "Variant ID", "Description"
+
+   "KJAR5gL1GY0j6QDGrM72z3v9yoO8VkBq", "Single Trip - Standard product"
+   "mB3R2EAL58b9qzXgzDOya7l6GneWgwpY", "Single Trip - Premium product"
+   "pgzP7GyB5WbENADQRXl2VqenJ3r9m6ZR", "Annual Cover - Standard product"
+   "4yrpmKnL8vqW9bMkLD26JO5olRYB17GP", "Annual Cover - Premium product"
+
+
+
+Single Trip Variants - Required Quote Data
 ------------------------------------
 Query string data appended to the quote request
 
