@@ -26,9 +26,8 @@ KASKO will provide you with two Secret keys to be used with the KASKO REST API.
 **LIVE** key is to create real policies. Once the distributor confirms that payment has been received real insurance policies will be
 created.
 
-.. code:: html
-
-	These keys must be stored securely as they allowing issuing of policies
+.. warning::
+	Secret keys must be stored securely as they allowing issuing of policies
 	for which payment will be owed by the distributor
 
 	If you are concerned about the security of one of your secret keys

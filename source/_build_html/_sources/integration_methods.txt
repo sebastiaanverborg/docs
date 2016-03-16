@@ -6,6 +6,8 @@ KASKO supports 2 integration methods by default.
 KASKO JS
 ~~~~~~~~~~~
 
+.. image:: /_static/widget.jpg
+
 This integration method is used to load the KASKO Widget onto your site.
 The KASKO widget is an end to end solution that will load onto your site
 and allow the full insurance transaction to take place.
