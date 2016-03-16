@@ -123,6 +123,4 @@ Go Live
 When testing is complete and you're ready to Go Live, please swap the
 Client TEST key for the Client LIVE key in your production site.
 
-.. code-block:: html
-
-    You must swap you client key with the live client key before going live.
+.. note:: You must swap you client key with the LIVE client key before going live.
