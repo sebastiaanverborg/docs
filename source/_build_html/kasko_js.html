@@ -97,7 +97,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="rest_api.html">REST API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rest_api.html#authorization-header">Authorization Header</a></li>
 <li class="toctree-l1"><a class="reference internal" href="products/index.html">Products</a></li>
 </ul>
 
@@ -176,8 +175,8 @@ left “height:auto” so that KASKO JS can handle the height responsively.</p>
     product : &quot;PRODUCT KEY&quot;,
     overlay_color : &quot;#FFFFFF&quot;,
     data:{
-        classified_id : &quot;Classified ID&quot;,
-        firstname : &quot;Customer First Name&quot;
+        optional_data_name : &quot;optional_data_value&quot;,
+        agent_id : &quot;Agent&#39;s ID&quot;
     }
   });
 &lt;/script&gt;
@@ -266,6 +265,10 @@ left “height:auto” so that KASKO JS can handle the height responsively.</p>
 <tr class="row-even"><td>classified_id</td>
 <td>string</td>
 <td>ID of the classified advert for the car of the policy</td>
+</tr>
+<tr class="row-odd"><td>agent_id</td>
+<td>string</td>
+<td>ID of the agent</td>
 </tr>
 </tbody>
 </table>

@@ -45,8 +45,8 @@ Setup KASKO JS
         product : "PRODUCT KEY",
         overlay_color : "#FFFFFF",
         data:{
-            classified_id : "Classified ID",
-            firstname : "Customer First Name"
+            optional_data_name : "optional_data_value",
+            agent_id : "Agent's ID"
         }
       });
     </script>
@@ -93,6 +93,8 @@ These fields can prepopulate widget data or be used to pass extra information
 | registration     | string        | Registration plate of the car the policy is for - This will prepopulate in the widget   |
 +------------------+---------------+-----------------------------------------------------------------------------------------+
 | classified_id    | string        | ID of the classified advert for the car of the policy                                   |
++------------------+---------------+-----------------------------------------------------------------------------------------+
+| agent_id         | string        | ID of the agent                                                                         |
 +------------------+---------------+-----------------------------------------------------------------------------------------+
 
 

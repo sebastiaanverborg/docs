@@ -179,9 +179,9 @@ Example Request
 .. code:: bash
 
 	curl 'https://qa-staging-api.kasko.io/payments' \
-   	-H 'Authorization: Bearer sk_test_SECRET_KEY' \
-   	-d "token=PAYMENT_TOKEN" \
-   	-d "policy_id=POLICY_ID"
+   		-H 'Authorization: Bearer sk_test_SECRET_KEY' \
+   		-d "token=PAYMENT_TOKEN" \
+   		-d "policy_id=POLICY_ID"
 
 
 Testing
