@@ -1,5 +1,5 @@
 Probefahrten-Schutz
-===================
+=============================================
 
 Probefahrten-Schutz (Test drive cover)
 
@@ -9,10 +9,10 @@ Probefahrten-Schutz (Test drive cover)
 
    "Name", "Probefahrten-Schutz"
    "Description", "German test drive cover"
-   "ID", "xxx"
+   "ID", "KP8VEOzroaqw15DnBDyd64JZ2jG7egkm"
    "Language", "DE"
    "Region", "DE"
-   "Live", "True"
+   "Live", "Yes"
 
 
 Quote Data

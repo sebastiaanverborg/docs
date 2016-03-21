@@ -1,18 +1,18 @@
-Probefahrten-Schutz
+Drittfahrer-Schutz (Barmenia Direct Version)
 =============================================
 
-Probefahrten-Schutz (Test drive cover)
+Drittfahrer-Schutz (Test drive cover)
 
 
 .. csv-table::
    :widths: 50, 50
 
-   "Name", "Probefahrten-Schutz"
+   "Name", "Drittfahrer-Schutz"
    "Description", "German test drive cover"
-   "ID", "KP8VEOzroaqw15DnBDyd64JZ2jG7egkm"
+   "ID", ""
    "Language", "DE"
    "Region", "DE"
-   "Live", "Yes"
+   "Live", "No"
 
 
 Quote Data

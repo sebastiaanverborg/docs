@@ -1,5 +1,6 @@
-Probefahrten-Schutz
+Probefahrten-Schutz (Barmenia Direct Version)
 =============================================
+
 
 Probefahrten-Schutz (Test drive cover)
 
@@ -12,7 +13,7 @@ Probefahrten-Schutz (Test drive cover)
    "ID", "KP8VEOzroaqw15DnBDyd64JZ2jG7egkm"
    "Language", "DE"
    "Region", "DE"
-   "Live", "Yes"
+   "Live", "No"
 
 
 Quote Data
