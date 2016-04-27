@@ -29,7 +29,7 @@ Variants
 
 
 Single Trip Variants - Required Quote Data
-------------------------------------
+------------------------------------------
 Query string data appended to the quote request
 
 .. csv-table::

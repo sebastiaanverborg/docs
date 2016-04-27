@@ -85,7 +85,7 @@
 <li class="toctree-l1"><a class="reference internal" href="integration_methods.html">Integration Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="authentication.html">Keys</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kasko_js.html">KASKO JS</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">REST API</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">REST API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#authorization-header">Authorization Header</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#get-a-quote">Get a Quote</a><ul>
@@ -135,7 +135,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -182,8 +182,8 @@
 </div>
 <div class="section" id="authorization-header">
 <h2>Authorization Header<a class="headerlink" href="#authorization-header" title="Permalink to this headline">¶</a></h2>
-<p>The request header must with your TEST or LIVE secret <a class="reference internal" href="authentication.html#keys"><span>Keys</span></a> on every request you make to the API.</p>
-<div class="code rest highlight-python"><div class="highlight"><pre><span></span>Authorization: Bearer secret_key
+<p>The request header must with your TEST or LIVE secret <a class="reference internal" href="authentication.html#keys"><span class="std std-ref">Keys</span></a> on every request you make to the API.</p>
+<div class="code rest highlight-default"><div class="highlight"><pre><span></span><span class="n">Authorization</span><span class="p">:</span> <span class="n">Bearer</span> <span class="n">secret_key</span>
 </pre></div>
 </div>
 </div>
@@ -192,7 +192,7 @@
 <p>Get a quote from the KASKO platform</p>
 <div class="section" id="definition">
 <h3>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
-<div class="code bash highlight-python"><div class="highlight"><pre><span></span>GET https://qa-staging-api.kasko.io/quotes
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">GET</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">qa</span><span class="o">-</span><span class="n">staging</span><span class="o">-</span><span class="n">api</span><span class="o">.</span><span class="n">kasko</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">quotes</span>
 </pre></div>
 </div>
 </div>
@@ -221,7 +221,7 @@
 <tr class="row-odd"><td>data</td>
 <td>yes</td>
 <td>JSON</td>
-<td>Refer to the <a class="reference internal" href="products/index.html#products"><span>Products</span></a> section for required data</td>
+<td>Refer to the <a class="reference internal" href="products/index.html#products"><span class="std std-ref">Products</span></a> section for required data</td>
 </tr>
 </tbody>
 </table>
@@ -232,16 +232,16 @@
 </div>
 <div class="section" id="example-request">
 <h3>Example Request<a class="headerlink" href="#example-request" title="Permalink to this headline">¶</a></h3>
-<div class="code bash highlight-python"><div class="highlight"><pre><span></span>curl    --get &#39;https://qa-staging-api.kasko.io/quotes&#39; \
-        --data &#39;variant_id=VARIANT_ID&#39; \
-        --data-urlencode &#39;data=DATA&#39; \
-        -H &#39;Authorization: Bearer sk_test_SECRET_KEY&#39;
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">curl</span>    <span class="o">--</span><span class="n">get</span> <span class="s1">&#39;https://qa-staging-api.kasko.io/quotes&#39;</span> \
+        <span class="o">--</span><span class="n">data</span> <span class="s1">&#39;variant_id=VARIANT_ID&#39;</span> \
+        <span class="o">--</span><span class="n">data</span><span class="o">-</span><span class="n">urlencode</span> <span class="s1">&#39;data=DATA&#39;</span> \
+        <span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Authorization: Bearer sk_test_SECRET_KEY&#39;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-response">
 <h3>Example Response<a class="headerlink" href="#example-response" title="Permalink to this headline">¶</a></h3>
-<div class="code javascript highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="code javascript highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
         <span class="s2">&quot;gross_premium&quot;</span><span class="p">:</span> <span class="mi">699</span><span class="p">,</span>
         <span class="s2">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;eur&quot;</span><span class="p">,</span>
         <span class="s2">&quot;net_premium&quot;</span><span class="p">:</span> <span class="mi">587</span><span class="p">,</span>
@@ -260,7 +260,7 @@
 <p>Why do we do this 2 step mechanism?   We want to ensure that there is no problem with the quote or details before you charge your customers for the policy.  After this point we can ensure that the policy can be purchased.</p>
 <div class="section" id="id2">
 <h3>Definition<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<div class="code bash highlight-python"><div class="highlight"><pre><span></span>POST https://qa-staging-api.kasko.io/policies
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">POST</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">qa</span><span class="o">-</span><span class="n">staging</span><span class="o">-</span><span class="n">api</span><span class="o">.</span><span class="n">kasko</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">policies</span>
 </pre></div>
 </div>
 </div>
@@ -311,19 +311,19 @@
 </div>
 <div class="section" id="id4">
 <h3>Example Request<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<div class="code bash highlight-python"><div class="highlight"><pre><span></span>curl &#39;https://qa-staging-api.kasko.io/policies&#39; \
-        -H &#39;Authorization: Bearer sk_test_SECRET_KEY&#39; \
-        -d quote_token=&#39;QUOTE_TOKEN&#39; \
-        -d &#39;first_name=FIRSTNAME&#39; \
-        -d &#39;last_name=SURNAME&#39; \
-        -d &#39;email=EMAIL_ADDRESS&#39; \
-        -d &#39;data=DATA&#39;
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="s1">&#39;https://qa-staging-api.kasko.io/policies&#39;</span> \
+        <span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Authorization: Bearer sk_test_SECRET_KEY&#39;</span> \
+        <span class="o">-</span><span class="n">d</span> <span class="n">quote_token</span><span class="o">=</span><span class="s1">&#39;QUOTE_TOKEN&#39;</span> \
+        <span class="o">-</span><span class="n">d</span> <span class="s1">&#39;first_name=FIRSTNAME&#39;</span> \
+        <span class="o">-</span><span class="n">d</span> <span class="s1">&#39;last_name=SURNAME&#39;</span> \
+        <span class="o">-</span><span class="n">d</span> <span class="s1">&#39;email=EMAIL_ADDRESS&#39;</span> \
+        <span class="o">-</span><span class="n">d</span> <span class="s1">&#39;data=DATA&#39;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id5">
 <h3>Example Response<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<div class="code javascript highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="code javascript highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;tmGgyzWx47B5qY6wXMLPNREA9dDnOQVZ3&quot;</span><span class="p">,</span>
   <span class="s2">&quot;payment_token&quot;</span><span class="p">:</span> <span class="s2">&quot;2pwqBTy+79gK/dKuJmRjC1yTk7jx5zvuh5tn34139GiOd8irZuuTB6ViTKyRMNW8VcctGzDAn+QQf9fHOjdowpE67GHEFFuy4X+QFfx87qlg=&quot;</span><span class="p">,</span>
   <span class="s2">&quot;_links&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -342,7 +342,7 @@
 <p>This API request should be made after payment has been taken for the policy by the distirbutor.   This will trigger the KASKO platform to email the customer the Policy Documents.</p>
 <div class="section" id="id6">
 <h3>Definition<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
-<div class="code bash highlight-python"><div class="highlight"><pre><span></span>POST https://qa-staging-api.kasko.io/payments
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">POST</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">qa</span><span class="o">-</span><span class="n">staging</span><span class="o">-</span><span class="n">api</span><span class="o">.</span><span class="n">kasko</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">payments</span>
 </pre></div>
 </div>
 </div>
@@ -378,10 +378,10 @@
 </div>
 <div class="section" id="id8">
 <h3>Example Request<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
-<div class="code bash highlight-python"><div class="highlight"><pre><span></span>curl &#39;https://qa-staging-api.kasko.io/payments&#39; \
--H &#39;Authorization: Bearer sk_test_SECRET_KEY&#39; \
--d &quot;token=PAYMENT_TOKEN&quot; \
--d &quot;policy_id=POLICY_ID&quot;
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="s1">&#39;https://qa-staging-api.kasko.io/payments&#39;</span> \
+<span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Authorization: Bearer sk_test_SECRET_KEY&#39;</span> \
+<span class="o">-</span><span class="n">d</span> <span class="s2">&quot;token=PAYMENT_TOKEN&quot;</span> \
+<span class="o">-</span><span class="n">d</span> <span class="s2">&quot;policy_id=POLICY_ID&quot;</span>
 </pre></div>
 </div>
 </div>
