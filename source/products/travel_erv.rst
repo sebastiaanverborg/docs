@@ -39,6 +39,8 @@ Query string data appended to the quote request
    "trip_price", "int", "Trip price in cents", "20000"
    "number_of_assured", "int", "Number of travelers", "2"
    "georegion", "char", "Travel destination (e for Europe or w for worldwide)", "e"
+   "start_date", "string", "Trip start date", "01/12/2016 00:00:00"
+   "end_date", "string", "Trip end date", "09/12/2016 00:00:00"
 
 
 Policy Data
@@ -48,17 +50,15 @@ JSON data posted to /policies on creation of policy
 .. csv-table::
    :header: "Name", "Type", "Description", "Example Value"
    :widths: 20, 20, 80, 20
-
-   "start_date", "string", "Trip start date", "01/12/2016 00:00:00"
-   "end_date", "string", "Trip end date", "09/12/2016 00:00:00"
    "travelers.*.first_name", "string", "Array of traveler first names", "John"
+   "travelers.*.last_name", "string", "Array of traveler last names", "Doe"
    "city", "string", "City", "n/a"
    "street", "string", "Street", "n/a"
    "zipcode", "string", "Zipcode", "n/a"
 
 --------------------------------------------------------------------------------
 
-ERV FR - Reise
+ERV GB - Reise
 --------------
 
 Product Information
@@ -67,10 +67,10 @@ Product Information
 .. csv-table::
    :widths: 50, 50
 
-   "Name", "ERV FR - Reise"
-   "Description", "ERV FR - Reise"
-   "ID", "g9rVJqB3lE15zoXLveMK8kbp0RmZOW6Q"
-   "Language", "FR"
+   "Name", "ERV GB - Reise"
+   "Description", "ERV GB - Reise"
+   "ID", "WKLe03JjQRwmZzDY6lX7Ob4NPlk8rpyv"
+   "Language", "GB"
    "Region", "All"
    "Live", "No"
 
@@ -81,8 +81,8 @@ Variants
    :widths: 50, 50
    :header: "Variant ID", "Description"
 
-   "KJAR5gL1GY0j6QDGbrM72z3v9yoO8VkB", "ERV FR Package"
-   "d2leL7QmGaOyz4M3RBxPgrkVBEqK6RJZ", "ERV FR Cancelation"
+   "RQA8lkzNvBLb0pDbjYDyP16Go3Wwe4qn", "ERV GB Package"
+   "9znERVLG5Wwk3dXdV6MBPyJ4vQrpAb0e", "ERV GB Cancelation"
 
 Quote Data
 ^^^^^^^^^^
@@ -95,6 +95,8 @@ Query string data appended to the quote request
    "trip_price", "int", "Trip price in cents", "20000"
    "number_of_assured", "int", "Number of travelers", "2"
    "georegion", "char", "Travel destination (e for Europe or w for worldwide)", "e"
+   "start_date", "string", "Trip start date", "01/12/2016 00:00:00"
+   "end_date", "string", "Trip end date", "09/12/2016 00:00:00"
 
 
 Policy Data
@@ -105,9 +107,8 @@ JSON data posted to /policies on creation of policy
    :header: "Name", "Type", "Description", "Example Value"
    :widths: 20, 20, 80, 20
 
-   "start_date", "string", "Trip start date", "01/12/2016 00:00:00"
-   "end_date", "string", "Trip end date", "09/12/2016 00:00:00"
    "travelers.*.first_name", "string", "Array of traveler first names", "John"
+   "travelers.*.last_name", "string", "Array of traveler last names", "Doe"
    "city", "string", "City", "n/a"
    "street", "string", "Street", "n/a"
    "zipcode", "string", "Zipcode", "n/a"
