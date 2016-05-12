@@ -37,8 +37,8 @@ Query string data appended to the quote request
    :widths: 20, 20, 80, 20
 
    "trip_price", "int", "Trip price in cents", "20000"
-   "number_of_assured", "int", "Number of travelers", "2"
-   "georegion", "char", "Travel destination (e for Europe or w for worldwide)", "e"
+   "number_of_insured", "int", "Number of travelers", "2"
+   "georegion", "char", "Travel destination (europe or worldwide)", "europe"
    "start_date", "string", "Trip start date", "01/12/2016 00:00:00"
    "end_date", "string", "Trip end date", "09/12/2016 00:00:00"
 
@@ -50,11 +50,8 @@ JSON data posted to /policies on creation of policy
 .. csv-table::
    :header: "Name", "Type", "Description", "Example Value"
    :widths: 20, 20, 80, 20
-   "travelers.*.first_name", "string", "Array of traveler first names", "John"
-   "travelers.*.last_name", "string", "Array of traveler last names", "Doe"
-   "city", "string", "City", "n/a"
-   "street", "string", "Street", "n/a"
-   "zipcode", "string", "Zipcode", "n/a"
+   "travelers.*.first_name", "string", "Array of traveler first names (excluding the policy holder)", "John"
+   "travelers.*.last_name", "string", "Array of traveler last names (excluding the policy holder)", "Doe"
 
 --------------------------------------------------------------------------------
 
@@ -93,8 +90,8 @@ Query string data appended to the quote request
    :widths: 20, 20, 80, 20
 
    "trip_price", "int", "Trip price in cents", "20000"
-   "number_of_assured", "int", "Number of travelers", "2"
-   "georegion", "char", "Travel destination (e for Europe or w for worldwide)", "e"
+   "number_of_insured", "int", "Number of travelers", "2"
+   "georegion", "char", "Travel destination (europe or worldwide)", "europe"
    "start_date", "string", "Trip start date", "01/12/2016 00:00:00"
    "end_date", "string", "Trip end date", "09/12/2016 00:00:00"
 
@@ -107,8 +104,5 @@ JSON data posted to /policies on creation of policy
    :header: "Name", "Type", "Description", "Example Value"
    :widths: 20, 20, 80, 20
 
-   "travelers.*.first_name", "string", "Array of traveler first names", "John"
-   "travelers.*.last_name", "string", "Array of traveler last names", "Doe"
-   "city", "string", "City", "n/a"
-   "street", "string", "Street", "n/a"
-   "zipcode", "string", "Zipcode", "n/a"
+   "travelers.*.first_name", "string", "Array of traveler first names (excluding the policy holder)", "John"
+   "travelers.*.last_name", "string", "Array of traveler last names (excluding the policy holder)", "Doe"
