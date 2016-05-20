@@ -45,7 +45,7 @@ Definition
 ~~~~~~~~~~
 .. code:: bash
 
-	GET https://qa-staging-api.kasko.io/quotes
+	GET https://api.kasko.io/quotes
 
 Parameters
 ~~~~~~~~~~
@@ -65,7 +65,7 @@ Example Request
 
 .. code:: bash
 
-	curl 	--get 'https://qa-staging-api.kasko.io/quotes' \
+	curl 	--get 'https://api.kasko.io/quotes' \
 		--data 'variant_id=VARIANT_ID' \
 		--data-urlencode 'data=DATA' \
 		-H 'Authorization: Bearer sk_test_SECRET_KEY'
@@ -97,7 +97,7 @@ Definition
 ~~~~~~~~~~
 .. code:: bash
 
-	POST https://qa-staging-api.kasko.io/policies
+	POST https://api.kasko.io/policies
 
 
 Parameters
@@ -121,7 +121,7 @@ Example Request
 
 .. code:: bash
 
-	curl 'https://qa-staging-api.kasko.io/policies' \
+	curl 'https://api.kasko.io/policies' \
    		-H 'Authorization: Bearer sk_test_SECRET_KEY' \
    		-d quote_token='QUOTE_TOKEN' \
    		-d 'first_name=FIRSTNAME' \
@@ -141,7 +141,7 @@ Example Response
 	  "payment_token": "2pwqBTy+79gK/dKuJmRjC1yTk7jx5zvuh5tn34139GiOd8irZuuTB6ViTKyRMNW8VcctGzDAn+QQf9fHOjdowpE67GHEFFuy4X+QFfx87qlg=",
 	  "_links": {
 	    "_self": {
-	      "href": "https://dev-api.kasko.io/policies/tmGgyzWx47B5qY6wXMLPNREA9dDnOQVZ3"
+	      "href": "https://api.kasko.io/policies/tmGgyzWx47B5qY6wXMLPNREA9dDnOQVZ3"
 	    }
 	  }
 	}
@@ -159,7 +159,7 @@ Definition
 ~~~~~~~~~~
 .. code:: bash
 
-	POST https://qa-staging-api.kasko.io/payments
+	POST https://api.kasko.io/payments
 
 
 Parameters
@@ -178,7 +178,7 @@ Example Request
 
 .. code:: bash
 
-	curl 'https://qa-staging-api.kasko.io/payments' \
+	curl 'https://api.kasko.io/payments' \
    	-H 'Authorization: Bearer sk_test_SECRET_KEY' \
    	-d "token=PAYMENT_TOKEN" \
    	-d "policy_id=POLICY_ID"
