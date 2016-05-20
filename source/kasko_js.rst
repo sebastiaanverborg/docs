@@ -39,7 +39,7 @@ Setup KASKO JS
 .. code:: html
 
     <script>
-      KASKO.Setup({
+      Kasko.Setup({
         container: "kasko-widget-container",
         key: "TEST OR LIVE CLIENT KEY",
         product : "PRODUCT KEY",
