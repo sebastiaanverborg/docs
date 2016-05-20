@@ -84,7 +84,7 @@
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="integration_methods.html">Integration Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="authentication.html">Keys</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">KASKO JS</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">KASKO JS</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#integration-kasko-js">Integration KASKO JS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#widget-containter">Widget Containter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#setup-kasko-js">Setup KASKO JS</a><ul>
@@ -120,7 +120,7 @@
         <div class="rst-content">
           
 
- 
+
 
 
 
@@ -147,10 +147,10 @@
 <p>KASKO JS is used to load and configure the KASKO widget onto your site.
 KASKO JS automatically handles sizing of the widget so that it works
 responsively in your page.</p>
-<p>Before you start this guide you will need <a class="reference internal" href="authentication.html#keys"><span class="std std-ref">Keys</span></a></p>
+<p>Before you start this guide you will need <a class="reference internal" href="authentication.html#keys"><span>Keys</span></a></p>
 <div class="section" id="integration-kasko-js">
 <h2>Integration KASKO JS<a class="headerlink" href="#integration-kasko-js" title="Permalink to this headline">¶</a></h2>
-<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://js.kasko.io&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<div class="code html highlight-python"><div class="highlight"><pre><span></span>&lt;script type=&quot;text/javascript&quot; src=&quot;https://js.kasko.io&quot;&gt;&lt;/script&gt;
 </pre></div>
 </div>
 <p>Include the following JS snippet in the HEAD of the page or at above
@@ -158,7 +158,7 @@ where you want the widget to be created.</p>
 </div>
 <div class="section" id="widget-containter">
 <h2>Widget Containter<a class="headerlink" href="#widget-containter" title="Permalink to this headline">¶</a></h2>
-<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;kasko-widget-container&quot;</span><span class="o">&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<div class="code html highlight-python"><div class="highlight"><pre><span></span>&lt;div id=&quot;kasko-widget-container&quot;&gt;&lt;/div&gt;
 </pre></div>
 </div>
 <p>Add a container div where you want the widget to be created on the page.</p>
@@ -168,18 +168,18 @@ left “height:auto” so that KASKO JS can handle the height responsively.</p>
 </div>
 <div class="section" id="setup-kasko-js">
 <h2>Setup KASKO JS<a class="headerlink" href="#setup-kasko-js" title="Permalink to this headline">¶</a></h2>
-<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
-  <span class="n">KASKO</span><span class="o">.</span><span class="n">Setup</span><span class="p">({</span>
-    <span class="n">container</span><span class="p">:</span> <span class="s2">&quot;kasko-widget-container&quot;</span><span class="p">,</span>
-    <span class="n">key</span><span class="p">:</span> <span class="s2">&quot;TEST OR LIVE CLIENT KEY&quot;</span><span class="p">,</span>
-    <span class="n">product</span> <span class="p">:</span> <span class="s2">&quot;PRODUCT KEY&quot;</span><span class="p">,</span>
-    <span class="n">overlay_color</span> <span class="p">:</span> <span class="s2">&quot;#FFFFFF&quot;</span><span class="p">,</span>
-    <span class="n">data</span><span class="p">:{</span>
-        <span class="n">classified_id</span> <span class="p">:</span> <span class="s2">&quot;Classified ID&quot;</span><span class="p">,</span>
-        <span class="n">firstname</span> <span class="p">:</span> <span class="s2">&quot;Customer First Name&quot;</span>
-    <span class="p">}</span>
-  <span class="p">});</span>
-<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<div class="code html highlight-python"><div class="highlight"><pre><span></span>&lt;script&gt;
+  Kasko.Setup({
+    container: &quot;kasko-widget-container&quot;,
+    key: &quot;TEST OR LIVE CLIENT KEY&quot;,
+    product : &quot;PRODUCT KEY&quot;,
+    overlay_color : &quot;#FFFFFF&quot;,
+    data:{
+        classified_id : &quot;Classified ID&quot;,
+        firstname : &quot;Customer First Name&quot;
+    }
+  });
+&lt;/script&gt;
 </pre></div>
 </div>
 <p>Below the widget container div include the widget setup javascript</p>
