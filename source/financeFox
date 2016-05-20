@@ -260,9 +260,10 @@ GET https://api.kasko.io/quotes
 ####Example Request
 
 	curl 	--get 'https://api.kasko.io/quotes' \
-		--data 'variant_id=VARIANT_ID' \
-		--data-urlencode 'data=DATA' \
-		-H 'Authorization: Bearer sk_test_SECRET_KEY'
+    -u sk_test_SECRET_KEY: \
+    -H "Content-Type: application/json" \
+		-d 'variant_id=VARIANT_ID' \
+		--data-urlencode 'data=DATA'
 
 ####Example Response
 
@@ -297,7 +298,8 @@ Why do we do this 2 step mechanism?   We want to ensure that there is no problem
 
 ####Example Request
 	curl 'https://api.kasko.io/policies' \
-   		-H 'Authorization: Bearer sk_test_SECRET_KEY' \
+   		-u sk_test_SECRET_KEY: \
+      -H "Content-Type: application/json" \
    		-d quote_token='QUOTE_TOKEN' \
    		-d 'first_name=FIRSTNAME' \
    		-d 'last_name=SURNAME' \
@@ -339,7 +341,8 @@ This API request should be made after payment has been taken for the policy by t
 ####Example Request
 
 	curl 'https://api.kasko.io/payments' \
-   	-H 'Authorization: Bearer sk_test_SECRET_KEY' \
+   	-u sk_test_SECRET_KEY: \
+    -H "Content-Type: application/json" \
    	-d "token=PAYMENT_TOKEN" \
    	-d "policy_id=POLICY_ID"
 

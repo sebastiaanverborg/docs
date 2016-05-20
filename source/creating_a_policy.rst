@@ -65,7 +65,7 @@ Example Request
 .. code:: rest
 
 	curl 'https://dev-api.kasko.io/policies' \
-   	-H 'Content-Type: application/json;charset=UTF-8' \
+   	-H 'Content-Type: application/json' \
    	-H 'Authorization: Bearer sk_test_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJKK1gwNkc4VDdwTFhQNjlyNmUyNCIsImlhdCI6MTQ1NjE0Mjk4MiwiZXhwIjo5OTk5OTk5OTk5LCJpc3MiOiJLYXNrbyIsIm93bmVyIjoiYTIzIiwiYWNjb3VudCI6MjMsInR5cGUiOiJkaXN0cmlidXRvciIsInJvbGUiOiJhZG1pbiIsImxpdmVtb2RlIjpmYWxzZX0.Lm8EHXBSrLTmr8o0QAvnhbu1aiiCfJRZ5vl2cduu5OY' \
    	-H 'Connection: keep-alive' \
    	--data-binary '{"quote_token":"0kiJgJpa9t8PjRMGNWhyHRQkqaUaehLV9nL4aUpGbefpphSRDFsG2BNmLl0sfVcXwH2v+se2BRx0E0NfEN0Lsc1M9NJg8g\/1wxBNw8RJHcqmRhwsBc2G6oFydpA5dR562543qv+DHwqjAlqwLO5rYh6iaqE0MdARU4RH9yJMxExdkk+\/K+gOGUyaxjMsgLk+jcB5wHqXOq3QIVzeSssGMfPmWQiTwarh4z02GZgqoE2IilSYjdLTMcduJkQwgGmTBVB5n+RfaxGg7bn6WqwkOciEGHsEmK3LB5ItnDuwiiy5weDW9LceYShuoSPmW8tsimHiFxTSpPgVPwWK6ojUR7dM5vrIDPBoj4N9E\/zJe\/0fRmoYG6IeKA2uClVqFrnZ4BSMyjM6Ierv11wJj6M1tMcnfdGuo0WHMMiJ3pACIDFtJa81WwZe7sUqgN1esAm0SsTjg5qgJ4MuxNghqFgwIOIJgp8yHQU6Mj7QFbARL9ric+hBVHd12qIQyp0MPgZjqo+1YNraUAXXAB0tCtCOUzwPVmGgeebS9\/u+4p+A4ubmdC7xlo0JTOyBj+GCxVzex1rkWwPQmxQzMNZDij1EWDjp2Jf2+MpdxDoFIKpsZEd\/xfrCDOZNDiCY7vfr90B+w","first_name":"Matthew","last_name":"Wardle","email":"mwardle@kasko.io","data":{"registration":"mm-123"}}'

@@ -66,6 +66,7 @@ Example Request
 .. code:: bash
 
 	curl 	--get 'https://qa-staging-api.kasko.io/quotes' \
+        -H "Content-Type: application/json" \
 		--data 'variant_id=VARIANT_ID' \
 		--data-urlencode 'data=DATA' \
 		-H 'Authorization: Bearer sk_test_SECRET_KEY'
@@ -122,7 +123,8 @@ Example Request
 .. code:: bash
 
 	curl 'https://qa-staging-api.kasko.io/policies' \
-   		-H 'Authorization: Bearer sk_test_SECRET_KEY' \
+        -u sk_test_SECRET_KEY: \
+        -H "Content-Type: application/json" \
    		-d quote_token='QUOTE_TOKEN' \
    		-d 'first_name=FIRSTNAME' \
    		-d 'last_name=SURNAME' \
@@ -179,7 +181,8 @@ Example Request
 .. code:: bash
 
 	curl 'https://qa-staging-api.kasko.io/payments' \
-   	-H 'Authorization: Bearer sk_test_SECRET_KEY' \
+   	-u sk_test_SECRET_KEY: \
+    -H "Content-Type: application/json" \
    	-d "token=PAYMENT_TOKEN" \
    	-d "policy_id=POLICY_ID"
 
