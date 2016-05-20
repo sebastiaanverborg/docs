@@ -107,7 +107,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -166,13 +166,13 @@
 </div>
 <div class="section" id="example-request">
 <h3>Example Request<a class="headerlink" href="#example-request" title="Permalink to this headline">¶</a></h3>
-<div class="code rest highlight-python"><div class="highlight"><pre><span></span>curl &quot;https://dev-api.kasko.io/quotes?data=%7B%22duration%22:1%7D&amp;key=pk_test_pjXOPLyVnNdAbWKAmKrR658MJw7GDEmx&amp;variant_id=d8ZYoyL6gBlpnJX9jx4Gkzj1wm7aKrPe&quot;
+<div class="code rest highlight-default"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="s2">&quot;https://dev-api.kasko.io/quotes?data=%7B</span><span class="si">%22d</span><span class="s2">uration%22:1%7D&amp;key=pk_test_pjXOPLyVnNdAbWKAmKrR658MJw7GDEmx&amp;variant_id=d8ZYoyL6gBlpnJX9jx4Gkzj1wm7aKrPe&quot;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-response">
 <h3>Example Response<a class="headerlink" href="#example-response" title="Permalink to this headline">¶</a></h3>
-<div class="code javascript highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="code javascript highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
         <span class="s2">&quot;gross_premium&quot;</span><span class="p">:</span> <span class="mi">699</span><span class="p">,</span>
         <span class="s2">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;eur&quot;</span><span class="p">,</span>
         <span class="s2">&quot;net_premium&quot;</span><span class="p">:</span> <span class="mi">587</span><span class="p">,</span>
@@ -233,17 +233,17 @@
 </table>
 <div class="section" id="id1">
 <h3>Example Request<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<div class="code rest highlight-python"><div class="highlight"><pre><span></span>curl &#39;https://dev-api.kasko.io/policies&#39; \
--H &#39;Content-Type: application/json;charset=UTF-8&#39; \
--H &#39;Authorization: Bearer sk_test_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJKK1gwNkc4VDdwTFhQNjlyNmUyNCIsImlhdCI6MTQ1NjE0Mjk4MiwiZXhwIjo5OTk5OTk5OTk5LCJpc3MiOiJLYXNrbyIsIm93bmVyIjoiYTIzIiwiYWNjb3VudCI6MjMsInR5cGUiOiJkaXN0cmlidXRvciIsInJvbGUiOiJhZG1pbiIsImxpdmVtb2RlIjpmYWxzZX0.Lm8EHXBSrLTmr8o0QAvnhbu1aiiCfJRZ5vl2cduu5OY&#39; \
--H &#39;Connection: keep-alive&#39; \
---data-binary &#39;{&quot;quote_token&quot;:&quot;0kiJgJpa9t8PjRMGNWhyHRQkqaUaehLV9nL4aUpGbefpphSRDFsG2BNmLl0sfVcXwH2v+se2BRx0E0NfEN0Lsc1M9NJg8g\/1wxBNw8RJHcqmRhwsBc2G6oFydpA5dR562543qv+DHwqjAlqwLO5rYh6iaqE0MdARU4RH9yJMxExdkk+\/K+gOGUyaxjMsgLk+jcB5wHqXOq3QIVzeSssGMfPmWQiTwarh4z02GZgqoE2IilSYjdLTMcduJkQwgGmTBVB5n+RfaxGg7bn6WqwkOciEGHsEmK3LB5ItnDuwiiy5weDW9LceYShuoSPmW8tsimHiFxTSpPgVPwWK6ojUR7dM5vrIDPBoj4N9E\/zJe\/0fRmoYG6IeKA2uClVqFrnZ4BSMyjM6Ierv11wJj6M1tMcnfdGuo0WHMMiJ3pACIDFtJa81WwZe7sUqgN1esAm0SsTjg5qgJ4MuxNghqFgwIOIJgp8yHQU6Mj7QFbARL9ric+hBVHd12qIQyp0MPgZjqo+1YNraUAXXAB0tCtCOUzwPVmGgeebS9\/u+4p+A4ubmdC7xlo0JTOyBj+GCxVzex1rkWwPQmxQzMNZDij1EWDjp2Jf2+MpdxDoFIKpsZEd\/xfrCDOZNDiCY7vfr90B+w&quot;,&quot;first_name&quot;:&quot;Matthew&quot;,&quot;last_name&quot;:&quot;Wardle&quot;,&quot;email&quot;:&quot;mwardle@kasko.io&quot;,&quot;data&quot;:{&quot;registration&quot;:&quot;mm-123&quot;}}&#39;
+<div class="code rest highlight-default"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="s1">&#39;https://dev-api.kasko.io/policies&#39;</span> \
+<span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Content-Type: application/json;charset=UTF-8&#39;</span> \
+<span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Authorization: Bearer sk_test_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJKK1gwNkc4VDdwTFhQNjlyNmUyNCIsImlhdCI6MTQ1NjE0Mjk4MiwiZXhwIjo5OTk5OTk5OTk5LCJpc3MiOiJLYXNrbyIsIm93bmVyIjoiYTIzIiwiYWNjb3VudCI6MjMsInR5cGUiOiJkaXN0cmlidXRvciIsInJvbGUiOiJhZG1pbiIsImxpdmVtb2RlIjpmYWxzZX0.Lm8EHXBSrLTmr8o0QAvnhbu1aiiCfJRZ5vl2cduu5OY&#39;</span> \
+<span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Connection: keep-alive&#39;</span> \
+<span class="o">--</span><span class="n">data</span><span class="o">-</span><span class="n">binary</span> <span class="s1">&#39;{&quot;quote_token&quot;:&quot;0kiJgJpa9t8PjRMGNWhyHRQkqaUaehLV9nL4aUpGbefpphSRDFsG2BNmLl0sfVcXwH2v+se2BRx0E0NfEN0Lsc1M9NJg8g\/1wxBNw8RJHcqmRhwsBc2G6oFydpA5dR562543qv+DHwqjAlqwLO5rYh6iaqE0MdARU4RH9yJMxExdkk+\/K+gOGUyaxjMsgLk+jcB5wHqXOq3QIVzeSssGMfPmWQiTwarh4z02GZgqoE2IilSYjdLTMcduJkQwgGmTBVB5n+RfaxGg7bn6WqwkOciEGHsEmK3LB5ItnDuwiiy5weDW9LceYShuoSPmW8tsimHiFxTSpPgVPwWK6ojUR7dM5vrIDPBoj4N9E\/zJe\/0fRmoYG6IeKA2uClVqFrnZ4BSMyjM6Ierv11wJj6M1tMcnfdGuo0WHMMiJ3pACIDFtJa81WwZe7sUqgN1esAm0SsTjg5qgJ4MuxNghqFgwIOIJgp8yHQU6Mj7QFbARL9ric+hBVHd12qIQyp0MPgZjqo+1YNraUAXXAB0tCtCOUzwPVmGgeebS9\/u+4p+A4ubmdC7xlo0JTOyBj+GCxVzex1rkWwPQmxQzMNZDij1EWDjp2Jf2+MpdxDoFIKpsZEd\/xfrCDOZNDiCY7vfr90B+w&quot;,&quot;first_name&quot;:&quot;Matthew&quot;,&quot;last_name&quot;:&quot;Wardle&quot;,&quot;email&quot;:&quot;mwardle@kasko.io&quot;,&quot;data&quot;:{&quot;registration&quot;:&quot;mm-123&quot;}}&#39;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id2">
 <h3>Example Response<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<div class="code javascript highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="code javascript highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;tDd0oL9AJZV5B6kPOMXa2mG4qgN3WbYpX&quot;</span><span class="p">,</span>
   <span class="s2">&quot;variant_id&quot;</span><span class="p">:</span> <span class="s2">&quot;d8ZYoyL6gBlpnJX9jx4Gkzj1wm7aKrPe&quot;</span><span class="p">,</span>
   <span class="s2">&quot;insurer_policy_id&quot;</span><span class="p">:</span> <span class="s2">&quot;PROBE-0726E&quot;</span><span class="p">,</span>

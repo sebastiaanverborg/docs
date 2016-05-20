@@ -15,7 +15,6 @@ Contents
 
    integration_methods
    authentication
-   products
    kasko_js
    rest_api
    products/index

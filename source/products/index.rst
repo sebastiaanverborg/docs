@@ -9,7 +9,7 @@ List of KASKO insurance products with required data to quote and purchase a poli
    :maxdepth: 1
 
    probefahrten_schutz
+   xtra_fahrer_schutz
    testdrive_protect
    travel_demo
-
-
+   travel_erv
