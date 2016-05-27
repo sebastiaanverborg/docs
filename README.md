@@ -1,22 +1,17 @@
-Kasko Docs
-==========
+# Kasko Developer Documentation
 
-Based on Slate - see docs below. To get up and running run these commands:
 
-Pre-requisites:
-- Ruby Gem - https://rubygems.org/pages/download
-- Bundler - http://bundler.io/#getting-started
-- Xcode CLI tools
+### Pre-requisites:
 
 ```
-bundle install
-npm install
+pip install sphinx-autobuild
 ```
+
+### Build:
 
 Only update files in the `source` folder, and then run from the source folder
 
 ```sphinx-autobuild . _build_html```
-
 
 
 ### Need Help? Found a bug?
