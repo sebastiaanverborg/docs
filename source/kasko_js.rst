@@ -33,6 +33,17 @@ This can be given any ID but we have used kasko-widget-container in our
 example below. This container can be set with any width, but should be
 left “height:auto” so that KASKO JS can handle the height responsively.
 
+Popup Mode
+----------
+
+If you wish to have the widget popup in a new window instead of loading inline on the page please add the foolowing to the Kasko.Setup method detailed below.
+
+.. code:: html
+
+    mode: "popup"
+
+When using popup mode the containter attribute is the target which KASKO JS will attach the click event handler too.
+
 Setup KASKO JS
 -----------------
 
