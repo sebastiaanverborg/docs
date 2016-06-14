@@ -52,6 +52,8 @@ JSON data posted to /policies on creation of policy
    :widths: 20, 20, 80, 20
    "travelers.*.first_name", "string", "Array of traveler first names (excluding the policy holder)", "John"
    "travelers.*.last_name", "string", "Array of traveler last names (excluding the policy holder)", "Doe"
+   "streetaddress", "string", "Street address of the policy holder", "Main str. 12"
+   "postcode", "string", "Postcode of the policy holder", "12772"
 
 --------------------------------------------------------------------------------
 
@@ -106,3 +108,5 @@ JSON data posted to /policies on creation of policy
 
    "travelers.*.first_name", "string", "Array of traveler first names (excluding the policy holder)", "John"
    "travelers.*.last_name", "string", "Array of traveler last names (excluding the policy holder)", "Doe"
+   "streetaddress", "string", "Street address of the policy holder", "Main str. 12"
+   "postcode", "string", "Postcode of the policy holder", "12772"
