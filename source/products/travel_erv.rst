@@ -50,6 +50,7 @@ JSON data posted to /policies on creation of policy
 .. csv-table::
    :header: "Name", "Type", "Description", "Example Value"
    :widths: 20, 20, 80, 20
+
    "travelers.*.first_name", "string", "Array of traveler first names (excluding the policy holder)", "John"
    "travelers.*.last_name", "string", "Array of traveler last names (excluding the policy holder)", "Doe"
    "streetaddress", "string", "Street address of the policy holder", "Main str. 12"
