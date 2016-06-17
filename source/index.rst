@@ -14,7 +14,7 @@ Contents
    :maxdepth: 1
 
    integration_methods
-   authentication
+   keys
    kasko_js
    rest_api
    products/index

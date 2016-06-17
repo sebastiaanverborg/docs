@@ -4,14 +4,18 @@
 ### Pre-requisites:
 
 ```
-pip install sphinx-autobuild
+$ sudo pip install Sphinx sphinx-autobuild
+$ sudo pip install sphinx_rtd_theme
 ```
 
 ### Build:
 
-Only update files in the `source` folder, and then run from the source folder
+All source files are located in `source` folder.
+To auto build whenever source files are changes use the following command (You should run this command from teh project root).
 
-```sphinx-autobuild . _build_html```
+```
+$ sphinx-autobuild source/ _build_html/
+```
 
 
 ### Need Help? Found a bug?

@@ -14,6 +14,7 @@ tmp
 *.DS_STORE
 build/
 source/_build_html
+_build_html
 .cache
 
 # YARD artifacts
