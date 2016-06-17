@@ -1,8 +1,8 @@
 Probefahrten-Schutz
 ===================
 
-Probefahrten-Schutz (Test drive cover)
-
+Product Information
+-------------------
 
 .. csv-table::
    :widths: 50, 50

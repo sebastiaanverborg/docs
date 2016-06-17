@@ -1,9 +1,6 @@
 Testdrive-Protect
 ===================
 
-Testdrive-Protect
-
-
 .. csv-table::
    :widths: 50, 50
 

@@ -1,8 +1,8 @@
 Xtra-Fahrer-Schutz
 ===================
 
-Xtra-Fahrer-Schutz
-
+Product Information
+-------------------
 
 .. csv-table::
    :widths: 50, 50
