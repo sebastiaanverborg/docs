@@ -54,6 +54,33 @@ All API requests must be made over `HTTPS <https://en.wikipedia.org/wiki/HTTPS>`
 	curl -H "Authorization: Bearer sk_test_SECRET_KEY" https://api.kasko.io
 
 
+Errors
+------
+
+KASKO uses conventional `HTTP response <https://en.wikipedia.org/wiki/List_of_HTTP_status_codes>`_ codes to indicate the success or failure of an API request.
+In general, codes in the ``2xx`` range indicate success,
+codes in the ``4xx`` range indicate an error that failed given the information provided (e.g., a required parameter was omitted, etc.),
+and codes in the ``5xx`` range indicate an error with KASKO's servers (these are rare).
+
+.. csv-table::
+   :header: "Code", "Description"
+
+   "200 OK", "Everything worked as expected."
+   "400 Bad Request", "The request was unacceptable, often due to missing a required parameter."
+   "401 Unauthorized", "No valid API key provided."
+   "403 Forbidden", "The API key is valid, but does not have enough permissions."
+   "404 Not Found", "The requested resource doesn't exist."
+   "500 Internal Server Error", "Something went wrong on KASKO's end. (These are rare.)"
+   "503 Service Unavailable", "Something went wrong on KASKO's end. (These are rare.)"
+
+Request IDs
+-----------
+
+Each API request has an associated request identifier. You can find this value in the response headers, under ``X-Request-Id``.
+
+.. hint::
+   If you need to contact us about a specific request, providing the request identifier will ensure the fastest possible resolution.
+
 Get a Quote
 --------------------
 Get a quote from the KASKO platform
