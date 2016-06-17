@@ -19,7 +19,7 @@ created.
 Secret Keys
 ~~~~~~~~~~~
 
-KASKO will provide you with two Secret keys to be used with the KASKO REST API.
+KASKO will provide you with two Secret keys to be used with the :ref:`KASKO REST API <rest_api>`.
 
 **TEST** key is for development purposes without real insurance policies being created.
 
@@ -27,8 +27,10 @@ KASKO will provide you with two Secret keys to be used with the KASKO REST API.
 created.
 
 .. warning::
-	Secret keys must be stored securely as they allowing issuing of policies
-	for which payment will be owed by the distributor
+	Your API keys carry many privileges, including allowing issuing of insurance policies
+	for which payment will be owed by the distributor, so be sure to keep them secret!
+	Do not share your secret API keys in publicly accessible areas such GitHub,
+	client-side code, and so forth.
 
 	If you are concerned about the security of one of your secret keys
 	please contact support@kasko.io immediately and we will rotate the key
