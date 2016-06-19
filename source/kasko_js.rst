@@ -55,6 +55,7 @@ Setup KASKO JS
         key: "TEST OR LIVE CLIENT KEY",
         product : "PRODUCT KEY",
         overlay_color : "#FFFFFF",
+        traffic_source : "TRAFIC SOURCE"
         data:{
             classified_id : "Classified ID",
             firstname : "Customer First Name"
@@ -79,6 +80,8 @@ Widget setup parameters
 | product          | yes        | string        | Product key provided by KASKO.                          |
 +------------------+------------+---------------+---------------------------------------------------------+
 | overlay\_color   | no         | string        | HEX Color code of the loading overlay.                  |
++------------------+------------+---------------+---------------------------------------------------------+
+| traffic\_source  | no         | string        | Distributor reference of traffic source.  e.g. Email    |
 +------------------+------------+---------------+---------------------------------------------------------+
 | data             | no         | data object   | Data                                                    |
 +------------------+------------+---------------+---------------------------------------------------------+
