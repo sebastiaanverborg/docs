@@ -55,7 +55,7 @@ Setup KASKO JS
         key: "TEST OR LIVE CLIENT KEY",
         product : "PRODUCT KEY",
         overlay_color : "#FFFFFF",
-        traffic_source : "TRAFIC SOURCE"
+        traffic_source : "TRAFIC SOURCE",
         data:{
             classified_id : "Classified ID",
             firstname : "Customer First Name"
