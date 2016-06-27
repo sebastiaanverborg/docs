@@ -27,6 +27,27 @@ The basic steps to creating a policy are as follows.
 
 	Once the implementation has been completed and tested, and a go-live date has been approved by the business, you can change you key to the LIVE key.
 
+Schema
+------
+
+All API access is over HTTPS, and accessed from the ``https://api.kasko.io``. All data is sent and received as JSON.
+
+.. code:: rest
+
+	curl -i https://api.kasko.io
+
+	HTTP/1.1 200 OK
+	Server: nginx
+	Date: Mon, 27 Jun 2016 10:18:18 GMT
+	Content-Type: application/json; charset=utf-8
+	Connection: keep-alive
+	Content-Length: 2
+	Access-Control-Allow-Origin: *
+	Access-Control-Expose-Headers: ETag, Link
+	Cache-Control: no-cache
+	X-Request-Id: c7c39ec56325ceb292817b7bf947eaaf
+
+All timestamps are returned in ISO 8601 format: ``YYYY-MM-DDTHH:MM:SS+00:00``
 
 Authentication
 --------------
