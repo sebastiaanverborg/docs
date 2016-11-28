@@ -64,7 +64,7 @@ response code 200
 .. code:: javascript
 
 	{
-	  "quote_price": 212.43,
+	  "quote_price": "212.43",
 	  "deductable": "150"
 	}
 
