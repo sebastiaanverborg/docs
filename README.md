@@ -4,8 +4,8 @@
 ### Pre-requisites:
 
 ```
-$ sudo pip install Sphinx sphinx-autobuild
-$ sudo pip install sphinx_rtd_theme
+$ sudo pip install Sphinx sphinx-autobuild --ignore-installed six
+$ sudo pip install sphinx_rtd_theme --ignore-installed six
 ```
 
 ### Build:
