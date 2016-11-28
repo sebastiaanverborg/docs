@@ -54,7 +54,7 @@ Example Request
 
 .. code:: bash
 
-	curl --get https://api.kasko.io/indexes/PGqXYJndRax9zoNzAEjMLwA01y76B5gp?year=1990&make=Peugeot&model=205&market_value=30000
+	curl 'https://api.kasko.io/indexes/PGqXYJndRax9zoNzAEjMLwA01y76B5gp?year=1990&make=Peugeot&model=205&market_value=30000'
 
 Example Response Success
 ~~~~~~~~~~~~~~~~
