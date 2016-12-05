@@ -10,6 +10,7 @@ List of KASKO insurance products with required data to quote and purchase a poli
 
    probefahrten_schutz
    xtra_fahrer_schutz
+   deposit_de
    testdrive_protect
    travel_erv
    barmenia_yearly_car_de
