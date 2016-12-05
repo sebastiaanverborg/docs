@@ -57,8 +57,7 @@ Setup KASKO JS
         overlay_color : "#FFFFFF",
         traffic_source : "TRAFIC SOURCE",
         data:{
-            classified_id : "Classified ID",
-            firstname : "Customer First Name"
+            optional data : "see optional params"
         }
       });
     </script>
@@ -86,14 +85,12 @@ Widget setup parameters
 | data             | no         | data object   | Data                                                    |
 +------------------+------------+---------------+---------------------------------------------------------+
 
-Optional data parameters
+Generic Optional data parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 These fields can be provided to the data object.
 
 These fields can prepopulate widget data or be used to pass extra information
-
-
 
 +------------------+---------------+-----------------------------------------------------------------------------------------+
 | Parameter        | Type          | Description                                                                             |
@@ -106,9 +103,10 @@ These fields can prepopulate widget data or be used to pass extra information
 +------------------+---------------+-----------------------------------------------------------------------------------------+
 | registration     | string        | Registration plate of the car the policy is for - This will prepopulate in the widget   |
 +------------------+---------------+-----------------------------------------------------------------------------------------+
-| classified_id    | string        | ID of the classified advert for the car of the policy                                   |
+| classified_id    | string        | ID of the classified advert                                                             |
 +------------------+---------------+-----------------------------------------------------------------------------------------+
 
+.. note::   Please see product specific page for product specific optional data params.
 
 Testing
 ----------
