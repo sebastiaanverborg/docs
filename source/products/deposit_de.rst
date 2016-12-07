@@ -31,7 +31,6 @@ Optional data that can be put in the "data" tag of the kasko embed object
    "house_number",  "Customer house number", "99"
    "postal_code",  "Customer postal code", "01067"
    "deposit_amount",  "Deposit ammount in cents", "150000 (euro cents)"
-   "payment_frequency",  "Payment frequency", "yearly || half_yearly || quarterly || monthly"
    "monthly_rent",  "Monthly rent in cents", "60000 (euro cents)"
    "landlord_salutation",  "Landlord title", "mr || ms || firm"
    "landlord_firstname",  "Landlord first name", "LandFirst"
@@ -68,9 +67,7 @@ Example Kasko JS embed code
              'house_number'      : '99',
              'postal_code'       : '01067',
              'deposit_amount'    : '150000',
-             'payment_frequency' : 'half_yearly',
              'monthly_rent'      : '60000',
-
              'landlord_salutation'   : 'mr',
              'landlord_firstname'    : 'LandFirst',
              'landlord_lastname'     : 'LandLast',
@@ -79,7 +76,6 @@ Example Kasko JS embed code
              'landlord_street'       : 'LandStreet',
              'landlord_house_number' : '1',
              'landlord_postal_code'  : '01069',
-
              'post_documents_to'     : 'landlord',
              'property_street'       : 'PropStreet',
              'property_house_number' : '2',
