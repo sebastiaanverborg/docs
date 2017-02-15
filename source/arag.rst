@@ -1,7 +1,7 @@
 ARAG AS24 PUSH API
 ======================================
 
-This API is used for polocy creation for ARAG
+This API is used for policy creation for ARAG
 
 Getting started
 ---------------
@@ -83,9 +83,9 @@ Example Request
 .. code:: bash
 
 	curl https://push-api.kasko.io/ \
-	    -u sk_test_YE2KUZnp43i9563nY6o46fkz9tadEtMO: \
+	    -u sk_test_kfRHWrHGz1PlKYwcIvXVsgvg0sGoJBPG: \
 	    -H "Content-Type: application/json" \
-	    -d '{"variant_id":"d2va8Owp4WRnkbMpEWDAmVoN1JejB5GE","input":{"first_name":"Test","last_name":"Person","email":"test@person.com","data":{"start_date":"2017-02-13T10:34:39+00:00","vin":"12345"}}}'
+	    -d '{"variant_id":"d2va8Owp4WRnkbMpEWDAmVoN1JejB5GE","input":{"first_name":"Test","last_name":"Person","email":"test@person.com","data":{"start_date":"2017-02-13","vin":"12345"}}}'
 
 Example Response Success
 ~~~~~~~~~~~~~~~~
