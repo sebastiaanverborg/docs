@@ -26,7 +26,7 @@ Optional data that can be put in the "data" tag of the kasko embed object
    "salutation",  "Customer title", "mr || ms"
    "registration",  "Customer title", "x"
    "email",  "Customer email address", "name@example.com"
-   "dob",  "Customer date of birth", "1976-05-19' // yyyy-mm-dd"
+   "dob",  "Customer date of birth", "1976-05-19 // yyyy-mm-dd"
    "street",  "Customer Street", "CustStreet"
    "house_number",  "Customer house number", "99"
    "postal_code",  "Customer postal code", "01067"
