@@ -12,4 +12,5 @@ List of Baloise insurance products with required data to quote and purchase a po
    fahrradversicherung
    fernseherversicherung
    handy
+   cyber
 
