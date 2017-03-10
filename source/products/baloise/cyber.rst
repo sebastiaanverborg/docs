@@ -35,7 +35,7 @@ Example Kasko JS embed code
       Kasko.Setup({
         container: "kasko-widget-container",
         key: 'KEY',
-        product : 'd2va8Owp4WRnkbMpEWDAmVoN1JejB5GE',
+        product : 'L14J5Za9VRe7yjDaVrXzWwmpBO0AkKor',
         overlay_color: "#FFFFFF",
         data: {
             quote:{
