@@ -44,6 +44,15 @@ If you wish to have the widget popup in a new window instead of loading inline o
 
 When using popup mode the containter attribute is the target which KASKO JS will attach the click event handler too.
 
+Full Screen Mode
+----------------
+
+If you wish to have the widget to consume the whole page instead of loading inline on the page please add the follwoing to the Kasko.Setup method detailed below.
+
+.. code:: html
+
+    mode: "fullscreen"
+
 Setup KASKO JS
 -----------------
 
@@ -53,11 +62,11 @@ Setup KASKO JS
       Kasko.Setup({
         container: "kasko-widget-container",
         key: "TEST OR LIVE CLIENT KEY",
-        product : "PRODUCT KEY",
-        overlay_color : "#FFFFFF",
-        traffic_source : "TRAFIC SOURCE",
+        product: "PRODUCT KEY",
+        overlay_color: "#FFFFFF",
+        traffic_source: "TRAFIC SOURCE",
         data:{
-            optional data : "see optional params"
+            optional data: "see optional params"
         }
       });
     </script>
