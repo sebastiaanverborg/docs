@@ -54,7 +54,7 @@ If you wish to have the widget to consume the whole page instead of loading inli
     mode: "fullscreen"
 
 Setup KASKO JS
------------------
+--------------
 
 .. code:: html
 
@@ -95,7 +95,7 @@ Widget setup parameters
 +------------------+------------+---------------+---------------------------------------------------------+
 
 Generic Optional data parameters
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 These fields can be provided to the data object.
 
@@ -118,7 +118,7 @@ These fields can prepopulate widget data or be used to pass extra information
 .. note::   Please see product specific page for product specific optional data params.
 
 Testing
-----------
+-------
 
 Once the Widget is working in TEST mode, you can buy a policy with the
 following CC details
@@ -139,7 +139,7 @@ Please contact techsupport@kasko.io with the URL of your page for us to
 check the integration
 
 Go Live
-----------
+-------
 
 When testing is complete and you're ready to Go Live, please swap the
 Client TEST key for the Client LIVE key in your production site.
