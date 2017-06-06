@@ -8,7 +8,7 @@ Product Information
    :widths: 50, 50
 
    "Name", "Fernseherversicherung"
-   "Insurer", "Balose"
+   "Insurer", "Baloise"
    "ID", "d2va8Owp4WRnkbMpEWDAmVoN1JejB5GE"
    "Language", "DE"
    "Region", "Switzerland"

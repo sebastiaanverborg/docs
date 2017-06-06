@@ -8,7 +8,7 @@ Product Information
    :widths: 50, 50
 
    "Name", "Cyber"
-   "Insurer", "Balose"
+   "Insurer", "Baloise"
    "ID DE", "L14J5Za9VRe7yjDaVrXzWwmpBO0AkKor"
    "ID FR", "WKLe03JjQRwmZzDYAzD7Ob4NPlk8rpyv"
    "ID IT", "wQKOzW9P5omVBexzA4XqdE6r48LA3GYN"
