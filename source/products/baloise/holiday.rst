@@ -22,7 +22,7 @@ Optional data that can be put in the "data" tag of the kasko embed object
 .. csv-table::
    :header: "Name", "Description", "Example Value"
 
-   "luggage_value",  "The value of luggage. Increments of 1000 starting from 0, up to 20000", "0, 1000, 2000"
+   "luggage_value",  "The value of luggage. Increments of 1000 starting from 0, up to 20000", "0, 1000, 2000, .., 20000"
    "reduced_excess",  "Boolean of whether reduced excess is included", "true"
 
 Example Kasko JS embed code
