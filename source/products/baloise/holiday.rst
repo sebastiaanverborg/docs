@@ -15,6 +15,16 @@ Product Information
    "Language", "DE|FR|IT"
    "Region", "Switzerland"
 
+Kasko JS Optional Data Parameters
+-------------
+Optional data that can be put in the "data" tag of the kasko embed object
+
+.. csv-table::
+   :header: "Name", "Description", "Example Value"
+
+   "luggage_value",  "The value of luggage. Increments of 1000 starting from 0, up to 20000", "0, 1000, 2000"
+   "reduced_excess",  "Boolean of whether reduced excess is included", "true"
+
 Example Kasko JS embed code
 -------------
 
@@ -25,6 +35,10 @@ Example Kasko JS embed code
         container: "kasko-widget-container",
         key: "KEY",
         product : "pJeQgLmKblzBR6x5poX5vdqEkV3wP7an",
-        mode: "fullscreen"
+        mode: "fullscreen",
+        data: {
+          luggage_value: 3000,
+          reduced_excess: true
+        }
       });
     </script>
