@@ -14,7 +14,7 @@ Product Information
    "Region", "Switzerland"
 
 Kasko JS Optional Data Parameters
--------------
+---------------------------------
 Optional data that can be put in the "data" tag of the kasko embed object
 
 .. csv-table::
@@ -25,7 +25,7 @@ Optional data that can be put in the "data" tag of the kasko embed object
    "duration",  "Duration in years", "2"
 
 Example Kasko JS embed code
--------------
+---------------------------
 
 .. code:: html
 
@@ -37,10 +37,13 @@ Example Kasko JS embed code
         overlay_color: "#FFFFFF",
         data: {
             quote:{
-              'product': '2',
-              'product_price' : 500,
-              'duration' : '2'
+              product: '2',
+              product_price: 500,
+              duration: '2'
             }
+        },
+        metadata: {
+          salesagentid: 123456789
         }
       });
     </script>

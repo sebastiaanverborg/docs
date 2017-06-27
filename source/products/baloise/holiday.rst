@@ -10,13 +10,13 @@ Product Information
    "Name", "Holiday"
    "Insurer", "Baloise"
    "ID DE", "pJeQgLmKblzBR6x5poX5vdqEkV3wP7an"
-   "ID FR", "L14J5Za9VRe7yjDadlMzWwmpBO0AkKor"
    "ID IT", "LPE5mgGpndOQZoX7j5Dze0w8aK7Br3N1"
+   "ID FR", "L14J5Za9VRe7yjDadlMzWwmpBO0AkKor"
    "Language", "DE|FR|IT"
    "Region", "Switzerland"
 
 Kasko JS Optional Data Parameters
--------------
+---------------------------------
 Optional data that can be put in the "data" tag of the kasko embed object
 
 .. csv-table::
@@ -25,8 +25,17 @@ Optional data that can be put in the "data" tag of the kasko embed object
    "luggage_value",  "The value of luggage. Increments of 1000 starting from 0, up to 20000", "0, 1000, 2000, .., 20000"
    "reduced_excess",  "Boolean of whether reduced excess is included", "true | fase"
 
+Kasko JS Optional metadata Parameters
+-------------------------------------
+Optional data that can be put in the "metadadata" tag of the kasko embed object
+
+.. csv-table::
+   :header: "Name", "Description", "Example Value"
+
+   "salesagentid",  "The string ID of the sales agent.", "123456789"
+
 Example Kasko JS embed code
--------------
+---------------------------
 
 .. code:: html
 
@@ -39,6 +48,9 @@ Example Kasko JS embed code
         data: {
           luggage_value: 3000,
           reduced_excess: true
+        },
+        metadata: {
+          salesagentid: 123456789
         }
       });
     </script>
