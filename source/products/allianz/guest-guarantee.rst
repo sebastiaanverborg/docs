@@ -61,8 +61,8 @@ Parameters
    :header: "Parameter", "required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
-   "variant_id", "yes", "string", "d7zoBRlEp9yar6XyrjxPWm05VqwkQKA8"
-   "input", "yes", "JSON", "JSON - See Product Input."
+   "variant_id", "yes", "``string``", "d7zoBRlEp9yar6XyrjxPWm05VqwkQKA8"
+   "input", "yes", "``JSON``", "JSON - See Product Input."
 
 Product Input
 ~~~~~~~~~~~~~
@@ -71,10 +71,10 @@ Product Input
    :header: "Parameter", "required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
-   "first_name", "yes", "string", "Customer first name."
-   "last_name", "yes", "string", "Customer last name."
-   "email", "yes", "string", "Customer Email Address."
-   "data", "yes", "JSON", "JSON - See Policy Data Input."
+   "first_name", "yes", "``string``", "Customer first name."
+   "last_name", "yes", "``string``", "Customer last name."
+   "email", "yes", "``string``", "Customer Email Address."
+   "data", "yes", "``JSON``", "JSON - See Policy Data Input."
 
 Policy Data Input
 ~~~~~~~~~~~~~~~~~
@@ -83,14 +83,14 @@ Policy Data Input
    :header: "Parameter", "required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
-   "checkin_date", "yes", "string", "Check-in date in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`_ format (YYYY-MM-DD). Must be greater than or equal to todays date."
-   "checkout_date", "yes", "string", "Check-out date in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`_ format (YYYY-MM-DD). Must be greater than or equal to check-in date."
-   "sum_insured", "yes", "string", "The sum insured in cents. Allowed values are 100000, 200000, 300000"
-   "street", "yes", "string", "Customers street."
-   "house_number", "yes", "string", "Customers house number."
-   "postcode", "yes", "string", "Customers postal code."
-   "city", "yes", "string", "Customers city."
-   "country", "yes", "string", "Customers country."
+   "checkin_date", "yes", "``string``", "Check-in date in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`_ format (YYYY-MM-DD). Must be greater than or equal to todays date."
+   "checkout_date", "yes", "``string``", "Check-out date in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`_ format (YYYY-MM-DD). Must be greater than or equal to check-in date."
+   "sum_insured", "yes", "``string``", "The sum insured in cents. Allowed values are ``100000``, ``200000`` or ``300000``"
+   "street", "yes", "``string``", "Customers street."
+   "house_number", "yes", "``string``", "Customers house number."
+   "postcode", "yes", "``string``", "Customers postal code."
+   "city", "yes", "``string``", "Customers city."
+   "country", "yes", "``string``", "Customers country."
 
 Example Request
 ~~~~~~~~~~~~~~~
