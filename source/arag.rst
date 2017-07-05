@@ -1,12 +1,12 @@
 ARAG AS24 PUSH API
 ======================================
 
-This API is used for policy creation for ARAG
+This API is used for policy creation for ARAG.
 
 Getting started
 ---------------
 
-This uses the KASKO push API  and is a single request.
+This uses the KASKO push API and is a single request.
 
 1) Make POST request to URL
 
@@ -27,13 +27,13 @@ All API requests must be made over `HTTPS <https://en.wikipedia.org/wiki/HTTPS>`
 
 .. code:: rest
 
-	curl -u sk_test_SECRET_KEY: https:/push-api.kasko.io
+	curl -u sk_test_SECRET_KEY: https://push-api.kasko.io/
 
 **Bearer Authentication**
 
 .. code:: rest
 
-	curl -H "Authorization: Bearer sk_test_SECRET_KEY" https://push-api.kasko.io
+	curl -H "Authorization: Bearer sk_test_SECRET_KEY" https://push-api.kasko.io/
 
 Header
 -------
@@ -74,7 +74,17 @@ Product Input
    "first_name", "yes", "string", "Customer first name"
    "last_name", "yes", "string", "Customer last name"
    "email", "yes", "string", "Customer Email Address"
-   "data", "yes", "JSON", "{ 'start_date' : '<DATE IN ISO 8601>' , 'vin' : '<VIN>' }"
+   "data", "yes", "JSON", "JSON - See Policy Data Input."
+
+Policy Data Input
+~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Parameter", "required", "Type", "Description"
+   :widths: 20, 20, 20, 80
+
+   "start_date", "yes", "string", "Start date in ISO8601 format (YYYY-MM-DD)"
+   "vin", "yes", "Vehicle Identification Number."
 
 
 Example Request
