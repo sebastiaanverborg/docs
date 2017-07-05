@@ -92,10 +92,10 @@ Example Request
 
 .. code:: bash
 
-	curl https://push-api.kasko.io/ \
-	    -u <YOUR SECRET API KEY>: \
-	    -H "Content-Type: application/json" \
-	    -d '{
+    curl https://push-api.kasko.io/ \
+        -u <YOUR SECRET API KEY>: \
+        -H "Content-Type: application/json" \
+        -d '{
             "variant_id":"d2va8Owp4WRnkbMpEWDAmVoN1JejB5GE",
             "input":{
                 "first_name":"Test",
