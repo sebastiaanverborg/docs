@@ -97,10 +97,27 @@ Example Request
 
 .. code:: bash
 
-	curl https://push-api.kasko.io/ \
-	    -u <YOUR SECRET API KEY>: \
-	    -H "Content-Type: application/json" \
-	    -d '{"variant_id":"d7zoBRlEp9yar6XyrjxPWm05VqwkQKA8","input":{"first_name":"Test","last_name":"Person","email":"test@person.com","data":{"checkin_date":"2017-07-05","checkout_date":"2017-07-05","sum_insured":"200000","street":"2nd Avenue","house_number":"123","postcode":"UX XXX","city":"Atlantis","country":"Noland"}}}'
+    curl https://push-api.kasko.io/ \
+        -u <YOUR SECRET API KEY>: \
+        -H "Content-Type: application/json" \
+        -d '{ \
+            "variant_id":"d7zoBRlEp9yar6XyrjxPWm05VqwkQKA8", \
+                "input":{
+                    "first_name":"Test",
+                    "last_name":"Person",
+                    "email":"test@person.com",
+                    "data":{
+                        "checkin_date":"2017-07-05",
+                        "checkout_date":"2017-07-05",
+                        "sum_insured":"200000",
+                        "street":"2nd Avenue",
+                        "house_number":"123",
+                        "postcode":"UX XXX",
+                        "city":"Atlantis",
+                        "country":"Noland"
+                    }
+                }
+            }'
 
 Example Response Success
 ~~~~~~~~~~~~~~~~~~~~~~~~
