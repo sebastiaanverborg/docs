@@ -83,7 +83,7 @@ Policy Data Input
    :header: "Parameter", "required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
-   "start_date", "yes", "string", "Start date in ISO8601 format (YYYY-MM-DD)"
+   "start_date", "yes", "string", "Start date in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>` format (YYYY-MM-DD)"
    "vin", "yes", "Vehicle Identification Number."
 
 
