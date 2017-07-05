@@ -62,7 +62,7 @@ Parameters
    :widths: 20, 20, 20, 80
 
    "variant_id", "yes", "``string``", "d7zoBRlEp9yar6XyrjxPWm05VqwkQKA8"
-   "input", "yes", "``JSON``", "JSON - See Product Input."
+   "input", "yes", "``object``", "JSON - See Product Input."
 
 Product Input
 ~~~~~~~~~~~~~
@@ -74,7 +74,7 @@ Product Input
    "first_name", "yes", "``string``", "Customer first name."
    "last_name", "yes", "``string``", "Customer last name."
    "email", "yes", "``string``", "Customer Email Address."
-   "data", "yes", "``JSON``", "JSON - See Policy Data Input."
+   "data", "yes", "``object``", "JSON - See Policy Data Input."
 
 Policy Data Input
 ~~~~~~~~~~~~~~~~~

@@ -61,8 +61,8 @@ Parameters
    :header: "Parameter", "required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
-   "variant_id", "yes", "string", "d2va8Owp4WRnkbMpEWDAmVoN1JejB5GE"
-   "input", "yes", "JSON", "JSON - See Product Input"
+   "variant_id", "yes", "``string``", "d2va8Owp4WRnkbMpEWDAmVoN1JejB5GE"
+   "input", "yes", "``object``", "JSON - See Product Input"
 
 Product Input
 ~~~~~~~~~~~~~
@@ -71,10 +71,10 @@ Product Input
    :header: "Parameter", "required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
-   "first_name", "yes", "string", "Customer first name"
-   "last_name", "yes", "string", "Customer last name"
-   "email", "yes", "string", "Customer Email Address"
-   "data", "yes", "JSON", "JSON - See Policy Data Input."
+   "first_name", "yes", "``string``", "Customer first name"
+   "last_name", "yes", "``string``", "Customer last name"
+   "email", "yes", "``string``", "Customer Email Address"
+   "data", "yes", "``object``", "JSON - See Policy Data Input."
 
 Policy Data Input
 ~~~~~~~~~~~~~~~~~
@@ -83,8 +83,8 @@ Policy Data Input
    :header: "Parameter", "required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
-   "start_date", "yes", "string", "Start date in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>` format (YYYY-MM-DD)"
-   "vin", "yes", "Vehicle Identification Number."
+   "start_date", "yes", "``string``", "Start date in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>` format (YYYY-MM-DD)"
+   "vin", "yes", "``string``", Vehicle Identification Number."
 
 
 Example Request
