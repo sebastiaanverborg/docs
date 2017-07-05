@@ -100,8 +100,8 @@ Example Request
     curl https://push-api.kasko.io/ \
         -u <YOUR SECRET API KEY>: \
         -H "Content-Type: application/json" \
-        -d '{ \
-            "variant_id":"d7zoBRlEp9yar6XyrjxPWm05VqwkQKA8", \
+        -d '{
+            "variant_id":"d7zoBRlEp9yar6XyrjxPWm05VqwkQKA8",
                 "input":{
                     "first_name":"Test",
                     "last_name":"Person",

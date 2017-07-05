@@ -95,7 +95,18 @@ Example Request
 	curl https://push-api.kasko.io/ \
 	    -u <YOUR SECRET API KEY>: \
 	    -H "Content-Type: application/json" \
-	    -d '{"variant_id":"d2va8Owp4WRnkbMpEWDAmVoN1JejB5GE","input":{"first_name":"Test","last_name":"Person","email":"test@person.com","data":{"start_date":"2017-02-13","vin":"12345"}}}'
+	    -d '{
+            "variant_id":"d2va8Owp4WRnkbMpEWDAmVoN1JejB5GE",
+            "input":{
+                "first_name":"Test",
+                "last_name":"Person",
+                "email":"test@person.com",
+                "data":{
+                    "start_date":"2017-02-13",
+                    "vin":"12345"
+                }
+            }
+        }'
 
 Example Response Success
 ~~~~~~~~~~~~~~~~~~~~~~~~
