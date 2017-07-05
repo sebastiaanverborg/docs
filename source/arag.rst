@@ -83,7 +83,7 @@ Example Request
 .. code:: bash
 
 	curl https://push-api.kasko.io/ \
-	    -u sk_test_kfRHWrHGz1PlKYwcIvXVsgvg0sGoJBPG: \
+	    -u <YOUR SECRET API KEY>: \
 	    -H "Content-Type: application/json" \
 	    -d '{"variant_id":"d2va8Owp4WRnkbMpEWDAmVoN1JejB5GE","input":{"first_name":"Test","last_name":"Person","email":"test@person.com","data":{"start_date":"2017-02-13","vin":"12345"}}}'
 
