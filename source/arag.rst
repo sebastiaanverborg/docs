@@ -36,9 +36,9 @@ All API requests must be made over `HTTPS <https://en.wikipedia.org/wiki/HTTPS>`
 	curl -H "Authorization: Bearer sk_test_SECRET_KEY" https://push-api.kasko.io/
 
 Header
--------
+------
 
-All requests must be in JSON and include JSON header
+All requests must be in JSON and include ``Content-Type`` header.
 
 .. code:: rest
 
@@ -46,7 +46,7 @@ All requests must be in JSON and include JSON header
 
 
 Create a Policy
---------------------
+---------------
 
 Definition
 ~~~~~~~~~~
@@ -65,7 +65,7 @@ Parameters
    "input", "yes", "JSON", "JSON - See Product Input"
 
 Product Input
-~~~~~~~~~~
+~~~~~~~~~~~~~
 
 .. csv-table::
    :header: "Parameter", "required", "Type", "Description"
@@ -77,7 +77,7 @@ Product Input
    "data", "yes", "JSON", "JSON - See Policy Data Input."
 
 Policy Data Input
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 .. csv-table::
    :header: "Parameter", "required", "Type", "Description"
@@ -98,7 +98,7 @@ Example Request
 	    -d '{"variant_id":"d2va8Owp4WRnkbMpEWDAmVoN1JejB5GE","input":{"first_name":"Test","last_name":"Person","email":"test@person.com","data":{"start_date":"2017-02-13","vin":"12345"}}}'
 
 Example Response Success
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Reference of created policy
 
@@ -111,7 +111,7 @@ response code 200
 	}
 
 Example Response Failure
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 response code 400
 
@@ -122,7 +122,4 @@ response code 400
 	}
 
 
-If you have any questions please email us at techsupport@kasko.io
-
-
-
+If you have any questions please email us at ``techsupport@kasko.io``.
