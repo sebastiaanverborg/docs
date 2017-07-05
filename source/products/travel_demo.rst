@@ -36,8 +36,8 @@ Query string data appended to the quote request
    :header: "Name", "Type", "Description", "Example Value"
    :widths: 20, 20, 80, 20
 
-   "start_date", "date", "Policy start date in ISO 8601", "2016-03-16T14:05:53+01:00"
-   "end_date", "date", "Policy end date in ISO 8601", "2016-03-16T14:05:53+01:00"
+   "start_date", "date", "Policy start date in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`", "2016-03-16T14:05:53+01:00"
+   "end_date", "date", "Policy end date in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`", "2016-03-16T14:05:53+01:00"
    "age", "int", "Age of customer", "29"
    "region", "string", "Region for cover", "uk|europe|world"
 
@@ -50,7 +50,7 @@ Query string data appended to the quote request
    :header: "Name", "Type", "Description", "Example Value"
    :widths: 20, 20, 80, 20
 
-   "start_date", "date", "Policy start date in ISO 8601", "2016-03-16T14:05:53+01:00"
+   "start_date", "date", "Policy start date in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`", "2016-03-16T14:05:53+01:00"
    "age", "int", "Age of customer", "29"
    "region", "string", "Region for cover", "uk|europe|world"
 
