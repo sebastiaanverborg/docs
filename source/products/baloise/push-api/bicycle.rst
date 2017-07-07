@@ -90,7 +90,7 @@ Policy Data Input
    "product_name", "no", "``string``", "The name of the bicycle being insured. If this field is used, then ``receipt_number`` is required and ``frame_number`` must be omitted."
    "receipt_number", "no", "``string``", "Receipt number. If this field is used, then ``product_name`` field is required and ``frame_number`` field must be omitted."
    "salutation", "yes", "``string``", "Customers salutation, accepted values are ``mr`` and ``ms``."
-   "dob", "yes", "``string``", "Date of birth of customer in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`_ format (YYYY-MM-DD)."
+   "dob", "yes", "``string``", "Customers date of birth in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`_ format (YYYY-MM-DD)."
    "phone", "yes", "``string``", "Customers phone number."
    "house_number", "yes", "``string``", "Customers house number."
    "street", "yes", "``string``", "Customers street."

@@ -87,7 +87,7 @@ Policy Data Input
    "family_cover", "yes", "``boolean``", "If set to ``true`` then family cover will be included."
    "policy_duration", "yes", "``string``", "The duration of the policy, accepted values are ``P1Y`` (1 year) and ``P2Y`` (2 years)."
    "salutation", "yes", "``string``", "Customers salutation, accepted values are ``mr`` and ``ms``."
-   "dob", "yes", "``string``", "Date of birth of customer in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`_ format (YYYY-MM-DD)."
+   "dob", "yes", "``string``", "Customers date of birth in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`_ format (YYYY-MM-DD)."
    "phone", "yes", "``string``", "Customers phone number."
    "house_number", "yes", "``string``", "Customers house number."
    "street", "yes", "``string``", "Customers street."

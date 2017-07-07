@@ -1,5 +1,5 @@
 ARAG AS24 PUSH API
-======================================
+==================
 
 This API is used for policy creation for ARAG.
 
