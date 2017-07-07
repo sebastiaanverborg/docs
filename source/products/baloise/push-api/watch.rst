@@ -61,7 +61,7 @@ Parameters
    :header: "Parameter", "required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
-   "variant_id", "yes", "``string``", "DE: ``d7zoBRlEp9yar6XyrjxPWm05VqwkQKA8``, FR: ``L14J5Za9VRe7yjDadlMzWwmpBO0AkKor``, IT: ``RkO62bj0PmlL7dDP5jXK1ear4oypqz95``"
+   "variant_id", "yes", "``string``", "DE: ``d2va8Owp4WRnkbMpPgMAmVoN1JejB5GE``, FR: ``L14J5Za9VRe7yjDadlMzWwmpBO0AkKor``, IT: ``RkO62bj0PmlL7dDP5jXK1ear4oypqz95``"
    "input", "yes", "``object``", "JSON - See Product Input."
 
 Product Input

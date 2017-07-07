@@ -85,9 +85,9 @@ Policy Data Input
 
    "device_type", "yes", "``string``", "The type of device being insured, accepted values are ``smartphone`` or ``tablet``."
    "policy_duration", "yes", "``string``", "The duration of the policy, accepted values are ``P1Y`` (1 year) or ``P2Y`` (2 years)."
-   "device_value", "yes", "``string``", "Device value in cents, the value must be between ``0`` and ``1000000``."
-   "imei", "no", "``string``", "IMEI of the smartphone. This field can be used when the value of ``device_type`` field is set to ``smartphone``. If this field is used, then ``product_name`` and ``receipt_number`` fields must be omitted."
-   "serial_number", "no", "``string``", "Serial number of the tablet. This field can be used when the value of ``device_type`` field is set to ``tablet``. If this field is used, then ``product_name`` and ``receipt_number`` fields must be omitted."
+   "device_value", "yes", "``int``", "Device value in cents, the value must be an intger between ``1`` and ``1000000``."
+   "imei", "no", "``string``", "IMEI of the smartphone. This field can only be used when the value of ``device_type`` field is set to ``smartphone``. If this field is used, then ``product_name`` and ``receipt_number`` fields must be omitted."
+   "serial_number", "no", "``string``", "Serial number of the tablet. This field can only be used when the value of ``device_type`` field is set to ``tablet``. If this field is used, then ``product_name`` and ``receipt_number`` fields must be omitted."
    "product_name", "no", "``string``", "The name of the device being insured. If this field is used, then ``receipt_number`` is required and either ``imei`` or ``serial_number`` fields must be omitted."
    "receipt_number", "no", "``string``", "Receipt number. If this field is used, then ``product_name`` is required and either ``imei`` or ``serial_number`` fields must be omitted."
    "salutation", "yes", "``string``", "Customers salutation, accepted values are ``mr`` or ``ms``."
@@ -115,7 +115,7 @@ Example Request
                   "data": {
                       "device_type": "smartphone",
                       "policy_duration": "P1Y",
-                      "device_value": "50000",
+                      "device_value": 50000,
                       "product_name": "iPhone 7",
                       "receipt_number": "123456789",
                       "salutation": "mr",
