@@ -83,10 +83,10 @@ Policy Data Input
    :header: "Parameter", "required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
-   "risk_module", "yes", "``string``", "Risk module, accepted values are ``safe_pay``, ``safe_surf`` and ``safe_pay_and_surf``."
+   "risk_module", "yes", "``string``", "Risk module, accepted values are ``safe_pay``, ``safe_surf`` or ``safe_pay_and_surf``."
    "family_cover", "yes", "``boolean``", "If set to ``true`` then family cover will be included."
-   "policy_duration", "yes", "``string``", "The duration of the policy, accepted values are ``P1Y`` (1 year) and ``P2Y`` (2 years)."
-   "salutation", "yes", "``string``", "Customers salutation, accepted values are ``mr`` and ``ms``."
+   "policy_duration", "yes", "``string``", "The duration of the policy, accepted values are ``P1Y`` (1 year) or ``P2Y`` (2 years)."
+   "salutation", "yes", "``string``", "Customers salutation, accepted values are ``mr`` or ``ms``."
    "dob", "yes", "``string``", "Customers date of birth in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`_ format (YYYY-MM-DD)."
    "phone", "yes", "``string``", "Customers phone number."
    "house_number", "yes", "``string``", "Customers house number."
