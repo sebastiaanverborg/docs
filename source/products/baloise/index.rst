@@ -1,7 +1,7 @@
 .. _products:
 
 Products
-======================================
+========
 
 List of Baloise insurance products with required data to quote and purchase a policy.
 
@@ -16,4 +16,3 @@ List of Baloise insurance products with required data to quote and purchase a po
    watch
    watch-distributor
    holiday
-
