@@ -129,7 +129,7 @@ response code 400
 .. code:: javascript
 
 	{
-	  "errorMessage": "Bad Request: Missing 'vin'."
+	  "errorMessage": "Bad Request: The 'vin' field is required."
 	}
 
 

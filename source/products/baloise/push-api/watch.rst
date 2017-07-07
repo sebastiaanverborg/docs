@@ -148,7 +148,7 @@ response code 400
 .. code:: javascript
 
 	{
-	  "errorMessage": "Bad Request: Missing 'first_name'."
+	  "errorMessage": "Bad Request: The 'first_name' field is required."
 	}
 
 
