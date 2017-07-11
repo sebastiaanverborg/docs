@@ -85,7 +85,7 @@ Policy Data Input
 
    "bicycle_type", "yes", "``string``", "The type of bicycle being insured, accepted values are ``bicycle`` or ``electric_bicycle``."
    "policy_duration", "yes", "``string``", "The duration of the policy, accepted values are ``P1Y`` (1 year), ``P2Y`` (2 years) or ``P3Y`` (3 years)."
-   "bicycle_value", "yes", "``string``", "Bicycle value in cents, the value must be between ``0`` and ``2000000``."
+   "bicycle_value", "yes", "``int``", "Bicycle value in cents, the value must be an integer between ``0`` and ``2000000``."
    "frame_number", "no", "``string``", "The frame number of the bicycle. If this field is used, then ``product_name`` and ``receipt_number`` fields must be omitted."
    "product_name", "no", "``string``", "The name of the bicycle being insured. If this field is used, then ``receipt_number`` is required and ``frame_number`` must be omitted."
    "receipt_number", "no", "``string``", "Receipt number. If this field is used, then ``product_name`` field is required and ``frame_number`` field must be omitted."
@@ -114,7 +114,7 @@ Example Request
                   "data": {
                       "bicycle_type": "electric_bicycle",
                       "policy_duration": "P1Y",
-                      "bicycle_value": "50000",
+                      "bicycle_value": 50000,
                       "frame_number": "123456789",
                       "salutation": "mr",
                       "dob": "1989-02-04",

@@ -85,7 +85,7 @@ Policy Data Input
 
    "watch_make", "yes", "``string``", "Watch make (manufacturer)."
    "watch_model", "yes", "``string``", "Watch model."
-   "watch_value", "yes", "``string``", "Watch value in cents, the value must be between ``20000`` or ``3000000``."
+   "watch_value", "yes", "``int``", "Watch value in cents, the value must be an integer between ``20000`` or ``3000000``."
    "risk_module", "yes", "``string``", "Risk module, accepted values are ``damage``, ``theft`` or ``damage_and_theft``."
    "policy_duration", "yes", "``string``", "The duration of the policy, accepted values are ``P1Y`` (1 year), ``P2Y`` (2 years) or ``P3Y`` (3 years)."
    "salutation", "yes", "``string``", "Customers salutation, accepted values are ``mr`` or ``ms``."
@@ -113,7 +113,7 @@ Example Request
                 "data": {
                     "watch_make": "Rolex",
                     "watch_model": "Submariner",
-                    "watch_value": "100000",
+                    "watch_value": 100000,
                     "risk_module": "damage",
                     "policy_duration": "P1Y"
                     "salutation": "mr",
