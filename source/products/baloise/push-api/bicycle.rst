@@ -1,7 +1,7 @@
 Baloise Bicycle PUSH API
 ========================
 
-This API is used for creation of Baloise Cyber policies.
+This API is used for creation of Baloise Bicycle policies.
 
 Getting started
 ---------------

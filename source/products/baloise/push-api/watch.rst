@@ -115,7 +115,7 @@ Example Request
                     "watch_model": "Submariner",
                     "watch_value": 100000,
                     "risk_module": "damage",
-                    "policy_duration": "P1Y"
+                    "policy_duration": "P1Y",
                     "salutation": "mr",
                     "dob": "1989-02-04",
                     "phone": "0781234567",
