@@ -75,6 +75,7 @@ Product Input
    "last_name", "yes", "``string``", "Customer last name."
    "email", "yes", "``string``", "Customer Email Address."
    "data", "yes", "``object``", "JSON - See Policy Data Input."
+   "metadata", "no", "``object``", "Key/value pairs of arbitrary metadata that can be provided by the user."
 
 Policy Data Input
 ~~~~~~~~~~~~~~~~~
@@ -123,6 +124,9 @@ Example Request
                       "street": "2nd Avenue",
                       "city": "Atlantis",
                       "postcode": "1234"
+                  },
+                  "metadata": {
+                    "some": "value"
                   }
               }
           }'
