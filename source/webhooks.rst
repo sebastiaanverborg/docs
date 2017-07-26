@@ -32,7 +32,7 @@ Each webhook request made by KASKO will additionally include request headers out
 
    "``X-KASKO-Event``", "``policy.created``", "The event type that was triggered."
    "``X-KASKO-Delivery``", "``baf59150f9a60c1c0e6a700e6f531676``", "A `guid <https://en.wikipedia.org/wiki/Universally_unique_identifier>`_ to identify the payload and event being sent."
-   "``X-KASKO-Signature``", "``sha1=88dd4948bf8fc1e991a574179fc668c76d329db2``", "The value of this header is computed as the HMAC hex digest of the body, using the webhook secret as the key."
+   "``X-KASKO-Signature``", "``sha1=88dd4948bf8fc1e991a574179fc668c76d329db2``", "The value of this header is computed as the HMAC hex digest of the payload, using the webhook secret as the key."
 
 .. code:: php
 
@@ -96,7 +96,6 @@ This event is triggered when policy has been successfully created.
       "livemode": false,
       "policy_id": "TEST-POLICY-12345",
       "product_id": "oH68at2ddL7WnDJg23jhMPGRJy83QNpa",
-      "product_name": "Dummy Product",
       "first_name": "John",
       "last_name": "Doe",
       "email": "john@example.com",
