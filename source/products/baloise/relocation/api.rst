@@ -1,5 +1,5 @@
-Relocation API
-===================
+Relocation via REST API
+=======================
 
 **Please remember to use the API specific variant of a product.**
 

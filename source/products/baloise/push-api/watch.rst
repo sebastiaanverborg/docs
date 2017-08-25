@@ -68,7 +68,7 @@ Product Input
 ~~~~~~~~~~~~~
 
 .. csv-table::
-   :header: "Parameter", "required", "Type", "Description"
+   :header: "Parameter", "Required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
    "first_name", "yes", "``string``", "Customer first name."
