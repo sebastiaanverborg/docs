@@ -7,7 +7,7 @@ List of Baloise insurance products with required data to quote and purchase a po
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    bicycle/index
    cyber/index

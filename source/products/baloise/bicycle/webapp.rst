@@ -1,18 +1,18 @@
 Webapp
 ======
 
-Kasko JS Optional Data Parameters
----------------------------------
-Optional data that can be put in the "data" tag of the kasko embed object
+KASKO JS Data Parameters
+------------------------
+Optional data that can be put in the ``data`` tag of the KASKO embed object.
 
 .. csv-table::
-   :header: "Name", "Description", "Example Value"
+   :header: "Name", "Required", "Type", "Description", "Example Value"
 
-   "product",       "Product",           "``1`` - Bicycle, ``2`` - Electric bicycle"
-   "product_price", "Price in CHF",      "500"
-   "duration",      "Duration in years", "2"
+   "product",       "``no``", "`string`", "Product",           "``1`` - Bicycle, ``2`` - Electric bicycle"
+   "product_price", "``no``", "`string`", "Price in CHF",      "500"
+   "duration",      "``no``", "`string`", "Duration in years", "2"
 
-Example Kasko JS embed code
+Example KASKO JS embed code
 ---------------------------
 
 .. code:: html
