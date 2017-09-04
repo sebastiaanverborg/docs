@@ -1,7 +1,7 @@
-Baloise Cyber for Creadi PUSH API
-=================================
+Baloise Watch via PUSH API
+==========================
 
-This API is used for creation of Baloise Cyber policies.
+This API is used for creation of Baloise Watch policies.
 
 Getting started
 ---------------
@@ -61,14 +61,14 @@ Parameters
    :header: "Parameter", "required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
-   "variant_id", "yes", "``string``", "DE: ``LJROpwloaQ8ZBmMAg7X7W5PyE4qvAb31``, FR: ``WKLe03JjQRwmZzDY59D7Ob4NPlk8rpyv``, IT: ``wQKOzW9P5omVBexzqbXqdE6r48LA3GYN``"
+   "variant_id", "yes", "``string``", "DE: ``d2va8Owp4WRnkbMpPgMAmVoN1JejB5GE``, FR: ``L14J5Za9VRe7yjDadlMzWwmpBO0AkKor``, IT: ``RkO62bj0PmlL7dDP5jXK1ear4oypqz95``"
    "input", "yes", "``object``", "JSON - See Product Input."
 
 Product Input
 ~~~~~~~~~~~~~
 
 .. csv-table::
-   :header: "Parameter", "required", "Type", "Description"
+   :header: "Parameter", "Required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
    "first_name", "yes", "``string``", "Customer first name."
@@ -84,9 +84,11 @@ Policy Data Input
    :header: "Parameter", "required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
-   "risk_module", "yes", "``string``", "Risk module, accepted values are ``safe_surf``."
-   "family_cover", "yes", "``boolean``", "If set to ``true`` then family cover will be included."
-   "policy_duration", "yes", "``string``", "The duration of the policy, accepted values are ``P1Y`` (1 year) or ``P2Y`` (2 years)."
+   "watch_make", "yes", "``string``", "Watch make (manufacturer)."
+   "watch_model", "yes", "``string``", "Watch model."
+   "watch_value", "yes", "``int``", "Watch value in cents, the value must be an integer between ``20000`` or ``3000000``."
+   "risk_module", "yes", "``string``", "Risk module, accepted values are ``damage``, ``theft`` or ``damage_and_theft``."
+   "policy_duration", "yes", "``string``", "The duration of the policy, accepted values are ``P1Y`` (1 year), ``P2Y`` (2 years) or ``P3Y`` (3 years)."
    "salutation", "yes", "``string``", "Customers salutation, accepted values are ``mr`` or ``ms``."
    "dob", "yes", "``string``", "Customers date of birth in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`_ format (YYYY-MM-DD)."
    "phone", "yes", "``string``", "Customers phone number."
@@ -104,28 +106,30 @@ Example Request
         -u <YOUR SECRET API KEY>: \
         -H "Content-Type: application/json" \
         -d '{
-              "variant_id": "LJROpwloaQ8ZBmMAg7X7W5PyE4qvAb31",
-              "input": {
-                  "first_name":"Test",
-                  "last_name":"Person",
-                  "email":"test@person.com",
-                  "data": {
-                      "risk_module": "safe_surf",
-                      "family_cover": true,
-                      "policy_duration": "P1Y",
-                      "salutation": "mr",
-                      "dob": "1989-02-04",
-                      "phone": "0781234567",
-                      "house_number": "1",
-                      "street": "2nd Avenue",
-                      "city": "Atlantis",
-                      "postcode": "1234"
-                  },
-                  "metadata": {
-                    "some": "value"
-                  }
-              }
-          }'
+            "variant_id": "d2va8Owp4WRnkbMpPgMAmVoN1JejB5GE",
+            "input": {
+                "first_name":"Test",
+                "last_name":"Person",
+                "email":"test@person.com",
+                "data": {
+                    "watch_make": "Rolex",
+                    "watch_model": "Submariner",
+                    "watch_value": 100000,
+                    "risk_module": "damage",
+                    "policy_duration": "P1Y",
+                    "salutation": "mr",
+                    "dob": "1989-02-04",
+                    "phone": "0781234567",
+                    "house_number": "1",
+                    "street": "2nd Avenue",
+                    "city": "Atlantis",
+                    "postcode": "1234"
+                },
+                "metadata": {
+                  "some": "value"
+                }
+            }
+        }'
 
 Example Response Success
 ~~~~~~~~~~~~~~~~~~~~~~~~

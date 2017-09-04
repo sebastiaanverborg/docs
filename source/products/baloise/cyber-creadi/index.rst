@@ -1,5 +1,5 @@
-Baloise Cyber Creadi Insurance
-==============================
+Baloise Cyber (Creadi promotional) Insurance
+============================================
 
 This product is bespoke for Creadi for promotional purposes!
 
@@ -9,7 +9,7 @@ Product Information
 .. csv-table::
    :widths: 25, 75
 
-   "Name", "Baloise Cyber"
+   "Name", "Baloise Cyber (Creadi promotional)"
    "Insurer", "Baloise"
 
    "Product ID DE", "``zG13lWZ8KQykqaXwl1xNPAb6w7VOYdve``"
@@ -24,9 +24,10 @@ Product Information
    "Language", "DE|FR|EN"
    "Region", "Switzerland"
 
-List of Baloise Cyber product integration methods.
+List of Baloise Cyber (Creadi promotional) product integration methods.
 
 .. toctree::
    :maxdepth: 1
 
    rest-api
+   push-api

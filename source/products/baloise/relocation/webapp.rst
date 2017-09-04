@@ -1,5 +1,5 @@
-Relocation Web App
-===================
+Baloise Relocation via Web App
+==============================
 
 Product Information
 -------------------

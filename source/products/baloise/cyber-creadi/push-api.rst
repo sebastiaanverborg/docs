@@ -1,7 +1,7 @@
-Baloise Smartphone/Tablet PUSH API
-==================================
+Baloise Cyber (Creadi promotional) via PUSH API
+===============================================
 
-This API is used for creation of Baloise Smartphone/Tablet policies.
+This API is used for creation of Baloise Cyber policies.
 
 Getting started
 ---------------
@@ -61,7 +61,7 @@ Parameters
    :header: "Parameter", "required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
-   "variant_id", "yes", "``string``", "DE: ``n5l3L4wzQEPJykxv2YxqaBVZR78dvj0o``, FR: ``wQKOzW9P5omVBexzGYMqdE6r48LA3GYN``, IT: ``WKLe03JjQRwmZzDYyjD7Ob4NPlk8rpyv``"
+   "variant_id", "yes", "``string``", "DE: ``LJROpwloaQ8ZBmMAg7X7W5PyE4qvAb31``, FR: ``WKLe03JjQRwmZzDY59D7Ob4NPlk8rpyv``, IT: ``wQKOzW9P5omVBexzqbXqdE6r48LA3GYN``"
    "input", "yes", "``object``", "JSON - See Product Input."
 
 Product Input
@@ -84,13 +84,9 @@ Policy Data Input
    :header: "Parameter", "required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
-   "device_type", "yes", "``string``", "The type of device being insured, accepted values are ``smartphone`` or ``tablet``."
+   "risk_module", "yes", "``string``", "Risk module, accepted values are ``safe_surf``."
+   "family_cover", "yes", "``boolean``", "If set to ``true`` then family cover will be included."
    "policy_duration", "yes", "``string``", "The duration of the policy, accepted values are ``P1Y`` (1 year) or ``P2Y`` (2 years)."
-   "device_value", "yes", "``int``", "Device value in cents, the value must be an intger between ``1`` and ``1000000``."
-   "imei", "no", "``string``", "IMEI of the smartphone. This field can only be used when the value of ``device_type`` field is set to ``smartphone``. If this field is used, then ``product_name`` and ``receipt_number`` fields must be omitted."
-   "serial_number", "no", "``string``", "Serial number of the tablet. This field can only be used when the value of ``device_type`` field is set to ``tablet``. If this field is used, then ``product_name`` and ``receipt_number`` fields must be omitted."
-   "product_name", "no", "``string``", "The name of the device being insured. If this field is used, then ``receipt_number`` is required and either ``imei`` or ``serial_number`` fields must be omitted."
-   "receipt_number", "no", "``string``", "Receipt number. If this field is used, then ``product_name`` is required and either ``imei`` or ``serial_number`` fields must be omitted."
    "salutation", "yes", "``string``", "Customers salutation, accepted values are ``mr`` or ``ms``."
    "dob", "yes", "``string``", "Customers date of birth in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`_ format (YYYY-MM-DD)."
    "phone", "yes", "``string``", "Customers phone number."
@@ -108,17 +104,15 @@ Example Request
         -u <YOUR SECRET API KEY>: \
         -H "Content-Type: application/json" \
         -d '{
-              "variant_id": "n5l3L4wzQEPJykxv2YxqaBVZR78dvj0o",
+              "variant_id": "LJROpwloaQ8ZBmMAg7X7W5PyE4qvAb31",
               "input": {
                   "first_name":"Test",
                   "last_name":"Person",
                   "email":"test@person.com",
                   "data": {
-                      "device_type": "smartphone",
+                      "risk_module": "safe_surf",
+                      "family_cover": true,
                       "policy_duration": "P1Y",
-                      "device_value": 50000,
-                      "product_name": "iPhone 7",
-                      "receipt_number": "123456789",
                       "salutation": "mr",
                       "dob": "1989-02-04",
                       "phone": "0781234567",

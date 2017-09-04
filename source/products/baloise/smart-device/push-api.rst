@@ -1,7 +1,7 @@
-Baloise Watch PUSH API
-======================
+Baloise Smart device via PUSH API
+=================================
 
-This API is used for creation of Baloise Watch policies.
+This API is used for creation of Baloise Smartphone/Tablet policies.
 
 Getting started
 ---------------
@@ -61,14 +61,14 @@ Parameters
    :header: "Parameter", "required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
-   "variant_id", "yes", "``string``", "DE: ``d2va8Owp4WRnkbMpPgMAmVoN1JejB5GE``, FR: ``L14J5Za9VRe7yjDadlMzWwmpBO0AkKor``, IT: ``RkO62bj0PmlL7dDP5jXK1ear4oypqz95``"
+   "variant_id", "yes", "``string``", "DE: ``n5l3L4wzQEPJykxv2YxqaBVZR78dvj0o``, FR: ``wQKOzW9P5omVBexzGYMqdE6r48LA3GYN``, IT: ``WKLe03JjQRwmZzDYyjD7Ob4NPlk8rpyv``"
    "input", "yes", "``object``", "JSON - See Product Input."
 
 Product Input
 ~~~~~~~~~~~~~
 
 .. csv-table::
-   :header: "Parameter", "Required", "Type", "Description"
+   :header: "Parameter", "required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
    "first_name", "yes", "``string``", "Customer first name."
@@ -84,11 +84,13 @@ Policy Data Input
    :header: "Parameter", "required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
-   "watch_make", "yes", "``string``", "Watch make (manufacturer)."
-   "watch_model", "yes", "``string``", "Watch model."
-   "watch_value", "yes", "``int``", "Watch value in cents, the value must be an integer between ``20000`` or ``3000000``."
-   "risk_module", "yes", "``string``", "Risk module, accepted values are ``damage``, ``theft`` or ``damage_and_theft``."
-   "policy_duration", "yes", "``string``", "The duration of the policy, accepted values are ``P1Y`` (1 year), ``P2Y`` (2 years) or ``P3Y`` (3 years)."
+   "device_type", "yes", "``string``", "The type of device being insured, accepted values are ``smartphone`` or ``tablet``."
+   "policy_duration", "yes", "``string``", "The duration of the policy, accepted values are ``P1Y`` (1 year) or ``P2Y`` (2 years)."
+   "device_value", "yes", "``int``", "Device value in cents, the value must be an intger between ``1`` and ``1000000``."
+   "imei", "no", "``string``", "IMEI of the smartphone. This field can only be used when the value of ``device_type`` field is set to ``smartphone``. If this field is used, then ``product_name`` and ``receipt_number`` fields must be omitted."
+   "serial_number", "no", "``string``", "Serial number of the tablet. This field can only be used when the value of ``device_type`` field is set to ``tablet``. If this field is used, then ``product_name`` and ``receipt_number`` fields must be omitted."
+   "product_name", "no", "``string``", "The name of the device being insured. If this field is used, then ``receipt_number`` is required and either ``imei`` or ``serial_number`` fields must be omitted."
+   "receipt_number", "no", "``string``", "Receipt number. If this field is used, then ``product_name`` is required and either ``imei`` or ``serial_number`` fields must be omitted."
    "salutation", "yes", "``string``", "Customers salutation, accepted values are ``mr`` or ``ms``."
    "dob", "yes", "``string``", "Customers date of birth in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`_ format (YYYY-MM-DD)."
    "phone", "yes", "``string``", "Customers phone number."
@@ -106,30 +108,30 @@ Example Request
         -u <YOUR SECRET API KEY>: \
         -H "Content-Type: application/json" \
         -d '{
-            "variant_id": "d2va8Owp4WRnkbMpPgMAmVoN1JejB5GE",
-            "input": {
-                "first_name":"Test",
-                "last_name":"Person",
-                "email":"test@person.com",
-                "data": {
-                    "watch_make": "Rolex",
-                    "watch_model": "Submariner",
-                    "watch_value": 100000,
-                    "risk_module": "damage",
-                    "policy_duration": "P1Y",
-                    "salutation": "mr",
-                    "dob": "1989-02-04",
-                    "phone": "0781234567",
-                    "house_number": "1",
-                    "street": "2nd Avenue",
-                    "city": "Atlantis",
-                    "postcode": "1234"
-                },
-                "metadata": {
-                  "some": "value"
-                }
-            }
-        }'
+              "variant_id": "n5l3L4wzQEPJykxv2YxqaBVZR78dvj0o",
+              "input": {
+                  "first_name":"Test",
+                  "last_name":"Person",
+                  "email":"test@person.com",
+                  "data": {
+                      "device_type": "smartphone",
+                      "policy_duration": "P1Y",
+                      "device_value": 50000,
+                      "product_name": "iPhone 7",
+                      "receipt_number": "123456789",
+                      "salutation": "mr",
+                      "dob": "1989-02-04",
+                      "phone": "0781234567",
+                      "house_number": "1",
+                      "street": "2nd Avenue",
+                      "city": "Atlantis",
+                      "postcode": "1234"
+                  },
+                  "metadata": {
+                    "some": "value"
+                  }
+              }
+          }'
 
 Example Response Success
 ~~~~~~~~~~~~~~~~~~~~~~~~

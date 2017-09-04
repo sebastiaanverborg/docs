@@ -1,5 +1,5 @@
-Baloise Cyber Creadi via REST API
-=================================
+Baloise Cyber (Creadi promotional) via REST API
+===============================================
 
 Get Quote Request
 -----------------
@@ -24,13 +24,13 @@ Example Request
 
     curl https://api.kasko.io/quotes \
         -u <YOUR SECRET API KEY>: \
-        -d variant_id=9znERVLG5Wwk3dXdR3MBPyJ4vQrpAb0e \
+        -d variant_id=LJROpwloaQ8ZBmMAg7X7W5PyE4qvAb31 \
         -d data='{"duration":"1","product":"3","family":"2"}'
 
 Policy Data Fields
 ------------------
 
-Create Unpain Policy Request
+Create Unpaid Policy Request
 ----------------------------
 
 Data fields
@@ -46,7 +46,7 @@ Data fields
    "home_number", "yes", "``string``", "Customers house number."
    "street",      "yes", "``string``", "Customers street."
    "city",        "yes", "``string``", "Customers city."
-   "postcode",    "yes", "``string``", "Customers postal code."
+   "postcode",    "yes", "``string``", "Customers postal code, must be a valid Swiss postal code."
 
 Example Request
 ~~~~~~~~~~~~~~~

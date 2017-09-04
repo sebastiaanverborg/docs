@@ -1,5 +1,5 @@
-Relocation
-==========
+Baloise Relocation
+==================
 
 List of Baloise Relocation product integration methods.
 
@@ -8,4 +8,4 @@ List of Baloise Relocation product integration methods.
    :maxdepth: 1
 
    webapp
-   api
+   rest-api

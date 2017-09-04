@@ -1,5 +1,5 @@
-Baloise Bicycle PUSH API
-========================
+Baloise Bicycle via PUSH API
+============================
 
 This API is used for creation of Baloise Bicycle policies.
 

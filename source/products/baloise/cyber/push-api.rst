@@ -1,5 +1,5 @@
-Baloise Cyber PUSH API
-======================
+Baloise Cyber via PUSH API
+==========================
 
 This API is used for creation of Baloise Cyber policies.
 

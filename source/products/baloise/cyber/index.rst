@@ -28,3 +28,4 @@ List of Baloise Cyber product integration methods.
    :maxdepth: 1
 
    rest-api
+   push-api

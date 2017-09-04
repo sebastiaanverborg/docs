@@ -13,7 +13,7 @@ Query string data appended to the quote request
    :header: "Parameter", "Required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
-   "watch_value",     "yes", "``int``",    "Watch value in cents, the value must be an integer between ``20000`` or ``3000000``."
+   "watch_value",     "yes", "``int``",    "Watch value in CHF cents, the value must be an integer between ``20000`` or ``3000000``."
    "policy_duration", "yes", "``string``", "The duration of the policy, accepted values are ``P1Y`` (1 year), ``P2Y`` (2 years) or ``P3Y`` (3 years)."
    "product",         "yes", "``int``",    "Risk module, accepted values are ``1`` for ``damage_and_theft``, ``2`` for ``damage`` or ``3`` for ``theft``."
 
@@ -30,7 +30,7 @@ Example Request
 Policy Data Fields
 ------------------
 
-Create Unpain Policy Request
+Create Unpaid Policy Request
 ----------------------------
 
 Data fields
@@ -48,7 +48,7 @@ Data fields
    "house_number", "yes", "``string``", "Customers house number."
    "street",       "yes", "``string``", "Customers street."
    "city",         "yes", "``string``", "Customers city."
-   "postcode",     "yes", "``string``", "Customers postal code."
+   "postcode",     "yes", "``string``", "Customers postal code, must be a valid Swiss postal code."
 
 Example Request
 ~~~~~~~~~~~~~~~
