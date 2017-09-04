@@ -1,28 +1,30 @@
-Baloise Watch (Distributor) Insurance
-=====================================
+Watch (Distributor) Insurance
+=============================
 
 Product Information
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. csv-table::
    :widths: 25, 75
 
-   "Name",    "Baloise Watch"
-   "Insurer", "Baloise Switzerland"
+   "Name",      "Baloise Watch (Distributor)"
+   "Insurer",   "Baloise Switzerland"
+   "Region",    "Switzerland"
+   "Languages", "``DE``, ``FR``, ``IT``"
 
-   "Product ID DE", "``g9rVJqB3lE15zoXLNkMK8kbp0RmZOW6Q``"
-   "Variant ID DE", "``9znERVLG5Wwk3dXdkBDBPyJ4vQrpAb0e``"
+Product IDs
+^^^^^^^^^^^
 
-   "Product ID FR", "``WKLe03JjQRwmZzDYyjD7Ob4NPlk8rpyv``"
-   "Variant ID FR", "``d2va8Owp4WRnkbMpqkDAmVoN1JejB5GE``"
+.. csv-table::
+   :widths: 20, 40, 40
+   :header: "Language", "Product ID", "Variant ID"
 
-   "Product ID IT", "``LJROpwloaQ8ZBmMARnD7W5PyE4qvAb31``"
-   "Variant ID IT", "``LJROpwloaQ8ZBmMARnD7W5PyE4qvAb31``"
+   "``DE``", "``g9rVJqB3lE15zoXLNkMK8kbp0RmZOW6Q``", "``9znERVLG5Wwk3dXdkBDBPyJ4vQrpAb0e``"
+   "``FR``", "``WKLe03JjQRwmZzDYyjD7Ob4NPlk8rpyv``", "``d2va8Owp4WRnkbMpqkDAmVoN1JejB5GE``"
+   "``IT``", "``LJROpwloaQ8ZBmMARnD7W5PyE4qvAb31``", "``RQA8lkzNvBLb0pDbV1DyP16Go3Wwe4qn``"
 
-   "Language", "DE|FR|EN"
-   "Region",   "Switzerland"
-
-List of Baloise Watch product integration methods.
+Integration methods
+^^^^^^^^^^^^^^^^^^^
 
 .. toctree::
    :maxdepth: 1

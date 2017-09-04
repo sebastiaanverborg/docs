@@ -1,5 +1,5 @@
-Baloise Watch via REST API
-==========================
+REST API
+========
 
 Get Quote Request
 -----------------

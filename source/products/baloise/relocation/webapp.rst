@@ -1,19 +1,5 @@
-Baloise Relocation via Web App
-==============================
-
-Product Information
--------------------
-
-.. csv-table::
-   :widths: 50, 50
-
-   "Name", "Relocation"
-   "Insurer", "Baloise"
-   "ID DE", "zG13lWZ8KQykqaXwZPDNPAb6w7VOYdve"
-   "ID EN", "n5l3L4wzQEPJykxvnjxqaBVZR78dvj0o"
-   "ID FR", "4AzgY2WZk1eNaRM870x98r5vP6Jlj0oQ"
-   "Language", "DE|FR|EN"
-   "Region", "Switzerland"
+Webapp
+=======
 
 Kasko JS Required Data Parameters
 ---------------------------------

@@ -1,26 +1,26 @@
 Webapp
 ======
 
-Kasko JS Optional Data Parameters
----------------------------------
+Kasko JS Optional Parameters
+----------------------------
 
-Optional data that can be put in the "data" tag of the kasko embed object
+Optional data that can be put in the ``data`` tag of the KASKO embed object.
 
 .. csv-table::
-   :header: "Name", "Description", "Example Value"
+   :header: "Name", "Required", "Type", "Description", "Example Value"
 
-   "luggage_value",  "The value of luggage. Increments of 1000 starting from 0, up to 20000", "0, 1000, 2000, .., 20000"
-   "reduced_excess",  "Boolean of whether reduced excess is included", "true | fase"
+   "luggage_value",  "``no``", "`int`",  "The value of luggage. Increments of ``1000`` starting from ``0``, up to ``20000``", "``0``, ``1000``, ``2000``, .., ``20000``"
+   "reduced_excess", "``no``", "`bool`", "Indicates whether reduced excess is included.", "``true`` or ``fase``"
 
-Kasko JS Optional ``metadata`` Parameters
------------------------------------------
+Kasko JS ``metadata`` Parameters
+--------------------------------
 
 Optional data that can be put in the ``metadadata`` tag of the kasko embed object.
 
 .. csv-table::
-   :header: "Name", "Description", "Example Value"
+   :header: "Name", "Required", "Type", "Description", "Example Value"
 
-   "salesagentid",  "The ID of the sales agent.", "123456789"
+   "salesagentid", "``no``", "`string`", "The ID of the sales agent.", "``123456789``"
 
 Example Kasko JS embed code
 ---------------------------
@@ -38,7 +38,7 @@ Example Kasko JS embed code
           reduced_excess: true
         },
         metadata: {
-          salesagentid: 123456789
+          salesagentid: "123456789"
         }
       });
     </script>

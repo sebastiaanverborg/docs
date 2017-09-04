@@ -3,6 +3,7 @@ Webapp
 
 KASKO JS Data Parameters
 ------------------------
+
 Optional data that can be put in the ``data`` tag of the KASKO embed object.
 
 .. csv-table::
@@ -24,11 +25,11 @@ Example KASKO JS embed code
         product : "d7zoBRlEp9yar6XyQBXPWm05VqwkQKA8",
         overlay_color: "#FFFFFF",
         data: {
-            quote: {
-              product: "2",
-              product_price: 500,
-              duration: "2"
-            }
+          quote: {
+            product: "2",
+            product_price: "500",
+            duration: "2"
+          }
         },
         metadata: {
           salesagentid: "123456789"

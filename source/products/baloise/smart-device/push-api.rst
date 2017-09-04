@@ -1,5 +1,5 @@
-Baloise Smart device via PUSH API
-=================================
+Push API
+========
 
 This API is used for creation of Baloise Smartphone/Tablet policies.
 

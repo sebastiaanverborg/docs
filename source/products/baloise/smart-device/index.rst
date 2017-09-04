@@ -1,28 +1,30 @@
-Baloise Smart Device Insurance
-==============================
+Smart Device Insurance
+======================
 
 Product Information
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. csv-table::
    :widths: 25, 75
 
-   "Name",    "Baloise Smart Device"
-   "Insurer", "Baloise Switzerland"
+   "Name",      "Baloise Smart Device"
+   "Insurer",   "Baloise Switzerland"
+   "Region",    "Switzerland"
+   "Languages", "``DE``, ``FR``, ``IT``"
 
-   "Product ID DE", "``RQA8lkzNvBLb0pDbjYDyP16Go3Wwe4qn``"
-   "Variant ID DE", "``n5l3L4wzQEPJykxv2YxqaBVZR78dvj0o``"
+Product IDs
+^^^^^^^^^^^
 
-   "Product ID FR", "``KP8VEOzroaqw15DnPKxyd64JZ2jG7egk``"
-   "Variant ID FR", "``wQKOzW9P5omVBexzGYMqdE6r48LA3GYN``"
+.. csv-table::
+   :widths: 20, 40, 40
+   :header: "Language", "Product ID", "Variant ID"
 
-   "Product ID IT", "``VW9AmkbvRBqZN4xoP0MlLgEOry13djnK``"
-   "Variant ID IT", "``WKLe03JjQRwmZzDYyjD7Ob4NPlk8rpyv``"
+   "``DE``", "``RQA8lkzNvBLb0pDbjYDyP16Go3Wwe4qn``", "``n5l3L4wzQEPJykxv2YxqaBVZR78dvj0o``"
+   "``FR``", "``KP8VEOzroaqw15DnPKxyd64JZ2jG7egk``", "``wQKOzW9P5omVBexzGYMqdE6r48LA3GYN``"
+   "``IT``", "``VW9AmkbvRBqZN4xoP0MlLgEOry13djnK``", "``WKLe03JjQRwmZzDYyjD7Ob4NPlk8rpyv``"
 
-   "Language", "DE|FR|EN"
-   "Region",   "Switzerland"
-
-List of Baloise Smart Device product integration methods.
+Integration methods
+^^^^^^^^^^^^^^^^^^^
 
 .. toctree::
    :maxdepth: 1

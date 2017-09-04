@@ -1,30 +1,32 @@
-Baloise Cyber (Creadi promotional) Insurance
-============================================
-
-This product is bespoke for Creadi for promotional purposes!
+Cyber (Creadi promotional) Insurance
+====================================
 
 Product Information
--------------------
+^^^^^^^^^^^^^^^^^^^
+
+This product is bespoke for Creadi promotional purposes!
 
 .. csv-table::
    :widths: 25, 75
 
-   "Name",    "Baloise Cyber (Creadi promotional)"
-   "Insurer", "Baloise Switzerland"
+   "Name",      "Baloise Cyber (Creadi promotional)"
+   "Insurer",   "Baloise Switzerland"
+   "Region",    "Switzerland"
+   "Languages", "``DE``, ``FR``, ``IT``"
 
-   "Product ID DE", "``zG13lWZ8KQykqaXwl1xNPAb6w7VOYdve``"
-   "Variant ID DE", "``LJROpwloaQ8ZBmMAg7X7W5PyE4qvAb31``"
+Product IDs
+^^^^^^^^^^^
 
-   "Product ID FR", "``4AzgY2WZk1eNaRM82aX98r5vP6Jlj0oQ``"
-   "Variant ID FR", "``WKLe03JjQRwmZzDY59D7Ob4NPlk8rpyv``"
+.. csv-table::
+   :widths: 20, 40, 40
+   :header: "Language", "Product ID", "Variant ID"
 
-   "Product ID IT", "``n5l3L4wzQEPJykxvWQMqaBVZR78dvj0o``"
-   "Variant ID IT", "``wQKOzW9P5omVBexzqbXqdE6r48LA3GYN``"
+   "``DE``", "``zG13lWZ8KQykqaXwl1xNPAb6w7VOYdve``", "``LJROpwloaQ8ZBmMAg7X7W5PyE4qvAb31``"
+   "``FR``", "``4AzgY2WZk1eNaRM82aX98r5vP6Jlj0oQ``", "``WKLe03JjQRwmZzDY59D7Ob4NPlk8rpyv``"
+   "``IT``", "``n5l3L4wzQEPJykxvWQMqaBVZR78dvj0o``", "``wQKOzW9P5omVBexzqbXqdE6r48LA3GYN``"
 
-   "Language", "DE|FR|EN"
-   "Region",   "Switzerland"
-
-List of Baloise Cyber (Creadi promotional) product integration methods.
+Integration methods
+^^^^^^^^^^^^^^^^^^^
 
 .. toctree::
    :maxdepth: 1

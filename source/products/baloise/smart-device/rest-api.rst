@@ -1,5 +1,5 @@
-Baloise Smart Device via REST API
-=================================
+REST API
+========
 
 Get Quote Request
 -----------------

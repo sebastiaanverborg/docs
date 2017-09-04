@@ -1,5 +1,5 @@
-Baloise Cyber (Creadi promotional) via PUSH API
-===============================================
+Push API
+========
 
 This API is used for creation of Baloise Cyber policies.
 

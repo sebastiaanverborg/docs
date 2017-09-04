@@ -5,7 +5,7 @@ Get Quote Request
 -----------------
 
 Data fields
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 Query string data appended to the quote request
 
@@ -18,7 +18,7 @@ Query string data appended to the quote request
    "product_price", "yes", "``string``", "The value of the bike in CHF, the value must be between ``0`` and ``20000``."
 
 Example Request
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 .. code:: bash
 
@@ -27,14 +27,11 @@ Example Request
         -d variant_id=VW9AmkbvRBqZN4xoP0MlLgEOry13djnK \
         -d data='{"duration":"1","product":"2","product_price":"700"}'
 
-Policy Data Fields
-------------------
-
 Create Unpaid Policy Request
 ----------------------------
 
 Data fields
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 .. csv-table::
    :header: "Parameter", "Required", "Type", "Description"
@@ -53,7 +50,7 @@ Data fields
    "postcode",            "yes",         "``string``", "Customers postal code, must be a valid Swiss postal code."
 
 Example Request
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 .. code:: bash
 
@@ -85,7 +82,7 @@ Convert Policy To Paid Request
 After creating unpaid policy it is required to convert it to paid. This can be done by making another request.
 
 Data fields
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 .. csv-table::
    :header: "Parameter", "Required", "Type", "Description"
@@ -95,7 +92,7 @@ Data fields
    "policy_id", "yes", "``string``", "The 33 character long policy ID returned by the create policy request."
 
 Example Request
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 .. code:: bash
 

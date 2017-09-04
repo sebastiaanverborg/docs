@@ -1,9 +1,9 @@
 .. _products:
 
-Products
-========
+Baloise Products
+================
 
-List of Baloise insurance products with required data to quote and purchase a policy.
+List of Baloise insurance products.
 
 
 .. toctree::
@@ -15,15 +15,6 @@ List of Baloise insurance products with required data to quote and purchase a po
    holiday/index
    relocation/index
    smart-device/index
+   tv/index
    watch/index
    watch-distributor/index
-
-
-   fahrradversicherung
-   fernseherversicherung
-   handy
-   cyber
-   watch
-   watch-distributor
-   holiday
-   relocation

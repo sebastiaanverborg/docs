@@ -1,5 +1,5 @@
-Baloise Watch via Webapp
-========================
+Webapp
+======
 
 Kasko JS Optional ``metadata`` Parameters
 -----------------------------------------

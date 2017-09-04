@@ -1,5 +1,5 @@
-Baloise Smart Device via Webapp
-===============================
+Webapp
+======
 
 Product Information
 -------------------

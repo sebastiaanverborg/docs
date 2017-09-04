@@ -1,11 +1,11 @@
-Baloise Cyber (Creadi promotional) via REST API
-===============================================
+REST API
+========
 
 Get Quote Request
 -----------------
 
 Data fields
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 Query string data appended to the quote request
 
@@ -18,7 +18,7 @@ Query string data appended to the quote request
    "duration", "yes", "``string``", "The policy duration in years, accepted values are ``1`` for ``single year`` and ``2`` for ``two years``."
 
 Example Request
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 .. code:: bash
 
@@ -27,14 +27,11 @@ Example Request
         -d variant_id=LJROpwloaQ8ZBmMAg7X7W5PyE4qvAb31 \
         -d data='{"duration":"1","product":"3","family":"2"}'
 
-Policy Data Fields
-------------------
-
 Create Unpaid Policy Request
 ----------------------------
 
 Data fields
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 .. csv-table::
    :header: "Parameter", "Required", "Type", "Description"
@@ -49,7 +46,7 @@ Data fields
    "postcode",    "yes", "``string``", "Customers postal code, must be a valid Swiss postal code."
 
 Example Request
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 .. code:: bash
 
@@ -79,7 +76,7 @@ Convert Policy To Paid Request
 After creating unpaid policy it is required to convert it to paid. This can be done by making another request.
 
 Data fields
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 .. csv-table::
    :header: "Parameter", "Required", "Type", "Description"
@@ -89,7 +86,7 @@ Data fields
    "policy_id", "yes", "``string``", "The 33 character long policy ID returned by the create policy request."
 
 Example Request
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 .. code:: bash
 

@@ -1,5 +1,5 @@
-Baloise Bicycle Insurance
-=========================
+Bicycle Insurance
+=================
 
 Product Information
 ^^^^^^^^^^^^^^^^^^^
