@@ -1,31 +1,33 @@
 Baloise Bicycle Insurance
-=========================
+=======================
 
 Product Information
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 .. csv-table::
    :widths: 25, 75
 
-   "Name", "Baloise Bicycle"
-   "Insurer", "Baloise"
+   "Name",      "Baloise Bicycle"
+   "Insurer",   "Baloise Switzerland"
+   "Region",    "Switzerland"
+   "Languages", "``DE``, ``FR``, ``IT``"
 
-   "Product ID DE", "``d7zoBRlEp9yar6XyQBXPWm05VqwkQKA8``"
-   "Variant ID DE", "``VW9AmkbvRBqZN4xoP0MlLgEOry13djnK``"
+Product IDs
+~~~~~~~~~~~
 
-   "Product ID FR", "``n5l3L4wzQEPJykxv2YxqaBVZR78dvj0o``"
-   "Variant ID FR", "``KJAR5gL1GY0j6QDGA4x72z3v9yoO8VkB``"
+   :widths: 20, 40, 40
+   :header: "Language", "Product ID", "Variant ID"
 
-   "Product ID IT", "``2ekYGz8ProWy1BMVgaDjAd6nVp9NL5vb``"
-   "Variant ID IT", "``zG13lWZ8KQykqaXwZPDNPAb6w7VOYdve``"
+   "``DE``", "``d7zoBRlEp9yar6XyQBXPWm05VqwkQKA8``", "``VW9AmkbvRBqZN4xoP0MlLgEOry13djnK``"
+   "``FR``", "``n5l3L4wzQEPJykxv2YxqaBVZR78dvj0o``", "``KJAR5gL1GY0j6QDGA4x72z3v9yoO8VkB``"
+   "``IT``", "``2ekYGz8ProWy1BMVgaDjAd6nVp9NL5vb``", "``zG13lWZ8KQykqaXwZPDNPAb6w7VOYdve``"
 
-   "Language", "DE|FR|EN"
-   "Region", "Switzerland"
-
-List of Baloise Bicycle product integration methods.
+Integration methods
+~~~~~~~~~~~~~~~~~~~
 
 .. toctree::
    :maxdepth: 1
 
+   webapp
    rest-api
    push-api

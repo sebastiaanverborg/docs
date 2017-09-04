@@ -9,8 +9,8 @@ Product Information
 .. csv-table::
    :widths: 25, 75
 
-   "Name", "Baloise Cyber (Creadi promotional)"
-   "Insurer", "Baloise"
+   "Name",    "Baloise Cyber (Creadi promotional)"
+   "Insurer", "Baloise Switzerland"
 
    "Product ID DE", "``zG13lWZ8KQykqaXwl1xNPAb6w7VOYdve``"
    "Variant ID DE", "``LJROpwloaQ8ZBmMAg7X7W5PyE4qvAb31``"
@@ -22,7 +22,7 @@ Product Information
    "Variant ID IT", "``wQKOzW9P5omVBexzqbXqdE6r48LA3GYN``"
 
    "Language", "DE|FR|EN"
-   "Region", "Switzerland"
+   "Region",   "Switzerland"
 
 List of Baloise Cyber (Creadi promotional) product integration methods.
 

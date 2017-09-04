@@ -1,5 +1,5 @@
-Cyber
-===================
+Baloise Cyber via Webapp
+========================
 
 Product Information
 -------------------
@@ -23,8 +23,8 @@ Optional data that can be put in the "data" tag of the kasko embed object
    :header: "Name", "Description", "Example Value"
 
    "product",  "Safe Pay, Safe Surf, Surf & Pay", "1|2|3"
-   "family",  "Single, Family", "1|2"
-   "duration",  "Duration in years", "1|2"
+   "family",   "Single, Family",                  "1|2"
+   "duration", "Duration in years",               "1|2"
 
 Example Kasko JS embed code
 -------------

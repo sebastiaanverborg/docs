@@ -7,8 +7,8 @@ Product Information
 .. csv-table::
    :widths: 25, 75
 
-   "Name", "Baloise Smart Device"
-   "Insurer", "Baloise"
+   "Name",    "Baloise Smart Device"
+   "Insurer", "Baloise Switzerland"
 
    "Product ID DE", "``RQA8lkzNvBLb0pDbjYDyP16Go3Wwe4qn``"
    "Variant ID DE", "``n5l3L4wzQEPJykxv2YxqaBVZR78dvj0o``"
@@ -20,12 +20,13 @@ Product Information
    "Variant ID IT", "``WKLe03JjQRwmZzDYyjD7Ob4NPlk8rpyv``"
 
    "Language", "DE|FR|EN"
-   "Region", "Switzerland"
+   "Region",   "Switzerland"
 
 List of Baloise Smart Device product integration methods.
 
 .. toctree::
    :maxdepth: 1
 
+   webapp
    rest-api
    push-api

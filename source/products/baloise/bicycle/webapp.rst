@@ -1,5 +1,5 @@
-Fahrradversicherung
-===================
+Baloise Bicycle via Webapp
+==========================
 
 Product Information
 -------------------
@@ -7,11 +7,11 @@ Product Information
 .. csv-table::
    :widths: 50, 50
 
-   "Name", "Fahrradversicherung"
-   "Insurer", "Baloise"
-   "ID", "d7zoBRlEp9yar6XyQBXPWm05VqwkQKA8"
+   "Name",     "Fahrradversicherung"
+   "Insurer",  "Baloise"
+   "ID",       "d7zoBRlEp9yar6XyQBXPWm05VqwkQKA8"
    "Language", "DE"
-   "Region", "Switzerland"
+   "Region",   "Switzerland"
 
 Kasko JS Optional Data Parameters
 ---------------------------------
@@ -20,9 +20,9 @@ Optional data that can be put in the "data" tag of the kasko embed object
 .. csv-table::
    :header: "Name", "Description", "Example Value"
 
-   "product",  "Product", "1 = Fahrrad, 2 = E-Bike"
-   "product_price",  "Price in CHF", "500"
-   "duration",  "Duration in years", "2"
+   "product",       "Product",           "1 = Fahrrad, 2 = E-Bike"
+   "product_price", "Price in CHF",      "500"
+   "duration",      "Duration in years", "2"
 
 Example Kasko JS embed code
 ---------------------------
@@ -32,21 +32,18 @@ Example Kasko JS embed code
     <script>
       Kasko.Setup({
         container: "kasko-widget-container",
-        key: 'KEY',
-        product : 'd7zoBRlEp9yar6XyQBXPWm05VqwkQKA8',
+        key: "KEY",
+        product : "d7zoBRlEp9yar6XyQBXPWm05VqwkQKA8",
         overlay_color: "#FFFFFF",
         data: {
-            quote:{
-              product: '2',
+            quote: {
+              product: "2",
               product_price: 500,
-              duration: '2'
+              duration: "2"
             }
         },
         metadata: {
-          salesagentid: 123456789
+          salesagentid: "123456789"
         }
       });
     </script>
-
-
-

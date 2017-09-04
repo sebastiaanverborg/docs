@@ -1,5 +1,5 @@
-Watch Distributor
-===================
+Baloise Watch (Distributor) Insurance
+=====================================
 
 Product Information
 -------------------

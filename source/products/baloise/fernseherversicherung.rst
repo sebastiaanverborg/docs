@@ -1,5 +1,5 @@
-Fernseherversicherung
-===================
+Fernseherversicherung (TV)
+==========================
 
 Product Information
 -------------------
