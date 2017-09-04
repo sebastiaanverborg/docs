@@ -1,5 +1,5 @@
-Baloise Cyber Insurance
-=======================
+Baloise Cyber Creadi Insurance
+==============================
 
 This product is bespoke for Creadi for promotional purposes!
 
