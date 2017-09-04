@@ -1,17 +1,5 @@
-Baloise Bicycle via Webapp
-==========================
-
-Product Information
--------------------
-
-.. csv-table::
-   :widths: 50, 50
-
-   "Name",     "Fahrradversicherung"
-   "Insurer",  "Baloise"
-   "ID",       "d7zoBRlEp9yar6XyQBXPWm05VqwkQKA8"
-   "Language", "DE"
-   "Region",   "Switzerland"
+Webapp
+======
 
 Kasko JS Optional Data Parameters
 ---------------------------------
@@ -20,7 +8,7 @@ Optional data that can be put in the "data" tag of the kasko embed object
 .. csv-table::
    :header: "Name", "Description", "Example Value"
 
-   "product",       "Product",           "1 = Fahrrad, 2 = E-Bike"
+   "product",       "Product",           "``1`` - Bicycle, ``2`` - Electric bicycle"
    "product_price", "Price in CHF",      "500"
    "duration",      "Duration in years", "2"
 

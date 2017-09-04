@@ -1,5 +1,5 @@
-Baloise Bicycle via REST API
-============================
+REST API
+========
 
 Get Quote Request
 -----------------

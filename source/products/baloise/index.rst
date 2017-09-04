@@ -7,14 +7,16 @@ List of Baloise insurance products with required data to quote and purchase a po
 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   bicycle
-   cyber
-   cyber-creadi
-   relocation
-   smart-device
-   watch
+   bicycle/index
+   cyber/index
+   cyber-creadi/index
+   holiday/index
+   relocation/index
+   smart-device/index
+   watch/index
+   watch-distributor/index
 
 
    fahrradversicherung
