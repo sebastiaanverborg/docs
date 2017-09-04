@@ -1,8 +1,8 @@
 Baloise Bicycle Insurance
-=======================
+=========================
 
 Product Information
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 
 .. csv-table::
    :widths: 25, 75
@@ -13,8 +13,9 @@ Product Information
    "Languages", "``DE``, ``FR``, ``IT``"
 
 Product IDs
-~~~~~~~~~~~
+^^^^^^^^^^^
 
+.. csv-table::
    :widths: 20, 40, 40
    :header: "Language", "Product ID", "Variant ID"
 
@@ -23,7 +24,7 @@ Product IDs
    "``IT``", "``2ekYGz8ProWy1BMVgaDjAd6nVp9NL5vb``", "``zG13lWZ8KQykqaXwZPDNPAb6w7VOYdve``"
 
 Integration methods
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 
 .. toctree::
    :maxdepth: 1

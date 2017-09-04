@@ -6,7 +6,7 @@ Products
 List of KASKO insurance products with required data to quote and purchase a policy.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    probefahrten_schutz
    xtra_fahrer_schutz
