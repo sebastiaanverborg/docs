@@ -15,6 +15,7 @@ Product Information
 Product IDs
 ^^^^^^^^^^^
 
+.. csv-table::
    :widths: 20, 40, 40
    :header: "Language", "Product ID", "Variant ID"
 
