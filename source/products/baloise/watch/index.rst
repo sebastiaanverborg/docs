@@ -5,7 +5,7 @@ Product Information
 -------------------
 
 .. csv-table::
-   :widths: 50, 50
+   :widths: 25, 75
 
    "Name", "Baloise Watch"
    "Insurer", "Baloise"

@@ -1,4 +1,4 @@
-Baloise Watch via REST API
+Baloise Cyber via REST API
 ==========================
 
 Get Quote Request
@@ -13,9 +13,9 @@ Query string data appended to the quote request
    :header: "Parameter", "Required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
-   "watch_value",     "yes", "``int``",    "Watch value in cents, the value must be an integer between ``20000`` or ``3000000``."
-   "policy_duration", "yes", "``string``", "The duration of the policy, accepted values are ``P1Y`` (1 year), ``P2Y`` (2 years) or ``P3Y`` (3 years)."
-   "product",         "yes", "``int``",    "Risk module, accepted values are ``1`` for ``damage_and_theft``, ``2`` for ``damage`` or ``3`` for ``theft``."
+   "product",  "yes", "``string``", "Risk module, accepted values are ``1`` for ``Safe Pay``, ``2`` for ``Safe Surf`` and ``3`` for ``Safe Pay & Safe Surf``."
+   "family",   "yes", "``string``", "Indiciated wether it will be a single or famility cover. Accepted values are ``1`` for ``Single`` and ``2`` for ``Family``."
+   "duration", "yes", "``string``", "The policy duration in years, accepted values are ``1`` for ``single year`` and ``2`` for ``two years``."
 
 Example Request
 ~~~~~~~~~~~~~~~
@@ -24,8 +24,8 @@ Example Request
 
     curl https://api.kasko.io/quotes \
         -u <YOUR SECRET API KEY>: \
-        -d variant_id=d2va8Owp4WRnkbMpPgMAmVoN1JejB5GE \
-        -d data='{"watch_value":20000,"policy_duration":"P1Y","product":1}'
+        -d variant_id=9znERVLG5Wwk3dXdR3MBPyJ4vQrpAb0e \
+        -d data='{"duration":"1","product":"3","family":"2"}'
 
 Policy Data Fields
 ------------------
@@ -40,15 +40,13 @@ Data fields
    :header: "Parameter", "Required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
-   "watch_make",   "yes", "``string``", "Watch make (manufacturer)."
-   "watch_model",  "yes", "``string``", "Watch model."
-   "salutation",   "yes", "``string``", "Customers salutation, accepted values are ``mr`` or ``ms``."
-   "dob",          "yes", "``string``", "Customers date of birth in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`_ format (YYYY-MM-DD)."
-   "phone",        "yes", "``string``", "Customers phone number."
-   "house_number", "yes", "``string``", "Customers house number."
-   "street",       "yes", "``string``", "Customers street."
-   "city",         "yes", "``string``", "Customers city."
-   "postcode",     "yes", "``string``", "Customers postal code."
+   "gender",      "yes", "``string``", "Customers gender, accepted values are ``male`` or ``female``."
+   "dob",         "yes", "``string``", "Customers date of birth in `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`_ format (YYYY-MM-DD)."
+   "phone",       "yes", "``string``", "Customers phone number."
+   "home_number", "yes", "``string``", "Customers house number."
+   "street",      "yes", "``string``", "Customers street."
+   "city",        "yes", "``string``", "Customers city."
+   "postcode",    "yes", "``string``", "Customers postal code."
 
 Example Request
 ~~~~~~~~~~~~~~~
@@ -65,12 +63,10 @@ Example Request
             "last_name": "LastName",
             "email": "test@kasko.io",
             "data": {
-                "watch_make": "Rolex",
-                "watch_model": "Daytona",
-                "salutation": "mr",
+                "gender": "female",
                 "dob": "1990-12-31",
                 "phone": "+41781234567",
-                "house_number": "1",
+                "home_number": "1",
                 "street": "Street",
                 "city": "City",
                 "postcode": "1234"
@@ -89,8 +85,8 @@ Data fields
    :header: "Parameter", "Required", "Type", "Description"
    :widths: 20, 20, 20, 80
 
-   "token",     "yes", "``string``",  "The ``payment_token`` returned by the create policy request."
-   "policy_id", "yes", "``string``",  "The 33 character long policy ID returned by the create policy request."
+   "token",     "yes", "``string``", "The ``payment_token`` returned by the create policy request."
+   "policy_id", "yes", "``string``", "The 33 character long policy ID returned by the create policy request."
 
 Example Request
 ~~~~~~~~~~~~~~~
