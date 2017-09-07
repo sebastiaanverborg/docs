@@ -12,6 +12,7 @@ List of Baloise insurance products.
    bicycle/index
    cyber/index
    cyber-creadi/index
+   cyber-soba/index
    holiday/index
    relocation/index
    smart-device/index
